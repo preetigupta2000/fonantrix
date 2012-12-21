@@ -8,7 +8,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">    
 	<r:require modules="corestyles"/>
 	<r:require modules="homestyles"/>
-
+	<!--  Javascript includes START in body, make it load in head, you need to specify disposition='head' with r:require-->
+	<r:require modules="application,corejs"/>
+	<!--  Javascript includes END -->
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -462,14 +464,6 @@
 	
 </div> <!-- /wrapper -->
 
-<!-- Le javascript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="${resource(dir: 'js', file: 'jquery-1.7.2.min.js')}"></script>
-
-<script src="${resource(dir: 'js', file: 'bootstrap.min.js')}"></script>
-<script src="${resource(dir: 'js', file: 'focus.js')}"></script>
-
 <script>
 
 $(function () {
@@ -479,5 +473,6 @@ $(function () {
 });
 
 </script>
+<r:layoutResources />
   </body>
 </html>
