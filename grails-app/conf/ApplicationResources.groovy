@@ -10,7 +10,7 @@ modules = {
 
 	}
 	
-	application {
+	libs {
 		resource url:'js/jquery-1.7.2.min.js'
 		//Bootstrap JS components
 		resource url:'js/bootstrap-alert.js'
@@ -29,7 +29,7 @@ modules = {
 	}
 	
 	corejs {
-		dependsOn "application"
+		dependsOn "libs"
 		resource url:'js/focus.js'
 	}
 }

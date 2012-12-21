@@ -9,7 +9,7 @@
 	<r:require modules="corestyles"/>
 	<r:require modules="homestyles"/>
 	<!--  Javascript includes START in body, make it load in head, you need to specify disposition='head' with r:require-->
-	<r:require modules="application,corejs"/>
+	<r:require modules="corejs"/>
 	<!--  Javascript includes END -->
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
