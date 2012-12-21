@@ -6,17 +6,14 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">    
-
-    <link type="text/css" rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.min.css')}"/>
-    <link type="text/css" rel="stylesheet" href="${resource(dir: 'css', file: 'focus.css')}"/>
-    <link type="text/css" rel="stylesheet" href="${resource(dir: 'css', file: 'focus-responsive.css')}"/>
-    <link type="text/css" rel="stylesheet" href="${resource(dir: 'css/pages', file: 'homepage.css')}"/>
+	<r:require modules="corestyles"/>
+	<r:require modules="homestyles"/>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-	
+	<r:layoutResources />
   </head>
 
 <body>
