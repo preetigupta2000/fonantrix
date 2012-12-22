@@ -13,8 +13,7 @@
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 
-		<r:require modules="corestyles"/>
-		<r:require modules="homestyles"/>
+		<!--  Not Required as became depends on pages css r:require modules="corestyles"/ -->
 		<r:require modules="corejs"/>
 	    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	    <!--[if lt IE 9]>

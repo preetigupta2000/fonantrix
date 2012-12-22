@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
 	<meta name="layout" content="mainlayout">
+	<r:require modules="homestyles"/>
   </head>
 
 <body>
@@ -290,6 +291,8 @@
 		$(function () {
 			$('#masthead-carousel').carousel ({ interval: false });
 		});
+		$('#main-nav li').removeClass("active");
+		$('#main-nav li::nth-child(1)').addClass("active");		
 	</r:script>	
   </body>
 </html>

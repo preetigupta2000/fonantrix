@@ -43,9 +43,9 @@ grails.project.dependency.resolution = {
         //runtime ":resources:1.1.6"
 
 		runtime ":resources:1.2.RC2"  //Cgrails needs Resources plugin version 1.2.RC2.
-		runtime ":cache-headers:1.1.5"  //Provides support for caching expiry headers for static resources.
-		runtime ":zipped-resources:1.0" //Provides support for GZIPPED static resources.
-		runtime ":cached-resources:1.0" //Provides support for caching expiry headers for static resources.
+		//runtime ":cache-headers:1.1.5"  //Provides support for caching expiry headers for static resources.
+		//runtime ":zipped-resources:1.0" //Provides support for GZIPPED static resources.
+		//runtime ":cached-resources:1.0" //Provides support for caching expiry headers for static resources.
 		//runtime ":yui-minify-resources:0.1.5" //Provides support for minifying static resources.
 		
         // Uncomment these (or add new ones) to enable additional resources capabilities
