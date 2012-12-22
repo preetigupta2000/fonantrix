@@ -13,22 +13,22 @@
 	<div class="container">
 		<ul id="main-nav">
 			<li class="active">
-				<a href="./index.html">Home</a>
+				<a href="home">Home</a>
 			</li>			
 			<li>
-				<a href="./about.html">About</a>
+				<a href="about">About</a>
 			</li>
 			<li>
-				<a href="./services.html">Services</a>
+				<a href="services">Services</a>
 			</li>
 			<li>
-				<a href="./pricing.html">Pricing</a>
+				<a href="pricing">Pricing</a>
 			</li>
 			<li>
-				<a href="./faq.html">Faq</a>
+				<a href="faq">Faq</a>
 			</li>
 			<li>
-				<a href="./contact.html">Contact</a>
+				<a href="contact">Contact</a>
 			</li>
 			<li class="dropdown">
 				<a href="javascript:;" data-toggle="dropdown">

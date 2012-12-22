@@ -6,8 +6,33 @@ modules = {
 	}
 	
 	homestyles	{
+		dependsOn "corestyles"
 		resource url:'css/pages/homepage.css'
-
+	}
+	
+	aboutstyles	{
+		dependsOn "corestyles"
+		resource url:'css/pages/about.css'
+	}
+	
+	servicestyles	{
+		dependsOn "corestyles"
+		resource url:'css/pages/services.css'
+	}
+	
+	faqstyles	{
+		dependsOn "corestyles"
+		resource url:'js/plugins/faq/faq.css'
+	}
+	
+	contactstyles	{
+		dependsOn "corestyles"
+		resource url:'css/pages/contact.css'
+	}
+	
+	pricingstyles	{
+		dependsOn "corestyles"
+		resource url:'css/components/plans.css'
 	}
 	
 	libs {
@@ -31,5 +56,6 @@ modules = {
 	corejs {
 		dependsOn "libs"
 		resource url:'js/focus.js'
+		resource url:'js/plugins/faq/faq.js'
 	}
 }
