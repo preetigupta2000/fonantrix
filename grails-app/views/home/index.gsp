@@ -464,7 +464,7 @@
 	
 </div> <!-- /wrapper -->
 
-<script>
+<r:script disposition="defer">
 
 $(function () {
 	
@@ -472,7 +472,7 @@ $(function () {
 	
 });
 
-</script>
+</r:script>	
 <r:layoutResources />
   </body>
 </html>
