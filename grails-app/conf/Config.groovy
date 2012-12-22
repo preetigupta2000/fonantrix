@@ -90,3 +90,4 @@ log4j = {
            'net.sf.ehcache.hibernate'
 }
 
+grails.lesscss.resources.compress  = true
