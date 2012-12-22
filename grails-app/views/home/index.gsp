@@ -1,94 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Focus Business Template</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">    
-	<r:require modules="corestyles"/>
-	<r:require modules="homestyles"/>
-	<!--  Javascript includes START in body, make it load in head, you need to specify disposition='head' with r:require-->
-	<r:require modules="corejs"/>
-	<!--  Javascript includes END -->
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-	<r:layoutResources />
+	<meta name="layout" content="mainlayout">
   </head>
 
 <body>
-
-<div id="wrapper" class="clearfix">
-	
-	<div id="header">
-		
-		<div class="container">
-			
-			<h1 id="title">
-				<a href="./index.html">
-					Focus Business
-				</a>
-			</h1>
-			
-		</div> <!-- /container -->
-		
-	</div> <!-- /header -->	
-	
-	
-	<div id="nav" class="clearfix">
-		
-		<div class="container">
-		
-			<ul id="main-nav">
-				<li class="active">
-					<a href="./index.html">Home</a>
-				</li>
-				
-				<li>
-					<a href="./about.html">About</a>
-				</li>
-				
-				<li>
-					<a href="./services.html">Services</a>
-				</li>
-				
-				<li>
-					<a href="./pricing.html">Pricing</a>
-				</li>
-				
-				<li>
-					<a href="./faq.html">Faq</a>
-				</li>
-				
-				<li>
-					<a href="./contact.html">Contact</a>
-				</li>
-				
-				<li class="dropdown">
-					<a href="javascript:;" data-toggle="dropdown">
-						Dropdown
-						<span class="caret"></span>
-					</a>
-					
-					<ul class="dropdown-menu">
-						<li><a href="javascript:;"><i class="icon-home"></i> Dropdown #1</a></li>
-						<li><a href="javascript:;"><i class="icon-beaker"></i> Dropdown #2</a></li>
-						<li><a href="javascript:;"><i class="icon-bullhorn"></i> Dropdown #3</a></li>
-						<li><a href="javascript:;"><i class="icon-cloud"></i> Dropdown #4</a></li>
-					</ul>
-				</li>				
-				
-			</ul>
-			
-		</div> <!-- /container -->
-		
-	</div> <!-- /nav -->
-	
-	
-	
-	
 	<div id="masthead">
 		
 		<div class="container">
@@ -369,110 +285,11 @@
 		</div> <!-- /container -->
 		
 	</div> <!-- /content -->
-	
-	
-	
-	<div id="footer">
-		
-		<div class="container">
-		
-			<div class="row">
-				
-				<div class="grid-4">
-					<h1 id="footer-logo">Focus Business</h1>
-					
-					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					
-				</div> <!-- /grid-4 -->
-				
-				<div class="grid-4">
-					
-					<h3><span class="slash">//</span> Socialize with us!</h3>
-					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt magna aliqua.</p>
-					
-					<ul class="social-icons-container">						
-						<li>
-							<a href="javascript:;" class="social-icon social-icon-twitter">
-								Twitter
-							</a>
-						</li>
-							
-						<li>
-							<a href="javascript:;" class="social-icon social-icon-googleplus">
-								Google +
-							</a>
-						</li>
-						
-						<li>							
-							<a href="javascript:;" class="social-icon social-icon-facebook">
-								Facebook
-							</a>
-						</li>
-						
-					</ul>
-					
-				</div> <!-- /grid-4 -->
-				
-				<div class="grid-4">
-						
-					<h3><span class="slash">//</span> Subscribe and get updates</h3>
-					
-	
-					<p>Subscribe to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
-					
-					
-					<form>
-						
-						<input type="text" name="subscribe_email" placeholder="Your Email">
-						
-						<br>
-						
-						<button class="btn btn-warning">Subscribe</button>
-					</form>
-					
-					
-				</div><!-- /grid-4 -->
-				
-			</div> <!-- /row -->
-			
-		</div> <!-- /container -->
-		
-	</div> <!-- /footer -->
-	
-	
-	
-	<div id="copyright">
-		
-		<div class="container">
-			
-			<div class="row">
-			
-				<div id="rights" class="grid-6">
-				© 2012 Propel UI. All Rights Reserved.
-				</div> <!-- /grid-6 -->
-				
-				<div id="totop" class="grid-6">
-					<a href="http://propelui.com">Built by Propel.</a>
-				</div> <!-- /grid-6 -->
-				
-			</div> <!-- /row -->
-			
-		</div> <!-- /container -->
-			
-	</div> <!-- /copyright -->
-	
-</div> <!-- /wrapper -->
 
-<r:script disposition="defer">
-
-$(function () {
-	
-	$('#masthead-carousel').carousel ({ interval: false });
-	
-});
-
-</r:script>	
-<r:layoutResources />
+	<r:script disposition="defer">
+		$(function () {
+			$('#masthead-carousel').carousel ({ interval: false });
+		});
+	</r:script>	
   </body>
 </html>
