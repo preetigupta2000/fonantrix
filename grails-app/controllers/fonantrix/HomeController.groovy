@@ -14,6 +14,10 @@ class HomeController {
 		render(view: "/services/index")
 	}
 	
+	def pricing() {
+		render(view: "/pricing/index")
+	}
+	
 	def faq() {
 		render(view: "/faq/index")
 	}

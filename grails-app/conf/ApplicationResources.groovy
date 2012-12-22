@@ -30,6 +30,31 @@ modules = {
 		resource url:'css/pages/contact.css'
 	}
 	
+	aboutstyles	{
+		dependsOn "corestyles"
+		resource url:'css/pages/about.css'
+	}
+	
+	servicestyles	{
+		dependsOn "corestyles"
+		resource url:'css/pages/services.css'
+	}
+	
+	faqstyles	{
+		dependsOn "corestyles"
+		resource url:'js/plugins/faq/faq.css'
+	}
+	
+	contactstyles	{
+		dependsOn "corestyles"
+		resource url:'css/pages/contact.css'
+	}
+
+	pricingstyles	{
+		dependsOn "corestyles"
+		resource url:'css/components/plans.css'
+	}
+	
 	libs {
 		resource url:'js/jquery-1.7.2.min.js'
 		//Bootstrap JS components
