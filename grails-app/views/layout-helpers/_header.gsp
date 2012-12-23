@@ -22,7 +22,7 @@
 				<a href="services">Services</a>
 			</li>
 			<li>
-				<a href="pricing">Pricing</a>
+				<a href="product">Products</a>
 			</li>
 			<li>
 				<a href="faq">Faq</a>
