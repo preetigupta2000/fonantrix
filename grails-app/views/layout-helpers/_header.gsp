@@ -36,12 +36,12 @@
 					<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu">
-					<li><a href="casestudy"><i class="icon-map-marker"></i> Case Studies</a></li>
-					<li><a href="javascript:;"><i class="icon-map-marker"></i> Mobility</a></li>
-					<li><a href="javascript:;"><i class="icon-tint"></i> Social Media Integration</a></li>
-					<li><a href="javascript:;"><i class="icon-cogs"></i> Web Based Data & Reporting</a></li>
-					<li><a href="javascript:;"><i class="icon-cloud"></i> Cloud Service</a></li>
-					<li><a href="javascript:;"><i class="icon-wrench"></i> Quality Assurance</a></li>
+					<li><a href="casestudy"><i class="icon-briefcase"></i> Case Studies</a></li>
+					<li><a href="mobility"><i class="icon-map-marker"></i> Mobility</a></li>
+					<li><a href="socialmedia"><i class="icon-tint"></i> Social Media Integration</a></li>
+					<li><a href="webbased"><i class="icon-cogs"></i> Web Based Data & Reporting</a></li>
+					<li><a href="cloud"><i class="icon-cloud"></i> Cloud Service</a></li>
+					<li><a href="automation"><i class="icon-wrench"></i> Quality Assurance</a></li>
 				</ul>
 			</li>
 		</ul>

@@ -1,11 +1,25 @@
-.service {
+					.service {
 						float: left;
 						
 						width: 100%;
 						
 						text-align: center;
 					}
-					
+					.service-icon-small {					
+						display: inline;
+						padding: 2px 10px;
+						color: #FFF;
+						
+						font-size: 24px;
+						text-align: center;
+						line-height: 40px;
+						
+						background: #F90;
+						
+						border-radius: 50px;
+						
+						text-shadow: 1px 1px 2px rgba(0,0,0,.45);				
+					}
 					.service-icon {
 						
 						display: inline-block;
@@ -32,11 +46,18 @@
 					    font-style: oblique;
 					    font-weight: bold;						
 					}
-					
+					.mobility p {
+						margin-bottom: 5px;				
+					}					
 					#service-web-design .service-icon {						
 						background: #222;
 					}
-					
+					.service-web-design-small {
+						background: #222;
+					}					
 					#service-web-dev .service-icon {
 						background: #888;
 					}
+					.service-web-dev-small {
+						background: #888;
+					}					

@@ -29,4 +29,24 @@ class HomeController {
 	def casestudy() {
 		render(view: "/casestudy/index")
 	}
+	
+	def mobility() {
+		render(view: "/casestudy/mobility")
+	}
+	
+	def socialmedia() {
+		render(view: "/casestudy/socialmedia")
+	}
+	
+	def webbased() {
+		render(view: "/casestudy/webbased")
+	}
+	
+	def cloud() {
+		render(view: "/casestudy/cloud")
+	}
+	
+	def automation(){
+		render(view: "/casestudy/automation")
+	}
 }

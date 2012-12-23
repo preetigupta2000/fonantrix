@@ -111,7 +111,7 @@
 	</div> <!-- /content -->	
 	<r:script disposition="defer">
 		$('#main-nav li').removeClass("active");
-		$('#main-nav li::nth-child(2)').addClass("active");
+		$('#main-nav li::nth-child(7)').addClass("active");
 	</r:script>		
   </body>
 </html>
