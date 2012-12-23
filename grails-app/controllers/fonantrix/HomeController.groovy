@@ -25,4 +25,8 @@ class HomeController {
 	def contact() {
 		render(view: "/contact/index")
 	}
+	
+	def casestudy() {
+		render(view: "/casestudy/index")
+	}
 }

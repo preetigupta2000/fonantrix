@@ -55,6 +55,11 @@ modules = {
 		resource url:'css/components/plans.css'
 	}
 	
+	casestudystyles	{
+		dependsOn "corestyles"
+		resource url:'css/pages/casestudy.css'
+	}
+	
 	libs {
 		resource url:'js/jquery-1.7.2.min.js'
 		//Bootstrap JS components

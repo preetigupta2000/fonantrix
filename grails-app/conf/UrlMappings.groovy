@@ -14,6 +14,7 @@ class UrlMappings {
 		"/product"(controller:"home", action:"product" )
 		"/faq"(controller:"home", action:"faq" )
 		"/contact"(controller:"home", action:"contact" )
+		"/casestudy"(controller:"home", action:"casestudy" )
 		"500"(view:'/error')
 	}
 }

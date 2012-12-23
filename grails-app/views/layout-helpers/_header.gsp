@@ -32,14 +32,16 @@
 			</li>
 			<li class="dropdown">
 				<a href="javascript:;" data-toggle="dropdown">
-					Dropdown
+					Case Studies
 					<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu">
-					<li><a href="javascript:;"><i class="icon-home"></i> Dropdown #1</a></li>
-					<li><a href="javascript:;"><i class="icon-beaker"></i> Dropdown #2</a></li>
-					<li><a href="javascript:;"><i class="icon-bullhorn"></i> Dropdown #3</a></li>
-					<li><a href="javascript:;"><i class="icon-cloud"></i> Dropdown #4</a></li>
+					<li><a href="casestudy"><i class="icon-map-marker"></i> Case Studies</a></li>
+					<li><a href="javascript:;"><i class="icon-map-marker"></i> Mobility</a></li>
+					<li><a href="javascript:;"><i class="icon-tint"></i> Social Media Integration</a></li>
+					<li><a href="javascript:;"><i class="icon-cogs"></i> Web Based Data & Reporting</a></li>
+					<li><a href="javascript:;"><i class="icon-cloud"></i> Cloud Service</a></li>
+					<li><a href="javascript:;"><i class="icon-wrench"></i> Quality Assurance</a></li>
 				</ul>
 			</li>
 		</ul>
