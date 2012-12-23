@@ -9,7 +9,7 @@
 	<div id="page-title">
 		
 		<h1>About Us</h1>
-		<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p>Fonantrix is your outsourced product development leader for a converged world, delivering innovation and value across technologies and geographies.</p>
 		
 	</div> <!-- /page-title -->
 
@@ -23,9 +23,9 @@
 					
 					<h2><span class="slash">//</span> Our Philosophy</h2>
 					
-					<p>Nullam ligula sapien, pharetra eget volutpat vel, consequat in lectus.</p>
+					<p>From conception, ideation and design, to delivery of today's most advanced and converging technologies, Fonantrix is ready to meet the technical challenges you face and deliver the expertise you demand. We are dedicated to help customers design, develop and deliver innovative products.</p>
 					
-					<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Vivamus purus arcu, commodo cursus egestas et, dictum lobortis dui. Curabitur at mi eu mi sollicitudin faucibus at at libero.</p>
+					<p>Fonantrix designs and develops feature-rich products for companies embracing transformational advances in software and technology.</p>
 					
 				</div> <!-- /grid-6 -->
 				
@@ -34,9 +34,9 @@
 					
 					<h2><span class="slash">//</span> Our Mission</h2>
 					
-					<p>Mauris viverra, tortor eget interdum lacinia, lacus mi tempor purus, eu commodo enim dui ac nisl. Morbi euismod ante quis tellus imperdiet porta. Morbi nisi nibh, facilisis a varius id, adipiscing vel purus.</p>
+					<p>By leveraging our deep expertise in enterprise, Mobile, Web-based and user experience driven technologies, we enable our clients to focus on their core competencies while building mission-critical products to sustain, speed and secure the long-term success for the business.</p>
 					
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<p>With offices located in Asia, Europe and North America, Fonantrix is the outsourced product development partner to deliver truly integrated global reach with local touch.</p>
 				
 				</div> <!-- /grid-6 -->
 				
@@ -52,7 +52,7 @@
 					
 					<h2><span class="slash">//</span> Our Team</h2>
 					
-					<p>Mauris viverra, tortor eget interdum lacinia, lacus mi tempor purus, eu commodo enim dui ac nisl. Morbi euismod ante quis tellus imperdiet porta. Morbi nisi nibh, facilisis a varius id, adipiscing vel purus.</p>
+					<p>We are a team... We win together, we lose together, we celebrate and we mourn together. And defeats are softened and victories sweetened because we did them together.</p>
 					
 				</div> <!-- /grid-12 -->
 				
@@ -67,11 +67,11 @@
 						
 						<img src="${resource(dir: 'images/profiles', file: 'profile-1.png')}" alt="Profile Pic" />						
 						
-						<h4>John Doe</h4>
+						<h4>Sanjeev Aggarwal</h4>
 						
 						<p class="profile-title">Chief Executive Officer</p>
 						
-						<p>Mauris viverra, tortor eget interdum lacinia, lacus mi tempor purus, eu commodo enim dui ac nisl. Morbi euismod ante quis tellus imperdiet porta. Morbi nisi nibh, facilisis a varius id, adipiscing vel purus.</p>
+						<p>Our designers not only focus on improving user experience, but they frequently study and refine their feel for the aesthetic.Our developers employ new and interesting technologies to find a solution that is elegant, functional and in line with best practices.</p>
 						
 					</div> <!-- /profile -->
 					
@@ -84,11 +84,11 @@
 						
 						<img src="${resource(dir: 'images/profiles', file: 'profile-2.png')}" alt="Profile Pic" />						
 						
-						<h4>Jane Doe</h4>
+						<h4>Parul Sharma</h4>
 						
 						<p class="profile-title">Chief Operating Officer</p>
 						
-						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+						<p>Our software architects design solutions that are easy to maintain and extensible for the future. Our business analysts identify problems and work with our software architects to deliver solutions that ensure ongoing business agility, reduced total cost of ownership and strong ROI.</p>
 						
 					</div> <!-- /profile -->
 					
@@ -101,11 +101,11 @@
 						
 						<img src="${resource(dir: 'images/profiles', file: 'profile-3.png')}" alt="Profile Pic" />
 						
-						<h4>John Doe</h4>
+						<h4>Sandeep Pant</h4>
 						
 						<p class="profile-title">Chief Technology Officer</p>
 						
-						<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Vivamus purus arcu, commodo cursus egestas et, dictum lobortis dui. Curabitur at mi eu mi sollicitudin faucibus at at libero.</p>
+						<p>Our project managers measure project progress & encourage a high level of communication between stakeholders, so that you can make informed decisions. They ensure successfully delivered solutions in a timely and resource effective manner.</p>
 						
 					</div> <!-- /profile -->
 					

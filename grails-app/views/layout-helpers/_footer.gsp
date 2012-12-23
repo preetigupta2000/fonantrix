@@ -9,7 +9,7 @@
 			
 			<div class="grid-4">
 				<h3><span class="slash">//</span> Socialize with us!</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt magna aliqua.</p>
+				<p>Fonantrix is not only a Product solution provider, but a great social community. We like meeting new people, discovering new options possibilities, and sharing our experience with others.</p>
 				<ul class="social-icons-container">						
 					<li>
 						<a href="javascript:;" class="social-icon social-icon-twitter">
@@ -30,8 +30,8 @@
 			</div> <!-- /grid-4 -->
 			
 			<div class="grid-4">
-				<h3><span class="slash">//</span> Subscribe and get updates</h3>
-				<p>Subscribe to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+				<h3><span class="slash">//</span> Share Your Feedback</h3>
+				<p>Share Your Feedback And Queries. We request your time to give us valuable feedback about our website and our services.!</p>
 				<form>
 					<input type="text" name="subscribe_email" placeholder="Your Email">
 					<br>

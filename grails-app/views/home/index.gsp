@@ -18,11 +18,11 @@
 				
 						<div class="masthead-details">
 							
-							<h2>Masthead title goes right here!</h2>
+							<h2>PRODUCT DEVELOPMENT!</h2>
 							
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+							<p>Have an idea? We can make it happen.</p>
 							
-							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+							<p>Custom built, integrated technology products for a competitive edge.</p>
 							
 						</div> <!-- /masthead-details -->
 					</div> <!-- /item -->
@@ -32,11 +32,11 @@
 				
 						<div class="masthead-details">
 							
-							<h2>Masthead title goes right here!</h2>
+							<h2>MOBILITY & SOCIAL INTEGRATION!</h2>
 							
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+							<p>Not sure which solution is right fot you?</p>
 							
-							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+							<p>We are experts in cross platform, mobile web and native apps.</p>
 							
 						</div> <!-- /masthead-details -->
 					</div> <!-- /item -->
@@ -46,11 +46,11 @@
 				
 						<div class="masthead-details">
 							
-							<h2>Masthead title goes right here!</h2>
+							<h2>CLOUD SERVICES!</h2>
 							
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+							<p>Strategic consulting and development.</p>
 							
-							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+							<p>for leading cloud services such as Amazon Web Services and Google Apps..</p>
 							
 						</div> <!-- /masthead-details -->
 					</div> <!-- /item -->
@@ -60,15 +60,29 @@
 				
 						<div class="masthead-details">
 							
-							<h2>Masthead title goes right here!</h2>
+							<h2>AUTOMATION TESTING!</h2>
 							
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+							<p>Automated software testing is the best way</p>
 							
-							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+							<p>to incraese the effectiveness,efficiency and coverage of your software testing.</p>
 							
 						</div> <!-- /masthead-details -->
 					</div> <!-- /item -->
 					
+					<div class="item">
+						<img src="${resource(dir: 'images/masthead', file: 'masthead-3.jpg')}" alt="" />
+				
+						<div class="masthead-details">
+							
+							<h2>CASSANDRA & HADOOP!</h2>
+							
+							<p>Apache Cassandra 0.6 is 30% faster across the board,</p>
+							
+							<p>building on our already-impressive speed.</p>
+							
+						</div> <!-- /masthead-details -->
+					</div> <!-- /item -->
+										
 				</div> <!-- /carousel-inner -->
 				
 				<a class="carousel-control left" href="#masthead-carousel" data-slide="prev">&lsaquo;</a>
@@ -112,10 +126,10 @@
 						
 						<h3>
 							<i class="icon-tint"></i> 
-							Website Design
+							Our Expert Opinions
 						</h3> <!-- /service-icon -->
 						
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+						<p>Fonantrix build long term client relationships with close interaction at every level of management to implement solutions that are customized to meet their clients need.</p>
 						
 						<p><a href="javascript:;" class="">Learn More »</a></p>
 						
@@ -127,10 +141,10 @@
 						
 						<h3>
 							<i class="icon-map-marker"></i>		
-							Mobile Development
+							Case Study
 						</h3> <!-- /service-icon -->
 						
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+						<p>Blockbluster Express – Mobility : POC developed for migrating web based mobile app to native platform.</p>
 						
 						<p><a href="javascript:;" class="">Learn More »</a></p>
 						
@@ -145,7 +159,7 @@
 							Web Development
 						</h3> <!-- /service-icon -->
 						
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+						<p>Reporting Dashboard, Engagement model - Operated with engineering model as Iterative development - OnShore / Offshore.</p>
 						
 						<p><a href="javascript:;" class="">Learn More »</a></p>
 						
@@ -162,7 +176,7 @@
 				<div class="grid-3">
 					<h2><span class="slash">//</span> Our Work</h2>
 					
-					<p>Maecenas a mi nibh, eu euismod orci. Vivamus viverra lacus vitae.</p>
+					<p>Fonantrix provides comprehensive services to meet the market growing demand.</p>
 					
 					<a href="javascript:;" class="btn btn-small btn-warning">More Work</a>
 					
@@ -171,45 +185,46 @@
 				<div class="grid-3">
 					<div class="work-item">
 						
-						<h3>Portfolio Item #1</h3>
+						<h3>Mobility</h3>
 						
 						<a class="thumbnail">
 							<img src="${resource(dir: 'images/gallery', file: '1_small.jpg')}" alt="" />
 						</a> <!-- /img -->
 						
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p>We worked on mobile technology through creative and customized mobile application development services. Our processes are based on research and an understanding that stems from experience and expertise; our solutions therefore are not packaged to fit all. We cater to Business to Employee (B2E), Business to Consumer (B2C), and Business to Business (B2B), helping our customers retain their competitive edge in the ever changing world of mobility.</p>
 						
-						<p><a href="javascript:;" class="">View Project »</a></p>			
+						<p><a href="javascript:;" class="">Read More »</a></p>			
 					</div>
 				</div> <!-- /grid-3 -->
 				
 				<div class="grid-3">
 					<div class="work-item">
 						
-						<h3>Portfolio Item #1</h3>
+						<h3>Social Media</h3>
 						
 						<a class="thumbnail">
 							<img src="${resource(dir: 'images/gallery', file: '2_small.jpg')}" alt="" />
 						</a> <!-- /img -->
 						
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p>We can help you to integrate a wide range of social media technologies, from Facebook "Like" buttons and Twitter integration, to more advanced, deep-level integration with both established and emerging social media platforms.</p>
+						<p>We have experience in developing real time social media applications for facebook, twitter, youtube.</p>
 						
-						<p><a href="javascript:;" class="">View Project »</a></p>			
+						<p><a href="javascript:;" class="">Read More »</a></p>			
 					</div>
 				</div> <!-- /grid-3 -->
 				
 				<div class="grid-3">
 					<div class="work-item">
 						
-						<h3>Portfolio Item #1</h3>
+						<h3>Web based</h3>
 						
 						<a class="thumbnail">
 							<img src="${resource(dir: 'images/gallery', file: '3_small.jpg')}" alt="" />
 						</a> <!-- /img -->
 						
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p>We have been working in the field of custom software development for Data visualization and reporting services. Our expert team has taken part in hundreds of application development projects. We are experienced in developing management system, reporting applications and advanced systems with complex business logic dealing with large amounts of data and transactions. We are able to supply you with an innovative, trustworthy software solution to complement your most complicated business ideas.</p>
 						
-						<p><a href="javascript:;" class="">View Project »</a></p>			
+						<p><a href="javascript:;" class="">Read More »</a></p>			
 					</div>
 				</div> <!-- /grid-3 -->
 				
@@ -224,7 +239,7 @@
 				<div class="grid-3">				
 					<h2><span class="slash">//</span> Our Story</h2>
 					
-					<p>Maecenas a mi nibh, eu euismod orci. Vivamus viverra lacus vitae.</p>
+					<p>Fonantrix build long term client relationships with close interaction to implement solutions.</p>
 					
 					<p><a href="javascript:;" class="btn btn-small btn-warning">More Story »</a>
 				</p>
@@ -236,9 +251,9 @@
 									
 					<h3>About Us</h3>
 					
-					<p style="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-					
-					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p style="">Fonantrix build long term client relationships with close interaction at every level of management to implement solutions that are customized to meet their clients needs. Fonantrix use its experience and expertise to analyze the clients objectives and business goals, then choose the correct methodology and an appropriate mix of technologies.</p>
+
+					<p>Fonantrix go an extra mile to understand their customers business landscapes, which help us proactively, align their consulting and outsourcing services with the customers business goals.</p>
 					
 					<p><a href="javascript:;">Read More »</a></p>						
 					
@@ -252,31 +267,41 @@
 					
 					<h3>
 						<i class="icon-star"></i>
-						Awesome #1							
+						 Response time							
 					</h3>
 					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Accelerate software development cycles and speed time-to-market by as much as 50%.</p>
 				</div> <!-- /choose-item -->
 			
 				<div class="choose-item">
 					<h3>
 						<i class="icon-star"></i>
-						Awesome #2							
+						Cost efficiencies							
 					</h3>
 					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Gain as much as 75% of cost efficiencies in R&D and product engineering, test, and support operations.</p>
 				</div> <!-- /choose-item -->
 				
 				<div class="choose-item">
 					
 					<h3>
 						<i class="icon-star"></i>
-						Awesome #3							
+						Customer satisfaction							
 					</h3>
 					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Improve end-user experience. Customer satisfaction is foremost and absolute goal of our company.</p>
 				</div> <!-- /choose-item -->
 				
+				<div class="choose-item">
+					
+					<h3>
+						<i class="icon-star"></i>
+						Business ethics							
+					</h3>
+					
+					<p>Flexibility to respect business ethics of business partner.</p>
+				</div> <!-- /choose-item -->
+								
 				<p><a href="javascript:;">More Reasons »</a></p>
 				
 			</div> <!-- /grid-5 -->

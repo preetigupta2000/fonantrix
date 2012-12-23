@@ -9,13 +9,14 @@
 	<div id="page-title">
 		
 		<h1>Contact Us</h1>
-		<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p>You are welcome to contact for discussing about your specific needs. We are here to identify the most suitable solutions for you.</p>
 		
 	</div> <!-- /page-title -->
 	
 	
 	<div id="contact-map">
-		<iframe width="100%" height="180" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&source=s_q&hl=en&geocode=&q=New+York&sll=49.891235,-97.15369&sspn=47.259509,86.923828&ie=UTF8&hq=&hnear=New+York,+United+States&ll=40.714867,-74.005537&spn=0.019517,0.018797&z=14&iwloc=near&output=embed"></iframe>
+		<iframe width="100%" height="260" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+		src="https://maps.google.com/maps/ms?msid=200588186747348546128.0004cbc56913f132006b6&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;iwloc=0004cbc56cafabef79142&amp;ll=28.620354,77.386322&amp;spn=0.009286,0.019205&amp;output=embed"></iframe>
 	</div> <!-- /contact-map -->
 	
 	
@@ -30,7 +31,7 @@
 					
 					<h3><span class="slash">//</span> Send a Message</h3>
 					
-					<p>Suspendisse pellentesque imperdiet turpis, at tincidunt odio porta sed. Pellentesque tincidunt facilisis nisi non venenatis. Cras urna libero, fermentum non volutpat a, rhoncus nec lacus.</p>
+					<p>Contact us by filling out the form below or requesting a quote. We are available to discuss your specific project needs in greater detail to help find the best solution for you and your business.</p>
 					
 					<form method="post" action="/contact">
 						<fieldset>
@@ -71,18 +72,31 @@
 						<h3><span class="slash">//</span> More Information</h3>
 						
 						<p>
-							<strong>Address</strong> <br>
-							123 Street Name, Suite # <br>
-							City, State 12345, Country							
+							<strong>Head Office: Address</strong> <br>
+							1521 Concord Pike, #301, Wilmington, DE 19803 <br>
+							United State
 						</p>
 						
 						<p>
-							<strong>Phone</strong><br>
-							Phone: (123) 123-4567<br>
-							Fax: (123) 123-4567<br>
-							Toll Free: (800) 123-4567
+							<strong>Branch Office: Address</strong><br>
+							E-2, Sector 63<br>
+							Noida (NCR-DELHI),<br>
+							India
 						</p>
 						
+						<h3><span class="slash">//</span> Open Positions</h3>
+						
+						<p>
+							<ul>
+								<li>Java Developer</li>
+								<li>QE Automation Tester</li>
+								<li>QE Automation Lead</li>
+								<li>Senior Java Developer</li>
+								<li>Java Trainees</li>
+								<li>S/W Testing Trainees</li>
+							</ul>
+						</p>
+												
 					</div> <!-- /sidebar -->					
 	
 					

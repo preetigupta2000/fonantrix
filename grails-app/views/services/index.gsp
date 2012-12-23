@@ -9,7 +9,7 @@
 	<div id="page-title">
 		
 		<h1>Our Services</h1>
-		<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p>We deliver the services in software development & other IT services for the development of different products. It is based on unique customer oriented principles of our company.</p>
 		
 	</div> <!-- /page-title -->
 
