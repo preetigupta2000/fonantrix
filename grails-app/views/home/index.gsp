@@ -114,11 +114,11 @@
 			<div class="row divider service-container">
 				
 				<div class="grid-3">
-					<h2><span class="slash">//</span> Our Services</h2>
+					<h2><span class="slash">//</span> Our Work</h2>
 					
 					<p>Maecenas a mi nibh, eu euismod orci. Vivamus viverra lacus vitae.</p>
 					
-					<a href="javascript:;" class="btn btn-small btn-warning">More Services</a>
+					<a href="ourwork" class="btn btn-small btn-warning">More Work</a>
 				</div>
 				
 				<div class="grid-3">
@@ -131,7 +131,7 @@
 						
 						<p>Fonantrix build long term client relationships with close interaction at every level of management to implement solutions that are customized to meet their clients need.</p>
 						
-						<p><a href="javascript:;" class="">Learn More »</a></p>
+						<p><a href="expertopinion" class="">Learn More »</a></p>
 						
 					</div> <!-- /service -->
 				</div>
@@ -146,7 +146,7 @@
 						
 						<p>Blockbluster Express – Mobility : POC developed for migrating web based mobile app to native platform.</p>
 						
-						<p><a href="javascript:;" class="">Learn More »</a></p>
+						<p><a href="casestudy" class="">Learn More »</a></p>
 						
 					</div>				
 				</div>
@@ -174,11 +174,11 @@
 			<div class="row work-container">
 				
 				<div class="grid-3">
-					<h2><span class="slash">//</span> Our Work</h2>
+					<h2><span class="slash">//</span> Our Serivces</h2>
 					
 					<p>Fonantrix provides comprehensive services to meet the market growing demand.</p>
 					
-					<a href="javascript:;" class="btn btn-small btn-warning">More Work</a>
+					<a href="services" class="btn btn-small btn-warning">More Service</a>
 					
 				</div> <!-- /grid-3 -->
 				
@@ -193,7 +193,7 @@
 						
 						<p>We worked on mobile technology through creative and customized mobile application development services. Our processes are based on research and an understanding that stems from experience and expertise; our solutions therefore are not packaged to fit all. We cater to Business to Employee (B2E), Business to Consumer (B2C), and Business to Business (B2B), helping our customers retain their competitive edge in the ever changing world of mobility.</p>
 						
-						<p><a href="javascript:;" class="">Read More »</a></p>			
+						<p><a href="mobility" class="">Read More »</a></p>			
 					</div>
 				</div> <!-- /grid-3 -->
 				
@@ -209,7 +209,7 @@
 						<p>We can help you to integrate a wide range of social media technologies, from Facebook "Like" buttons and Twitter integration, to more advanced, deep-level integration with both established and emerging social media platforms.</p>
 						<p>We have experience in developing real time social media applications for facebook, twitter, youtube.</p>
 						
-						<p><a href="javascript:;" class="">Read More »</a></p>			
+						<p><a href="socialmedia" class="">Read More »</a></p>			
 					</div>
 				</div> <!-- /grid-3 -->
 				
@@ -224,7 +224,7 @@
 						
 						<p>We have been working in the field of custom software development for Data visualization and reporting services. Our expert team has taken part in hundreds of application development projects. We are experienced in developing management system, reporting applications and advanced systems with complex business logic dealing with large amounts of data and transactions. We are able to supply you with an innovative, trustworthy software solution to complement your most complicated business ideas.</p>
 						
-						<p><a href="javascript:;" class="">Read More »</a></p>			
+						<p><a href="webbased" class="">Read More »</a></p>			
 					</div>
 				</div> <!-- /grid-3 -->
 				
@@ -241,7 +241,7 @@
 					
 					<p>Fonantrix build long term client relationships with close interaction to implement solutions.</p>
 					
-					<p><a href="javascript:;" class="btn btn-small btn-warning">More Story »</a>
+					<p><a href="about" class="btn btn-small btn-warning">More Story »</a>
 				</p>
 				
 			</div> <!-- /grid-3 -->
@@ -255,7 +255,7 @@
 
 					<p>Fonantrix go an extra mile to understand their customers business landscapes, which help us proactively, align their consulting and outsourcing services with the customers business goals.</p>
 					
-					<p><a href="javascript:;">Read More »</a></p>						
+					<p><a href="about">Read More »</a></p>						
 					
 				</div> <!-- /about -->
 			</div> <!-- /grid-4 -->

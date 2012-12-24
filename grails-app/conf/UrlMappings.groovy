@@ -20,6 +20,8 @@ class UrlMappings {
 		"/webbased"(controller:"home", action:"webbased" )
 		"/cloud"(controller:"home", action:"cloud" )
 		"/automation"(controller:"home", action:"automation" )
+		"/expertopinion"(controller:"home", action:"expertopinion" )
+		"/ourwork"(controller:"home", action:"ourwork" )
 		"500"(view:'/error')
 	}
 }

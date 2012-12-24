@@ -112,6 +112,65 @@
 				</div> <!-- /grid-4 -->
 				
 			</div> <!-- /row -->
+			<hr class="row-divider" />
+			
+			
+			<div class="row">
+				
+				<div class="grid-12">
+					
+					<h2><span class="slash">//</span> Why Choose Us</h2>
+					
+					<p>Our association with our business partners to deliver the services in software development & other IT services for the development of different web products is based on some unique customer oriented principles of our company. Certain ethics are as follows:</p>
+					
+				</div> <!-- /grid-12 -->
+				
+			</div> <!-- /row -->
+			
+			
+			<div class="row">
+				
+				<div class="grid-12">
+					
+				<div class="choose-item">
+					
+					<h3>
+						<i class="icon-star"></i>
+						 Response time <p>Accelerate software development cycles and speed time-to-market by as much as 50%.</p>							
+					</h3>
+				</div> <!-- /choose-item -->
+									
+				<div class="choose-item">
+					<h3>
+						<i class="icon-star"></i>
+						Cost efficiencies							
+					</h3>
+					
+					<p>Gain as much as 75% of cost efficiencies in R&D and product engineering, test, and support operations.</p>
+				</div> <!-- /choose-item -->
+
+				<div class="choose-item">
+					<h3>
+						<i class="icon-star"></i>
+						Customer satisfaction							
+					</h3>
+					
+					<p>Improve end-user experience. Customer satisfaction is foremost and absolute goal of our company.</p>
+				</div> <!-- /choose-item -->
+				
+				<div class="choose-item">
+					
+					<h3>
+						<i class="icon-star"></i>
+						Business ethics							
+					</h3>
+					
+					<p>Flexibility to respect business ethics of business partner.</p>
+				</div> <!-- /choose-item -->
+				
+				</div> <!-- /grid-12 -->
+				
+			</div> <!-- /row -->			
 		</div> <!-- /container -->
 	</div> <!-- /content -->	
 	<r:script disposition="defer">

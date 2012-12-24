@@ -49,4 +49,12 @@ class HomeController {
 	def automation(){
 		render(view: "/casestudy/automation")
 	}
+	
+	def expertopinion(){
+		render(view: "/casestudy/expertopinion")
+	}
+	
+	def ourwork(){
+		render(view: "/casestudy/ourwork")
+	}
 }
