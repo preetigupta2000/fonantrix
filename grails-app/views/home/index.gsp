@@ -188,7 +188,7 @@
 						<h3>Mobility</h3>
 						
 						<a class="thumbnail">
-							<img src="${resource(dir: 'images/gallery', file: '1_small.jpg')}" alt="" />
+							<img src="${resource(dir: 'images/gallery', file: 'mobile.png')}" alt="" />
 						</a> <!-- /img -->
 						
 						<p>We worked on mobile technology through creative and customized mobile application development services. Our processes are based on research and an understanding that stems from experience and expertise; our solutions therefore are not packaged to fit all. We cater to Business to Employee (B2E), Business to Consumer (B2C), and Business to Business (B2B), helping our customers retain their competitive edge in the ever changing world of mobility.</p>
@@ -203,7 +203,7 @@
 						<h3>Social Media</h3>
 						
 						<a class="thumbnail">
-							<img src="${resource(dir: 'images/gallery', file: '2_small.jpg')}" alt="" />
+							<img src="${resource(dir: 'images/gallery', file: 'social-networking-logos.png')}" alt="" />
 						</a> <!-- /img -->
 						
 						<p>We can help you to integrate a wide range of social media technologies, from Facebook "Like" buttons and Twitter integration, to more advanced, deep-level integration with both established and emerging social media platforms.</p>
@@ -219,7 +219,7 @@
 						<h3>Web based</h3>
 						
 						<a class="thumbnail">
-							<img src="${resource(dir: 'images/gallery', file: '3_small.jpg')}" alt="" />
+							<img src="${resource(dir: 'images/gallery', file: 'web.png')}" alt="" />
 						</a> <!-- /img -->
 						
 						<p>We have been working in the field of custom software development for Data visualization and reporting services. Our expert team has taken part in hundreds of application development projects. We are experienced in developing management system, reporting applications and advanced systems with complex business logic dealing with large amounts of data and transactions. We are able to supply you with an innovative, trustworthy software solution to complement your most complicated business ideas.</p>

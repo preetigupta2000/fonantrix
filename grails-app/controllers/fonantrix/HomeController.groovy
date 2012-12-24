@@ -31,23 +31,23 @@ class HomeController {
 	}
 	
 	def mobility() {
-		render(view: "/casestudy/mobility")
+		render(view: "/services/mobility")
 	}
 	
 	def socialmedia() {
-		render(view: "/casestudy/socialmedia")
+		render(view: "/services/socialmedia")
 	}
 	
 	def webbased() {
-		render(view: "/casestudy/webbased")
+		render(view: "/services/webbased")
 	}
 	
 	def cloud() {
-		render(view: "/casestudy/cloud")
+		render(view: "/services/cloud")
 	}
 	
 	def automation(){
-		render(view: "/casestudy/automation")
+		render(view: "/services/automation")
 	}
 	
 	def expertopinion(){

@@ -7,6 +7,7 @@
 
   <body>
 	<div id="page-title">
+		<h1><a href="services">Our Services</a> : </h1>
 		<div class="service-icon-small">
 			<i class="icon-map-marker"></i> Cloud Services
 		</div> <!-- /service-icon -->
@@ -60,7 +61,7 @@
 	</div> <!-- /content -->
 	<r:script disposition="defer">
 		$('#main-nav li').removeClass("active");
-		$('#main-nav li::nth-child(7)').addClass("active");
+		$('#main-nav li::nth-child(3)').addClass("active");
 	</r:script>	
   </body>
 </html>

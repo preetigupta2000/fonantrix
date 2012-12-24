@@ -66,9 +66,7 @@
 					<div class="profile">
 						
 						<img src="${resource(dir: 'images/profiles', file: 'profile-1.png')}" alt="Profile Pic" />						
-						
-						<h4>Sanjeev Aggarwal</h4>
-						
+											
 						<p class="profile-title">Chief Executive Officer</p>
 						
 						<p>Our designers not only focus on improving user experience, but they frequently study and refine their feel for the aesthetic.Our developers employ new and interesting technologies to find a solution that is elegant, functional and in line with best practices.</p>
@@ -84,8 +82,7 @@
 						
 						<img src="${resource(dir: 'images/profiles', file: 'profile-2.png')}" alt="Profile Pic" />						
 						
-						<h4>Parul Sharma</h4>
-						
+					
 						<p class="profile-title">Chief Operating Officer</p>
 						
 						<p>Our software architects design solutions that are easy to maintain and extensible for the future. Our business analysts identify problems and work with our software architects to deliver solutions that ensure ongoing business agility, reduced total cost of ownership and strong ROI.</p>
@@ -100,9 +97,7 @@
 					<div class="profile">
 						
 						<img src="${resource(dir: 'images/profiles', file: 'profile-3.png')}" alt="Profile Pic" />
-						
-						<h4>Sandeep Pant</h4>
-						
+											
 						<p class="profile-title">Chief Technology Officer</p>
 						
 						<p>Our project managers measure project progress & encourage a high level of communication between stakeholders, so that you can make informed decisions. They ensure successfully delivered solutions in a timely and resource effective manner.</p>

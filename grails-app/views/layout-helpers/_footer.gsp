@@ -35,7 +35,7 @@
 				<form>
 					<input type="text" name="subscribe_email" placeholder="Your Email">
 					<br>
-					<button class="btn btn-warning">Subscribe</button>
+					<button class="btn btn-warning">Share</button>
 				</form>
 			</div><!-- /grid-4 -->
 		</div> <!-- /row -->

@@ -25,6 +25,7 @@
 					<div id="service-mobile-dev">
 						
 						<div class="service-details mobility">
+							<img class="pull-right" src="${resource(dir: 'images', file: 'ourwork.jpg')}" alt="" />
 							<p>We provides advanced software engineering and R&D co-creation services to the world's technology innovators.</p>						
 							<br/>
 							<p>Whether the project is designing a new product, revamping an existing product to cut costs, or redefining your development process, Fonantrix provides each client with a timely and cost effective solution. In addition to our own intellectual property, we provide a full range of engineering capabilities necessary for complete product management and development.</p>
