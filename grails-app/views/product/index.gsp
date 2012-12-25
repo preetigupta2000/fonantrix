@@ -45,7 +45,7 @@
 						        </div> <!-- /plan-header -->       
 						        
 						        <div class="plan-features">
-						        	<img src="${resource(dir: 'images', file: 'android-v-iphone.jpg')}" alt="Social Touch" />
+						        	<img style="margin-bottom:3em;" src="${resource(dir: 'images', file: 'android-v-iphone.jpg')}" alt="Social Touch" />
 								</div> <!-- /plan-features -->
 								
 								<div class="plan-actions">				
@@ -76,7 +76,7 @@
 						        </div> <!-- /plan-header -->	          
 						        
 						        <div class="plan-features">
-									<img src="${resource(dir: 'images', file: 'timeismoney.jpg')}" alt="Social Touch" />
+									<img src="${resource(dir: 'images', file: 'problemsolvingmap-time.jpg')}" alt="Social Touch" />
 								</div> <!-- /plan-features -->
 								
 								<div class="plan-actions">				
