@@ -57,7 +57,7 @@
 							</div>
 							
 							<div class="actions">
-								<button tabindex="3" type="submit" class="btn btn-warning btn-large">Send message</button>
+								<a href="sendemail"><button tabindex="3" type="submit" class="btn btn-warning btn-large">Send message</button></a>
 							</div>
 						</fieldset>
 					</form>

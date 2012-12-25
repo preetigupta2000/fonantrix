@@ -113,7 +113,7 @@
 			<div class="row work-container">
 				
 				<div class="grid-3">
-					<h2><span class="slash">//</span> Our Serivces</h2>
+					<h2><span class="slash">//</span> Our Services</h2>
 					
 					<p>Fonantrix provides comprehensive services to meet the market growing demand.</p>
 					
