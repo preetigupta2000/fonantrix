@@ -9,7 +9,7 @@
 	<div id="page-title">
 		
 		<h1>About Us</h1>
-		<p>Fonantrix is your outsourced product development leader for a converged world, delivering innovation and value across technologies and geographies.</p>
+		<p>Fonantrix is your outsourced product development leader for a converged world, delivering innovation and value across technologies and geographies. Fonantrix go an extra mile to understand their customers business landscapes, which help us proactively, align their consulting and outsourcing services with the customers business goals.</p>
 		
 	</div> <!-- /page-title -->
 
@@ -23,7 +23,7 @@
 					
 					<h2><span class="slash">//</span> Our Philosophy</h2>
 					
-					<p>From conception, ideation and design, to delivery of today's most advanced and converging technologies, Fonantrix is ready to meet the technical challenges you face and deliver the expertise you demand. We are dedicated to help customers design, develop and deliver innovative products.</p>
+					<p>From conception, ideation and design, to delivery of today's most advanced and converging technologies, Fonantrix is ready to meet the technical challenges you face and deliver the expertise you demand. We are dedicated to help customers design, develop and deliver innovative products. </p>
 					
 					<p>Fonantrix designs and develops feature-rich products for companies embracing transformational advances in software and technology.</p>
 					
@@ -131,38 +131,43 @@
 					
 					<h3>
 						<i class="icon-star"></i>
-						 Response time <p>Accelerate software development cycles and speed time-to-market by as much as 50%.</p>							
+						 Response time: <p>Accelerate software development cycles and speed time-to-market by as much as 50%.</p>							
 					</h3>
 				</div> <!-- /choose-item -->
 									
 				<div class="choose-item">
 					<h3>
 						<i class="icon-star"></i>
-						Cost efficiencies							
+						Cost efficiencies: <p>Gain as much as 75% of cost efficiencies in R&D and product engineering, test, and support operations.</p>							
 					</h3>
-					
-					<p>Gain as much as 75% of cost efficiencies in R&D and product engineering, test, and support operations.</p>
 				</div> <!-- /choose-item -->
 
 				<div class="choose-item">
 					<h3>
 						<i class="icon-star"></i>
-						Customer satisfaction							
+						Customer satisfaction: <p>Improve end-user experience. Customer satisfaction is foremost and absolute goal of our company.</p>							
 					</h3>
-					
-					<p>Improve end-user experience. Customer satisfaction is foremost and absolute goal of our company.</p>
 				</div> <!-- /choose-item -->
 				
 				<div class="choose-item">
 					
 					<h3>
 						<i class="icon-star"></i>
-						Business ethics							
+						Business ethics: <p>Flexibility to respect business ethics of business partner.</p>							
 					</h3>
-					
-					<p>Flexibility to respect business ethics of business partner.</p>
 				</div> <!-- /choose-item -->
-				
+				<div class="choose-item">
+					<h3>
+						<i class="icon-star"></i>
+						Regular research & development: <p>Current and upcoming events in IT industry, updating their knowledge for delivery of quality & latest IT services to clients.</p>							
+					</h3>
+				</div> <!-- /choose-item -->				
+				<div class="choose-item">
+					<h3>
+						<i class="icon-star"></i>
+						Efficiency enhancing: <p>We perform efficiency enhancing programs at regular intervals and implementation of new and improved methods of development & design.</p>							
+					</h3>
+				</div> <!-- /choose-item -->
 				</div> <!-- /grid-12 -->
 				
 			</div> <!-- /row -->			

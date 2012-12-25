@@ -103,73 +103,12 @@
 		
 			<div class="row">
 				<div id="welcome" class="grid-12">
-					<h1>Welcome to Our Small Agency. We specialize in Web Design and Development. Check out our outstanding portfolio, and get in.</h1>
+					<h1>Welcome to Fonantrix Solutions. We specialize in Web Design and Product Development. Check out web site, and call us.</h1>
 				</div>
 			</div> <!-- /row -->
 			
 			
 			<hr class="row-divider" />
-			
-			
-			<div class="row divider service-container">
-				
-				<div class="grid-3">
-					<h2><span class="slash">//</span> Our Work</h2>
-					
-					<p>Maecenas a mi nibh, eu euismod orci. Vivamus viverra lacus vitae.</p>
-					
-					<a href="ourwork" class="btn btn-small btn-warning">More Work</a>
-				</div>
-				
-				<div class="grid-3">
-					<div class="service-item">
-						
-						<h3>
-							<i class="icon-tint"></i> 
-							Our Expert Opinions
-						</h3> <!-- /service-icon -->
-						
-						<p>Fonantrix build long term client relationships with close interaction at every level of management to implement solutions that are customized to meet their clients need.</p>
-						
-						<p><a href="expertopinion" class="">Learn More »</a></p>
-						
-					</div> <!-- /service -->
-				</div>
-				
-				<div class="grid-3">
-					<div class="service-item">
-						
-						<h3>
-							<i class="icon-map-marker"></i>		
-							Case Study
-						</h3> <!-- /service-icon -->
-						
-						<p>Blockbluster Express – Mobility : POC developed for migrating web based mobile app to native platform.</p>
-						
-						<p><a href="casestudy" class="">Learn More »</a></p>
-						
-					</div>				
-				</div>
-				
-				<div class="grid-3">
-					<div class="service-item">
-						
-						<h3>
-							<i class="icon-cogs"></i> 
-							Web Development
-						</h3> <!-- /service-icon -->
-						
-						<p>Reporting Dashboard, Engagement model - Operated with engineering model as Iterative development - OnShore / Offshore.</p>
-						
-						<p><a href="javascript:;" class="">Learn More »</a></p>
-						
-					</div>			
-				</div>
-			</div> <!-- /row -->
-			
-			
-			<hr class="row-divider" />
-			
 			
 			<div class="row work-container">
 				
@@ -191,7 +130,7 @@
 							<img src="${resource(dir: 'images/gallery', file: 'mobile.png')}" alt="" />
 						</a> <!-- /img -->
 						
-						<p>We worked on mobile technology through creative and customized mobile application development services. Our processes are based on research and an understanding that stems from experience and expertise; our solutions therefore are not packaged to fit all. We cater to Business to Employee (B2E), Business to Consumer (B2C), and Business to Business (B2B), helping our customers retain their competitive edge in the ever changing world of mobility.</p>
+						<p>We worked on mobile technology through creative and customized mobile application development services. Our processes are based on research and an understanding that items from experience and expertise; our solutions therefore are not packaged to fit all.</p>
 						
 						<p><a href="mobility" class="">Read More »</a></p>			
 					</div>
@@ -205,10 +144,8 @@
 						<a class="thumbnail">
 							<img src="${resource(dir: 'images/gallery', file: 'social-networking-logos.png')}" alt="" />
 						</a> <!-- /img -->
-						
-						<p>We can help you to integrate a wide range of social media technologies, from Facebook "Like" buttons and Twitter integration, to more advanced, deep-level integration with both established and emerging social media platforms.</p>
-						<p>We have experience in developing real time social media applications for facebook, twitter, youtube.</p>
-						
+						<br/>
+						<p>We can help you to integrate a wide range of social media technologies, from Facebook "Like" buttons and Twitter integration, to more advanced, deep-level integration with both established and emerging social media platforms.</p>						
 						<p><a href="socialmedia" class="">Read More »</a></p>			
 					</div>
 				</div> <!-- /grid-3 -->
@@ -221,15 +158,71 @@
 						<a class="thumbnail">
 							<img src="${resource(dir: 'images/gallery', file: 'web.png')}" alt="" />
 						</a> <!-- /img -->
-						
-						<p>We have been working in the field of custom software development for Data visualization and reporting services. Our expert team has taken part in hundreds of application development projects. We are experienced in developing management system, reporting applications and advanced systems with complex business logic dealing with large amounts of data and transactions. We are able to supply you with an innovative, trustworthy software solution to complement your most complicated business ideas.</p>
-						
+						<p>We have been working in the field of custom software development for Data visualization and reporting services. Our expert team has taken part in hundreds of application development projects.We are able to supply you with an innovative, trustworthy software solution to complement your most complicated business ideas.</p>
+												
 						<p><a href="webbased" class="">Read More »</a></p>			
 					</div>
 				</div> <!-- /grid-3 -->
 				
-			</div> <!-- /row -->
+			</div> <!-- /row -->			
 			
+			<hr class="row-divider" />
+			
+			<div class="row divider service-container">
+					
+					<div class="grid-3">
+						<h2><span class="slash">//</span> Case Studies</h2>
+						
+						<p>Maecenas a mi nibh, eu euismod orci. Vivamus viverra lacus vitae.</p>
+						
+						<a href="ourwork" class="btn btn-small btn-warning">More Work</a>
+					</div>
+					
+					<div class="grid-3">
+						<div class="service-item">
+							
+							<h3>
+								<i class="icon-tint"></i> 
+								Our Expert Opinions
+							</h3> <!-- /service-icon -->
+							
+							<p>Fonantrix build long term client relationships with close interaction at every level of management to implement solutions that are customized to meet their clients need.</p>
+							
+							<p><a href="expertopinion" class="">Learn More »</a></p>
+							
+						</div> <!-- /service -->
+					</div>
+					
+					<div class="grid-3">
+						<div class="service-item">
+							
+							<h3>
+								<i class="icon-map-marker"></i>		
+								Case Study
+							</h3> <!-- /service-icon -->
+							
+							<p>Blockbluster Express – Mobility : POC developed for migrating web based mobile app to native platform.</p>
+							
+							<p><a href="casestudy" class="">Learn More »</a></p>
+							
+						</div>				
+					</div>
+					
+					<div class="grid-3">
+						<div class="service-item">
+							
+							<h3>
+								<i class="icon-cogs"></i> 
+								Web Development
+							</h3> <!-- /service-icon -->
+							
+							<p>Reporting Dashboard, Engagement model - Operated with engineering model as Iterative development - OnShore / Offshore.</p>
+							
+							<p><a href="javascript:;" class="">Learn More »</a></p>
+							
+						</div>			
+					</div>
+				</div> <!-- /row -->
 			
 			<hr class="row-divider" />
 			
@@ -252,8 +245,6 @@
 					<h3>About Us</h3>
 					
 					<p style="">Fonantrix build long term client relationships with close interaction at every level of management to implement solutions that are customized to meet their clients needs. Fonantrix use its experience and expertise to analyze the clients objectives and business goals, then choose the correct methodology and an appropriate mix of technologies.</p>
-
-					<p>Fonantrix go an extra mile to understand their customers business landscapes, which help us proactively, align their consulting and outsourcing services with the customers business goals.</p>
 					
 					<p><a href="about">Read More »</a></p>						
 					
@@ -281,28 +272,8 @@
 					
 					<p>Gain as much as 75% of cost efficiencies in R&D and product engineering, test, and support operations.</p>
 				</div> <!-- /choose-item -->
-				
-				<div class="choose-item">
-					
-					<h3>
-						<i class="icon-star"></i>
-						Customer satisfaction							
-					</h3>
-					
-					<p>Improve end-user experience. Customer satisfaction is foremost and absolute goal of our company.</p>
-				</div> <!-- /choose-item -->
-				
-				<div class="choose-item">
-					
-					<h3>
-						<i class="icon-star"></i>
-						Business ethics							
-					</h3>
-					
-					<p>Flexibility to respect business ethics of business partner.</p>
-				</div> <!-- /choose-item -->
-								
-				<p><a href="javascript:;">More Reasons »</a></p>
+												
+				<p><a href="about">More Reasons »</a></p>
 				
 			</div> <!-- /grid-5 -->
 				

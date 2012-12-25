@@ -7,12 +7,11 @@
 
   <body>
 	<div id="page-title">
-		<h1><a href="services">Our Services</a> : </h1> 
+		<h1><a href="services">Our Services</a> </h1> 
 		<div class="service-icon-small">
 			<i class="icon-map-marker"></i> Mobility
 		</div> <!-- /service-icon -->
-		<p>The emergence and proliferation of mobile technology has changed the manner of conducting business in just a decade. Mobile phones, PDAs, and smart-phones today present a horde of opportunities for developers and mobility services providers deliver a range of solutions that more than meet customer demands.</p>
-		
+		<p>We worked on mobile technology through creative and customized mobile application development services. Our processes are based on research and an understanding that items from experience and expertise; our solutions therefore are not packaged to fit all. We cater to Business to Employee (B2E), Business to Consumer (B2C), and Business to Business (B2B), helping our customers retain their competitive edge in the ever changing world of mobility.</p>
 	</div> <!-- /page-title -->
 
 	

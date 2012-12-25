@@ -7,7 +7,7 @@
 
   <body>
 	<div id="page-title">
-		<h1><a href="services">Our Services</a> : </h1>
+		<h1><a href="services">Our Services</a> </h1>
 		<div class="service-icon-small service-web-design-small">
 			<i class="icon-tint"></i> Social Media Integrity
 		</div> <!-- /service-icon -->
