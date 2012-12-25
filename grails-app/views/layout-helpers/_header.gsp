@@ -24,9 +24,9 @@
 			<li>
 				<a href="product">Products</a>
 			</li>
-			<li>
+			<!--  li>
 				<a href="faq">Faq</a>
-			</li>
+			</li -->
 			<li>
 				<a href="contact">Contact</a>
 			</li>

@@ -80,6 +80,7 @@ modules = {
 	
 	corejs {
 		dependsOn "libs"
+		resource url:'js/index.js'
 		resource url:'js/focus.js'
 		resource url:'js/plugins/faq/faq.js'
 	}
