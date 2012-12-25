@@ -9,7 +9,7 @@
 	<div id="page-title">
 		
 		<h1>About Us</h1>
-		<p>Fonantrix is your outsourced product development leader for a converged world, delivering innovation and value across technologies and geographies. Fonantrix go an extra mile to understand their customers business landscapes, which help us proactively, align their consulting and outsourcing services with the customers business goals.</p>
+		<p>Fonantrix is your outsourced product development leader for a converged world, delivering innovation and value across technologies and geographies. Fonantrix go an extra mile to understand their customers business landscapes, which help us pro-actively, align their consulting and outsourcing services with the customers business goals.</p>
 		
 	</div> <!-- /page-title -->
 
@@ -36,7 +36,7 @@
 					
 					<p>By leveraging our deep expertise in enterprise, Mobile, Web-based and user experience driven technologies, we enable our clients to focus on their core competencies while building mission-critical products to sustain, speed and secure the long-term success for the business.</p>
 					
-					<p>With offices located in Asia, Europe and North America, Fonantrix is the outsourced product development partner to deliver truly integrated global reach with local touch.</p>
+					<p>With offices located in Asia, Europe and North America, Fonantrix is the out-source product development partner to deliver truly integrated global reach with local touch.</p>
 				
 				</div> <!-- /grid-6 -->
 				

@@ -103,7 +103,7 @@
 		
 			<div class="row">
 				<div id="welcome" class="grid-12">
-					<h1>Welcome to Fonantrix Solutions. We specialize in Web Design and Product Development. Check out web site, and call us.</h1>
+					<h1>Welcome to Fonantrix Solutions. We specialize in Product Development and Application Design. Check out web site, and call us.</h1>
 				</div>
 			</div> <!-- /row -->
 			
@@ -113,7 +113,7 @@
 			<div class="row work-container">
 				
 				<div class="grid-3">
-					<h2><span class="slash">//</span> Our Serivces</h2>
+					<h2><span class="slash">//</span> Our Services</h2>
 					
 					<p>Fonantrix provides comprehensive services to meet the market growing demand.</p>
 					
