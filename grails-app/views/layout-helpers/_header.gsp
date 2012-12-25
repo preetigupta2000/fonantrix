@@ -2,7 +2,7 @@
 <div id="header">
 	<div class="container">		
 		<h1 id="title">
-			<a href="./index.html">
+			<a href="home">
 				Fonantrix
 			</a>
 		</h1>
