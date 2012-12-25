@@ -127,7 +127,7 @@
 						<h3>Mobility</h3>
 						
 						<a class="thumbnail">
-							<img src="${resource(dir: 'images/gallery', file: 'mobile.png')}" alt="" />
+							<img src="${resource(dir: 'images/gallery', file: 'report-custom-mobile.jpg')}" alt="" />
 						</a> <!-- /img -->
 						
 						<p>We worked on mobile technology through creative and customized mobile application development services. Our processes are based on research and an understanding that items from experience and expertise; our solutions therefore are not packaged to fit all.</p>
@@ -144,7 +144,6 @@
 						<a class="thumbnail">
 							<img src="${resource(dir: 'images/gallery', file: 'social-networking-logos.png')}" alt="" />
 						</a> <!-- /img -->
-						<br/>
 						<p>We can help you to integrate a wide range of social media technologies, from Facebook "Like" buttons and Twitter integration, to more advanced, deep-level integration with both established and emerging social media platforms.</p>						
 						<p><a href="socialmedia" class="">Read More »</a></p>			
 					</div>
@@ -158,7 +157,7 @@
 						<a class="thumbnail">
 							<img src="${resource(dir: 'images/gallery', file: 'web.png')}" alt="" />
 						</a> <!-- /img -->
-						<p>We have been working in the field of custom software development for Data visualization and reporting services. Our expert team has taken part in hundreds of application development projects.We are able to supply you with an innovative, trustworthy software solution to complement your most complicated business ideas.</p>
+						<p>We have been working in the field of custom software development for Data visualization and reporting services. Our expert team has taken part in hundreds of application development projects.We are able to supply you with an innovative, trustworthy software solution.</p>
 												
 						<p><a href="webbased" class="">Read More »</a></p>			
 					</div>

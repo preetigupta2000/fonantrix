@@ -25,7 +25,7 @@
 				<div class="grid-12">
 					
 					<div id="service-mobile-dev">
-						<img class="pull-right" src="${resource(dir: 'images/gallery', file: 'mobile.png')}" alt="" />
+						<img class="pull-right" src="${resource(dir: 'images/gallery', file: 'report-custom-mobile.jpg')}" alt="" />
 						<div class="service-details mobility">
 							<p>The emergence and proliferation of mobile technology has changed the manner of conducting business in just a decade. Mobile phones, PDAs, and smart-phones today present a horde of opportunities for developers and mobility services providers deliver a range of solutions that more than meet customer demands.</p>						
 							<p>As mobility solutions continue to evolve and new devices are introduced into the market, enterprises need to develop innovative solutions to stay competitive. Some of the challenges to consider when developing mobile applications include: </p>
