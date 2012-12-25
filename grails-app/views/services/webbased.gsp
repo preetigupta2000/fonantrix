@@ -7,7 +7,7 @@
 
   <body>
 	<div id="page-title">
-		<h1><a href="services">Our Services</a> : </h1>
+		<h1><a href="services">Our Services</a> </h1>
 		<div class="service-icon-small service-web-dev-small">
 			<i class="icon-cogs"></i> Web based Data Visualization & Reporting
 		</div> <!-- /service-icon -->

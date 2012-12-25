@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="grid-4">
-				<h1 id="footer-logo">Focus Business</h1>
+				<h1 id="footer-logo">Fonantrix</h1>
 				<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div> <!-- /grid-4 -->
 			
@@ -47,10 +47,10 @@
 	<div class="container">
 		<div class="row">
 			<div id="rights" class="grid-6">
-			© 2012 Propel UI. All Rights Reserved.
+			© 2013 Fonantrix Solutions LLP. All Rights Reserved.
 			</div> <!-- /grid-6 -->
 			<div id="totop" class="grid-6">
-				<a href="http://propelui.com">Built by Propel.</a>
+				
 			</div> <!-- /grid-6 -->
 		</div> <!-- /row -->
 	</div> <!-- /container -->

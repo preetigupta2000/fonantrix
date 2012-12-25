@@ -69,4 +69,7 @@
 						background: #888;
 						margin-left: 10px;
 						display: inline-block;
-					}					
+					}
+					.service-details h2 i {
+						color: #FF9900;
+					}				

@@ -7,7 +7,10 @@
 
   <body>
 	<div id="page-title">
-		<h1>Our Work</h1>
+		<h1><a href="about">About Us</a> </h1>
+		<div class="service-icon-small">
+			<i class="icon-map-marker"></i> Our Work
+		</div> <!-- /service-icon -->
 		<p>Fonantrix specializes in outsourced product development and custom technology solutions, utilizing best-of-class scalable, extensible technologies and processes.</p>
 		
 	</div> <!-- /page-title -->
@@ -48,7 +51,35 @@
 				</div> <!-- /grid-4 -->
 				
 			</div> <!-- /row -->
-								
+			
+			<hr class="row-divider" />
+			<div class="row">
+				
+				<div class="grid-12 service-details">
+					
+					<h2><i class="icon-tint"></i> Our Expert Opinions</h2>
+					
+					<p>Fonantrix build long term client relationships with close interaction at every level of management to implement solutions that are customized to meet their clients need.</p>
+					
+				</div> <!-- /grid-12 -->
+			</div> <!-- /row -->
+			
+			<div class="row">
+				
+				<div class="grid-12">
+					
+					<div id="service-mobile-dev">
+						
+						<div class="service-details">
+							<h4>Mobile Store App</h4>
+							<p>Fonantrix use its experience and expertise to analyze the clients objectives and business goals, then choose the correct methodology and an appropriate mix of technologies. Fonantrix go an extra mile to understand their customers business landscapes, which help us proactively, align their consulting and outsourcing services with the customers business goals.</p>							
+						</div> <!-- /service-details -->
+						
+					</div> <!-- /service -->
+					
+				</div> <!-- /grid-4 -->
+				
+			</div> <!-- /row -->
 			
 		</div> <!-- /container -->
 		
