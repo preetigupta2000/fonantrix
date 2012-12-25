@@ -52,7 +52,7 @@
 						<li>Provides reports as per user selected filters</li>
 						<li>Allow user to import reports in various format (PDF, CSV, XML, Tab-Delimited)</li>
 					</ul>
-					<img src="${resource(dir: 'images', file: 'Report Dashboards.png')}" alt="" />
+					<img src="${resource(dir: 'images', file: 'ReportDashboards.png')}" alt="" />
 					<p>Technology</p>
 					<ul>
 						<li>Java and Webservices</li>
