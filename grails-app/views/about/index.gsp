@@ -9,7 +9,7 @@
 	<div id="page-title">
 		
 		<h1>About Us</h1>
-		<p>Fonantrix is your outsourced product development leader for a converged world, delivering innovation and value across technologies and geographies. Fonantrix go an extra mile to understand their customers business landscapes, which help us pro-actively, align their consulting and outsourcing services with the customers business goals.</p>
+		<p>Fonantrix is your outsourced product development leader for a converged world, delivering innovation and value across technologies and geographies. Fonantrix goes the extra mile to understand their customers business landscapes, which help us pro-actively, align their consulting and outsourcing services with the customers business goals.</p>
 		
 	</div> <!-- /page-title -->
 

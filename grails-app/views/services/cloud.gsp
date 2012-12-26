@@ -45,7 +45,7 @@
 							<div>
 								<img class="pull-left" src="${resource(dir: 'images', file: 'sales.png')}" alt="Salesforce" />
 								<h5>CRM | Force.com | Database.com | Heroku | API </h5>
-								<p>Whether its customer relationship management services you need, better business efficiency, a data management solution, or a custom app, Riptide can help your business excel with salesforce cloud services.</p>
+								<p>Whether its customer relationship management services you need, better business efficiency, a data management solution, or a custom app, we can help your business excel with salesforce cloud services.</p>
 							</div>							
 						</div> <!-- /service-details -->
 						
