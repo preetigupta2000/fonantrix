@@ -9,7 +9,7 @@
 	<div id="page-title">
 		
 		<h1>Contact Us</h1>
-		<p>You are welcome to contact for discussing about your specific needs. We are here to identify the most suitable solutions for you.</p>
+		<p>You are welcome to contact us for discussing about your specific needs. We are here to identify the most suitable solutions for you.</p>
 		
 	</div> <!-- /page-title -->
 	

@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="grid-4">
 				<h1 id="footer-logo">Fonantrix</h1>
-				<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Welcome to Fonantrix Solutions. We specialize in Product Development and Application Design.</p>
 			</div> <!-- /grid-4 -->
 			
 			<div class="grid-4">

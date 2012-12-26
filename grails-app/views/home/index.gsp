@@ -103,7 +103,7 @@
 		
 			<div class="row">
 				<div id="welcome" class="grid-12">
-					<h1>Welcome to Fonantrix Solutions. We specialize in Product Development and Application Designing. Check out our web site, and call us.</h1>
+					<h1>Welcome to Fonantrix Solutions. We specialize in Product Development and Application Design.</h1>
 				</div>
 			</div> <!-- /row -->
 			
@@ -115,7 +115,7 @@
 				<div class="grid-3">
 					<h2><span class="slash">//</span> Our Services</h2>
 					
-					<p>Fonantrix provides comprehensive services to meet the market growing demand.</p>
+					<p>We provide comprehensive services to meet the market growing demand.</p>
 					
 					<a href="services" class="btn btn-small btn-warning">More Service</a>
 					
@@ -172,7 +172,7 @@
 					<div class="grid-3">
 						<h2><span class="slash">//</span> Case Studies</h2>
 						
-						<p>Possessing many years of experience, our consultants have dealt with a wide variety of issues and situations.</p>
+						<p>With possessing many years of experience, our consultants have dealt with a wide variety of issues and situations.</p>
 						
 						<a href="casestudy" class="btn btn-small btn-warning">More ...</a>
 					</div>
@@ -231,7 +231,7 @@
 				<div class="grid-3">				
 					<h2><span class="slash">//</span> Our Story</h2>
 					
-					<p>Fonantrix builds long term client relationships with close interaction to implement solutions.</p>
+					<p>We build long term client relationships with close interaction to implement solutions.</p>
 					
 					<p><a href="ourwork" class="btn btn-small btn-warning">More Work »</a>
 				</p>
@@ -243,7 +243,7 @@
 									
 					<h3>About Us</h3>
 					
-					<p style="">Fonantrix build long term client relationships with close interaction at every level of management to implement solutions that are customized to meet their clients needs. Fonantrix use its experience and expertise to analyze the clients objectives and business goals, then choose the correct methodology and an appropriate mix of technologies.</p>
+					<p style="">Fonantrix builds long term client relationships with close interaction at every level of management to implement solutions that are customized to meet their clients needs. Fonantrix use its experience and expertise to analyze the clients objectives and business goals, then choose the correct methodology and an appropriate mix of technologies.</p>
 					
 					<p><a href="about">Read More »</a></p>						
 					
