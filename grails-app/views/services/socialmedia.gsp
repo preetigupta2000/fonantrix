@@ -9,7 +9,7 @@
 	<div id="page-title">
 		<h1><a href="services">Our Services</a> </h1>
 		<div class="service-icon-small service-web-design-small">
-			<i class="icon-tint"></i> Social Media Integrity
+			<i class="icon-tint"></i> Social Media Integration
 		</div> <!-- /service-icon -->
 		<p>You've probably heard the buzz about how social media can help expose your business to a huge number of potential clients. Some of you may already have used and understand how social media can be used and what the advantages are of using services like Twitter, Facebook Pages, LinkedIn and other social media sites to promote and build a reputation online.</p>
 		
