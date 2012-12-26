@@ -1,6 +1,11 @@
 package fonantrix
 
 class HomeController {
+	
+	/**
+	 * Dependency injection for the simpleMail.
+	 */
+	def myMailSender
 
     def index() { 
 		
@@ -56,5 +61,13 @@ class HomeController {
 	
 	def ourwork(){
 		render(view: "/casestudy/ourwork")
+	}
+	
+	def sendemail(){
+		myMailSender.messageEmail = params.email
+		myMailSender.messageBody = params.body
+		myMailSender.messageSubject = params.name
+		myMailSender.test()
+		render(view: "/contact/index")
 	}
 }

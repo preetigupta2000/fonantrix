@@ -33,7 +33,7 @@
 					
 					<p>Contact us by filling out the form below or requesting a quote. We are available to discuss your specific project needs in greater detail to help find the best solution for you and your business.</p>
 					
-					<form method="post" action="/contact">
+					<form method="post" action="sendemail">
 						<fieldset>
 							<div class="clearfix">
 								<label for="name"><span>Name:</span></label>
@@ -57,7 +57,7 @@
 							</div>
 							
 							<div class="actions">
-								<a href="sendemail"><button tabindex="3" type="submit" class="btn btn-warning btn-large">Send message</button></a>
+								<button tabindex="3" type="submit" class="btn btn-warning btn-large">Send message</button>
 							</div>
 						</fieldset>
 					</form>

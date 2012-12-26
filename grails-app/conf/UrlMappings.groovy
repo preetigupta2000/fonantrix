@@ -22,6 +22,7 @@ class UrlMappings {
 		"/automation"(controller:"home", action:"automation" )
 		"/expertopinion"(controller:"home", action:"expertopinion" )
 		"/ourwork"(controller:"home", action:"ourwork" )
+		"/sendemail"(controller:"home", action:"sendemail" )
 		"500"(view:'/error')
 	}
 }
