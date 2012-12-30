@@ -95,9 +95,9 @@
 		</div> <!-- /container -->
 		
 	</div> <!-- /content -->	
-	<r:script disposition="defer">
+	<script>
 		$('#main-nav li').removeClass("active");
 		$('#main-nav li::nth-child(4)').addClass("active");
-	</r:script>		
+	</script>		
   </body>
 </html>
