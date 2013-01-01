@@ -20,9 +20,9 @@
 							
 							<h2><g:message code="home.site.carousel.item1.head" /></h2>
 							
-							<p><g:message code="home.site.carousel.item1.p1" /></p>
+							<p><g:message code="home.site.carousel.item1.text.p1" /></p>
 							
-							<p><g:message code="home.site.carousel.item1.p2" /></p>
+							<p><g:message code="home.site.carousel.item1.text.p2" /></p>
 							
 						</div> <!-- /masthead-details -->
 					</div> <!-- /item -->
@@ -34,9 +34,9 @@
 							
 							<h2><g:message code="home.site.carousel.item2.head" /></h2>
 							
-							<p><g:message code="home.site.carousel.item2.p1" /></p>
+							<p><g:message code="home.site.carousel.item2.text.p1" /></p>
 							
-							<p><g:message code="home.site.carousel.item2.p2" /></p>
+							<p><g:message code="home.site.carousel.item2.text.p2" /></p>
 							
 						</div> <!-- /masthead-details -->
 					</div> <!-- /item -->
@@ -48,9 +48,9 @@
 							
 							<h2><g:message code="home.site.carousel.item3.head" /></h2>
 							
-							<p><g:message code="home.site.carousel.item3.p1" /></p>
+							<p><g:message code="home.site.carousel.item3.text.p1" /></p>
 							
-							<p><g:message code="home.site.carousel.item3.p2" /></p>
+							<p><g:message code="home.site.carousel.item3.text.p2" /></p>
 							
 						</div> <!-- /masthead-details -->
 					</div> <!-- /item -->
@@ -62,9 +62,9 @@
 							
 							<h2><g:message code="home.site.carousel.item4.head" /></h2>
 							
-							<p><g:message code="home.site.carousel.item4.p1" /></p>
+							<p><g:message code="home.site.carousel.item4.text.p1" /></p>
 							
-							<p><g:message code="home.site.carousel.item4.p2" /></p>
+							<p><g:message code="home.site.carousel.item4.text.p2" /></p>
 							
 						</div> <!-- /masthead-details -->
 					</div> <!-- /item -->
@@ -76,9 +76,9 @@
 							
 							<h2><g:message code="home.site.carousel.item5.head" /></h2>
 							
-							<p><g:message code="home.site.carousel.item5.p1" /></p>
+							<p><g:message code="home.site.carousel.item5.text.p1" /></p>
 							
-							<p><g:message code="home.site.carousel.item5.p2" /></p>
+							<p><g:message code="home.site.carousel.item5.text.p2" /></p>
 							
 						</div> <!-- /masthead-details -->
 					</div> <!-- /item -->
@@ -282,12 +282,12 @@
 		
 	</div> <!-- /content -->
 
-	<r:script disposition="defer">
+	<script>
 		$(function () {
 			$('#masthead-carousel').carousel ({ interval: false });
 		});
 		$('#main-nav li').removeClass("active");
 		$('#main-nav li::nth-child(1)').addClass("active");		
-	</r:script>	
+	</script>	
   </body>
 </html>

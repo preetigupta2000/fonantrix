@@ -4,7 +4,7 @@
 		<h1 id="title">
 			<a href="home">
 				Fonantrix
-			</a>
+			</a>			
 		</h1>
 	</div> <!-- /container -->
 </div> <!-- /header -->	
@@ -33,6 +33,17 @@
 			<li>
 				<a href="casestudy"><g:message code="header.site.casestudies" /></a>
 			</li>
+			<li class="dropdown">
+				<a href="javascript:;" data-toggle="dropdown">
+					<i class="icon-cog"></i>
+					<span class="caret"></span>
+				</a>			
+				<ul class="dropdown-menu">
+		        	<li><a href="?lang=en">English</a></li>
+		            <li><a href="?lang=ar">Arabic</a></li>
+		            <li><a href="?lang=ja">Japanese</a></li>                        
+	        	</ul>
+	        </li>
 		</ul>
 	</div> <!-- /container -->
 </div> <!-- /nav -->
