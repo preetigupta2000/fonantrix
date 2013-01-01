@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="layout" content="mainlayout">
+	<meta name="layout" content="main">
 	<r:require modules="pricingstyles"/>
   </head>
 
 <body>
 	<div id="page-title">
 		
-		<h1>Products</h1>
-		<p>We develop our own products and help companies worldwide to develop, test and support their commercial software products/solutions in shortest possible time and within their budget...</p>
+		<h1><g:message code="products.site.heading" /></h1>
+		<p><g:message code="products.site.note" /></p>
 		
 	</div> <!-- /page-title -->
 
@@ -29,16 +29,16 @@
 						        <div class="plan-header">
 					                
 						        	<div class="plan-title">
-						        		SocialTouch	        		
+						        		<g:message code="products.site.product1.heading" />	        		
 					        		</div> <!-- /plan-title -->
 					                
 						            <div class="plan-price">
-						            	<p>Helps you stay in touch with people you should!</p>
+						            	<p><g:message code="products.site.product1.details" /></p>
 										<ul>
-											<li>Android & iPhone (coming soon!)</li>
-											<li>Personal & Professional list</li>
-											<li>Reminders & Prioritization</li>
-											<li>Get all contacts in ONE</li>
+											<li><g:message code="products.site.product1.feature1" /></li>
+											<li><g:message code="products.site.product1.feature2" /></li>
+											<li><g:message code="products.site.product1.feature3" /></li>
+											<li><g:message code="products.site.product1.feature4" /></li>
 										</ul>
 									</div> <!-- /plan-price -->
 									
@@ -49,7 +49,7 @@
 								</div> <!-- /plan-features -->
 								
 								<div class="plan-actions">				
-									<a target="_blank" href="http://www.socialtouch.co/Quick_Demo.html" class="btn">Quick Demo</a>				
+									<a target="_blank" href="http://www.socialtouch.co/Quick_Demo.html" class="btn"><g:message code="products.site.quickdemo" /></a>				
 								</div> <!-- /plan-actions -->
 					
 							</div> <!-- /plan -->
@@ -60,16 +60,16 @@
 						        <div class="plan-header">
 					                
 						        	<div class="plan-title">
-						        		Time Management	        		
+						        		<g:message code="products.site.product2.heading" />	        		
 					        		</div> <!-- /plan-title -->
 					                
 						            <div class="plan-price">
-						            	<p>Helps you stay up to date with your schedule and objectives!</p>
+						            	<p><g:message code="products.site.product2.details" /></p>
 										<ul>
-											<li>Cross Domain & Devices</li>
-											<li>Concentration and Focus</li>
-											<li>Effective Scheduling</li>
-											<li>Managing Conflicting Priorities</li>
+											<li><g:message code="products.site.product2.feature1" /></li>
+											<li><g:message code="products.site.product2.feature2" /></li>
+											<li><g:message code="products.site.product2.feature3" /></li>
+											<li><g:message code="products.site.product2.feature4" /></li>
 										</ul>
 									</div> <!-- /plan-price -->
 									
@@ -80,7 +80,7 @@
 								</div> <!-- /plan-features -->
 								
 								<div class="plan-actions">				
-									<a href="javascript:;" class="btn">Coming Soon !!!</a>				
+									<a href="javascript:;" class="btn"><g:message code="products.site.comingsoon" /></a>				
 								</div> <!-- /plan-actions -->
 					
 							</div> <!-- /plan -->

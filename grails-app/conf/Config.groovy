@@ -92,3 +92,4 @@ log4j = {
 }
 
 grails.lesscss.resources.compress  = true
+localizations.cache.size.kb = 512

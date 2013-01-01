@@ -4,38 +4,38 @@
 		<div class="row">
 			<div class="grid-4">
 				<h1 id="footer-logo">Fonantrix</h1>
-				<p>Welcome to Fonantrix Solutions. We specialize in Product Development and Application Design.</p>
+				<p><g:message code="footer.site.welcome" /></p>
 			</div> <!-- /grid-4 -->
 			
 			<div class="grid-4">
-				<h3><span class="slash">//</span> Socialize with us!</h3>
-				<p>Fonantrix is not only a Product solution provider, but a great social community. We like meeting new people, discovering new options possibilities, and sharing our experience with others.</p>
+				<h3><span class="slash">//</span> <g:message code="footer.site.social.head" /></h3>
+				<p><g:message code="footer.site.social.note" /></p>
 				<ul class="social-icons-container">						
 					<li>
 						<a href="javascript:;" class="social-icon social-icon-twitter">
-							Twitter
+							<g:message code="footer.site.social.icon1" />
 						</a>
 					</li>
 					<li>
 						<a href="javascript:;" class="social-icon social-icon-googleplus">
-							Google +
+							<g:message code="footer.site.social.icon2" />
 						</a>
 					</li>
 					<li>							
 						<a href="javascript:;" class="social-icon social-icon-facebook">
-							Facebook
+							<g:message code="footer.site.social.icon3" />
 						</a>
 					</li>
 				</ul>
 			</div> <!-- /grid-4 -->
 			
 			<div class="grid-4">
-				<h3><span class="slash">//</span> Share Your Feedback</h3>
-				<p>Share Your Feedback And Queries. We request your time to give us valuable feedback about our website and our services.!</p>
+				<h3><span class="slash">//</span> <g:message code="footer.site.share.head" /></h3>
+				<p><g:message code="footer.site.share.note" /></p>
 				<form>
 					<input type="text" name="subscribe_email" placeholder="Your Email">
 					<br>
-					<button class="btn btn-warning">Share</button>
+					<button class="btn btn-warning"><g:message code="footer.site.share.button.text" /></button>
 				</form>
 			</div><!-- /grid-4 -->
 		</div> <!-- /row -->

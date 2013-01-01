@@ -13,25 +13,25 @@
 	<div class="container">
 		<ul id="main-nav">
 			<li class="active">
-				<a href="home">Home</a>
+				<a href="home"><g:message code="header.site.home" /></a>
 			</li>			
 			<li>
-				<a href="about">About</a>
+				<a href="about"><g:message code="header.site.about" /></a>
 			</li>
 			<li>
-				<a href="services">Services</a>
+				<a href="services"><g:message code="header.site.services" /></a>
 			</li>
 			<li>
-				<a href="product">Products</a>
+				<a href="product"><g:message code="header.site.products" /></a>
 			</li>
 			<!--  li>
 				<a href="faq">Faq</a>
 			</li -->
 			<li>
-				<a href="contact">Contact</a>
+				<a href="contact"><g:message code="header.site.contact" /></a>
 			</li>
 			<li>
-				<a href="casestudy">Case Studies</a>
+				<a href="casestudy"><g:message code="header.site.casestudies" /></a>
 			</li>
 		</ul>
 	</div> <!-- /container -->

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="layout" content="mainlayout">
+	<meta name="layout" content="main">
 	<r:require modules="casestudystyles"/>
   </head>
 
 <body>
 	<div id="page-title">
 		
-		<h1>Case Studies</h1>
-		<p>Possessing many years of experience, our consultants have dealt with a wide variety of issues and situations. Please view few of our case studies.</p>
+		<h1><g:message code="casestudy.site.heading" /></h1>
+		<p><g:message code="casestudy.site.note" /></p>
 		
 	</div> <!-- /page-title -->
 
@@ -21,44 +21,44 @@
 				
 				<div class="grid-6 casestudy">
 					
-					<h2><span class="slash">//</span> Blockbluster Express –Mobility</h2>
+					<h2><span class="slash">//</span> <g:message code="casestudy.site.study1.heading" /></h2>
 					
-					<p>POC developed for migrating web based mobile app to native platform.</p>
+					<p><g:message code="casestudy.site.study1.note" /></p>
 					
-					<p>Description - Engagement model:</p>
+					<p><g:message code="casestudy.site.study1.note.detail" />:</p>
 					<ul>
-						<li>Operated with product management and engineering with Agile methodology</li>
-						<li>Onsite/offshore</li>
+						<li><g:message code="casestudy.site.study1.note.detail.bullet1" /></li>
+						<li><g:message code="casestudy.site.study1.note.detail.bullet2" /></li>
 					</ul>
-					<P>Project description: Proof of concept for migrating web based mobile application to native platform</p>
+					<P><g:message code="casestudy.site.study1.description" /></p>
 					<img src="${resource(dir: 'images', file: 'BEM.png')}" alt="" />
-					<p>Technology</p>
+					<p><g:message code="casestudy.site.technology.head" /></p>
 					<ul>
-						<li>Client:  Android</li>
-						<li>J2ee, Restful web services</li>
+						<li><g:message code="casestudy.site.study1.technology1" /></li>
+						<li><g:message code="casestudy.site.study1.technology2" /></li>
 					</ul>
 				</div> <!-- /grid-6 -->
 				
 				
 				<div class="grid-6 casestudy">
 					
-					<h2><span class="slash">//</span> Reporting Dashboard</h2>
+					<h2><span class="slash">//</span> <g:message code="casestudy.site.study2.heading" /></h2>
 					
-					<p>Engagement model - Operated with engineering model as Iterative development - OnShore / Offshore.</p>
+					<p><g:message code="casestudy.site.study2.note" /></p>
 					
-					<p>Description :</p>
+					<p><g:message code="casestudy.site.study2.note.detail" /> :</p>
 					<ul> 
-						<li>Rich User Interface</li>
-						<li>Provides reports as per user selected filters</li>
-						<li>Allow user to import reports in various format (PDF, CSV, XML, Tab-Delimited)</li>
+						<li><g:message code="casestudy.site.study2.note.detail.bullet1" /></li>
+						<li><g:message code="casestudy.site.study2.note.detail.bullet2" /></li>
+						<li><g:message code="casestudy.site.study2.note.detail.bullet3" /></li>
 					</ul>
 					<img src="${resource(dir: 'images', file: 'ReportDashboards.png')}" alt="" />
-					<p>Technology</p>
+					<p><g:message code="casestudy.site.technology.head" /></p>
 					<ul>
-						<li>Java and Webservices</li>
-						<li>Spring framework with Jasper and Jfree Chart</li>
-						<li>JQuery</li>
-						<li>Deployed in cloud</li>
+						<li><g:message code="casestudy.site.study2.technology1" /></li>
+						<li><g:message code="casestudy.site.study2.technology2" /></li>
+						<li><g:message code="casestudy.site.study2.technology3" /></li>
+						<li><g:message code="casestudy.site.study2.technology4" /></li>
 					</ul>
 				
 				</div> <!-- /grid-6 -->
@@ -71,30 +71,30 @@
 				
 				<div class="grid-6 casestudy">
 					
-					<h2><span class="slash">//</span> Time Management</h2>
+					<h2><span class="slash">//</span> <g:message code="casestudy.site.study3.heading" /></h2>
 					
-					<p>Adopy a simple, practical techniques that have helped the leading people in business, sport and public service reach the pinnacles of their careers.</p>
+					<p><g:message code="casestudy.site.study3.note" /></p>
 					
-					<p>Employees :</p>
+					<p><g:message code="casestudy.site.study3.note.head1" /> :</p>
 					<ul>
-						<li>Allow end user to log time spent on the daily bases for assigned project tasks</li>
-						<li>Help plan and track the status of the respective task assignments</li>
+						<li><g:message code="casestudy.site.study3.note.head1.bullet1" /></li>
+						<li><g:message code="casestudy.site.study3.note.head1.bullet2" /></li>
 					</ul>
-					<p>Team leads :</p>
+					<p><g:message code="casestudy.site.study3.note.head2" /> :</p>
 					<ul>
-						<li>Status of the assigned project task or activities to team</li>
-						<li>Project schedule planning in the beginning for task allocation</li>
-						<li>Risk management for behind schedule task</li>
-						<li>Resource time management</li>
+						<li><g:message code="casestudy.site.study3.note.head2.bullet1" /></li>
+						<li><g:message code="casestudy.site.study3.note.head2.bullet2" /></li>
+						<li><g:message code="casestudy.site.study3.note.head2.bullet3" /></li>
+						<li><g:message code="casestudy.site.study3.note.head2.bullet4" /></li>
 					</ul>					
 					<img src="${resource(dir: 'images', file: 'cal.png')}" alt="" />
 					<ul> 
-						<li>Technology</li>
+						<li><g:message code="casestudy.site.technology.head" /></li>
 						<ul>
-							<li>Deployed on cloud</li>
-							<li>J2ee, Restful web services</li>
-							<li>Responsive design</li>
-							<li>Client-side framework</li>
+							<li><g:message code="casestudy.site.study3.technology1" /></li>
+							<li><g:message code="casestudy.site.study3.technology2" /></li>
+							<li><g:message code="casestudy.site.study3.technology3" /></li>
+							<li><g:message code="casestudy.site.study3.technology4" /></li>
 						</ul>
 					</ul>
 				</div> <!-- /grid-6 -->

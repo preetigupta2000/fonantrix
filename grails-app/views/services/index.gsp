@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="layout" content="mainlayout">
+	<meta name="layout" content="main">
 	<r:require modules="servicestyles"/>
   </head>
 
   <body>
 	<div id="page-title">
 		
-		<h1>Our Services</h1>
-		<p>We deliver the services in software development & other IT services for the development of different products. It is based on unique customer oriented principles of our company.</p>
+		<h1><g:message code="services.site.heading" /></h1>
+		<p><g:message code="services.site.note" /></p>
 		
 	</div> <!-- /page-title -->
 
@@ -29,10 +29,10 @@
 							<i class="icon-map-marker"></i>
 						</div> <!-- /service-icon -->	
 						
-						<h3>Mobility</h3>						
+						<h3><g:message code="services.site.item1.head" /></h3>						
 						
 						<div class="service-details">
-							<p>The emergence and proliferation of mobile technology has changed the manner of conducting business in just a decade. Mobile phones, PDAs, and smart-phones today present a horde of opportunities for developers and mobility services providers deliver a range of solutions that more than meet customer demands. <a href="mobility">More...</a></p>						
+							<p><g:message code="services.site.item1.text.p1" /></p>						
 						</div> <!-- /service-details -->
 						
 					</div> <!-- /service -->
@@ -47,10 +47,10 @@
 							<i class="icon-tint"></i>
 						</div> <!-- /service-icon -->
 						
-						<h3>Social Media Integration</h3>							
+						<h3><g:message code="services.site.item2.head" /></h3>							
 						
 						<div class="service-details">
-							<p>You've probably heard the buzz about how social media can help expose your business to a huge number of potential clients. Some of you may already have used and understand how social media can be used and what the advantages are of using services like Twitter, Facebook Pages, LinkedIn and other social media sites to promote and build a reputation online.<a href="socialmedia">More...</a></p>
+							<p><g:message code="services.site.item2.text.p1" /></p>
 						</div> <!-- /service-details -->
 						
 					</div> <!-- /service -->
@@ -65,10 +65,10 @@
 							<i class="icon-cogs"></i>
 						</div> <!-- /service-icon -->
 						
-						<h3>Web based Data Visualization & Reporting</h3>							
+						<h3><g:message code="services.site.item3.head" /></h3>							
 						
 						<div class="service-details">
-							<p>Web-based systems are making it easier to analyze and spread data for those who need to know more. This potential is still not widely used though.<a href="webbased">More...</a></p>						
+							<p><g:message code="services.site.item3.text.p1" /></p>						
 						</div> <!-- /service-details -->
 						
 					</div> <!-- /service -->
@@ -88,10 +88,10 @@
 							<i class="icon-cloud"></i>
 						</div> <!-- /service-icon -->	
 						
-						<h3>Cloud Services</h3>						
+						<h3><g:message code="services.site.item4.head" /></h3>						
 						
 						<div class="service-details">
-							<p>Utilizing cloud services in your business is a great way to leverage your company's potential and increase sales and efficiency. Fonantrix can help you discover the full scope of how cloud services can help your business succeed, enabling your company to compete effectively in today's fast-paced business world.<a href="cloud">More...</a></p>						
+							<p><g:message code="services.site.item4.text.p1" /></p>						
 						</div> <!-- /service-details -->
 						
 					</div> <!-- /service -->
@@ -106,10 +106,10 @@
 							<i class="icon-wrench"></i>
 						</div> <!-- /service-icon -->
 						
-						<h3>Automation - Quality Assurance</h3>							
+						<h3><g:message code="services.site.item5.head" /></h3>							
 						
 						<div class="service-details">
-							<p>Quality assurance and testing are extremely crucial in the software development cycle and should be introduced at the earliest stage of the project.<a href="automation">More...</a></p>						
+							<p><g:message code="services.site.item5.text.p1" /></p>						
 						</div> <!-- /service-details -->
 						
 					</div> <!-- /service -->

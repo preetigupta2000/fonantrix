@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="layout" content="mainlayout">
+	<meta name="layout" content="main">
 	<r:require modules="servicestyles"/>
   </head>
 
   <body>
 	<div id="page-title">
-		<h1><a href="services">Our Services</a> </h1> 
+		<h1><a href="services"><g:message code="services.site.heading" /></a> </h1> 
 		<div class="service-icon-small">
-			<i class="icon-map-marker"></i> Mobility
+			<i class="icon-map-marker"></i> <g:message code="services.site.item1.head" />
 		</div> <!-- /service-icon -->
-		<p>We worked on mobile technology through creative and customized mobile application development services. Our processes are based on research and an understanding that items from experience and expertise; our solutions therefore are not packaged to fit all. We cater to Business to Employee (B2E), Business to Consumer (B2C), and Business to Business (B2B), helping our customers retain their competitive edge in the ever changing world of mobility.</p>
+		<p><g:message code="services.site.mobility.note" /></p>
 	</div> <!-- /page-title -->
 
 	
@@ -26,52 +26,50 @@
 					
 					<div id="service-mobile-dev">
 						<img class="pull-right" src="${resource(dir: 'images/gallery', file: 'report-custom-mobile.jpg')}" alt="" />
-						<div class="service-details mobility">
-							<p>The emergence and proliferation of mobile technology has changed the manner of conducting business in just a decade. Mobile phones, PDAs, and smart-phones today present a horde of opportunities for developers and mobility services providers deliver a range of solutions that more than meet customer demands.</p>						
-							<p>As mobility solutions continue to evolve and new devices are introduced into the market, enterprises need to develop innovative solutions to stay competitive. Some of the challenges to consider when developing mobile applications include: </p>
+						<div class="service-details mobility">					
+							<p><g:message code="services.site.mobility.text.p1" /></p>
 							<ul>
-								<li>Lack of staffing resources experienced in mobile application development.</li>
-								<li>Lack of staffing resources with mobile UI and UX experience.</li>
-								<li>Pressure to continuously innovate to meet your customers' mobility needs.</li>
-								<li>ROI expected from your mobility solutions.</li>
-								<li>Controlling the cost of developing, deploying, and supporting mobile apps.</li>
-								<li>The need to develop mobile apps for multiple channels-for example, Web-based, native, and SMS.</li>
-								<li>The need to develop mobile apps that support multiple device platforms, including iOS®, AndroidT, Windows®, and BlackBerry®.</li>
+								<li><g:message code="services.site.mobility.text.bullet1" /></li>
+								<li><g:message code="services.site.mobility.text.bullet2" /></li>
+								<li><g:message code="services.site.mobility.text.bullet3" /></li>
+								<li><g:message code="services.site.mobility.text.bullet4" /></li>
+								<li><g:message code="services.site.mobility.text.bullet5" /></li>
+								<li><g:message code="services.site.mobility.text.bullet6" /></li>
 							</ul>
-							<p>Fonantrix provides comprehensive services to meet this growing demand created by mobile technology through creative and customized mobile application development services. Our processes are based on research and an understanding that stems from experience and expertise; our solutions therefore are not packaged to fit all. We cater to Business to Employee (B2E), Business to Consumer (B2C), and Business to Business (B2B), helping our customers retain their competitive edge in the ever changing world of mobility.</p>
-							<p>Our mobility services extend to mobile application development for these platforms:</p>
+							<p><g:message code="services.site.mobility.text.p2" /></p>
+							<p><g:message code="services.site.mobility.text.p3" /></p>
 							<ul>
-								<li>iPhone</li>
-								<li>Android</li>
-								<li>Blackberry</li>
+								<li><g:message code="services.site.mobility.text.p3.bullet1" /></li>
+								<li><g:message code="services.site.mobility.text.p3.bullet2" /></li>
+								<li><g:message code="services.site.mobility.text.p3.bullet3" /></li>
 							</ul>
-							<p>Fonantrix team of mobile experts work closely with our customers from the very beginning of the project. This helps them understand customer requirements from strategy and architecture to design and development of each application. Once the scope of work is derived, the Sigmaways team works through the various components of the mobile application, bringing it all together to arrive at complete customer value.</p>
-							<p>Fonantrix provides the following services for mobile application development:</p>
+							<p><g:message code="services.site.mobility.text.p4" /></p>
+							<p><g:message code="services.site.mobility.text.p5" /></p>
 							<ul>
-								<li>Native Application Development</li>
-								<li>Replatforming across mobile devices</li>
-								<li>Enterprise mobility development</li>
+								<li><g:message code="services.site.mobility.text.p5.bullet1" /></li>
+								<li><g:message code="services.site.mobility.text.p5.bullet2" /></li>
+								<li><g:message code="services.site.mobility.text.p5.bullet3" /></li>
 							</ul>
-							<h4>The scope of our services often includes:</h4>
-							<h5>Mobile Application Development</h5>
+							<h4><g:message code="services.site.mobility.text.p6" /></h4>
+							<h5><g:message code="services.site.mobility.text.p6.head1" /></h5>
 							<ul>
-								<li>Develops the systems requirement document</li>
-								<li>Architects and develops system and data design</li>
-								<li>Build UIs and develop applications on the selected platform</li>
+								<li><g:message code="services.site.mobility.text.p6.head1.bullet1" /></li>
+								<li><g:message code="services.site.mobility.text.p6.head1.bullet2" /></li>
+								<li><g:message code="services.site.mobility.text.p6.head1.bullet3" /></li>
 							</ul>
-							<h5>Quality Assurance</h5>
+							<h5><g:message code="services.site.mobility.text.p6.head2" /></h5>
 							<ul>
-								<li>Conducts an assessment to identify the attributes that increase business and reliability risks</li>
-								<li>Designs overall quality testing strategy and scope</li>
-								<li>Develops test case design based on risk assessment</li>
-								<li>Maintains test case metrics and a defects log</li>
+								<li><g:message code="services.site.mobility.text.p6.head2.bullet1" /></li>
+								<li><g:message code="services.site.mobility.text.p6.head2.bullet2" /></li>
+								<li><g:message code="services.site.mobility.text.p6.head2.bullet3" /></li>
+								<li><g:message code="services.site.mobility.text.p6.head2.bullet4" /></li>
 							</ul>
-							<h5>Systems Integration</h5>
+							<h5><g:message code="services.site.mobility.text.p6.head3" /></h5>
 							<ul>
-								<li>Designs a data model</li>
-								<li>Synchronizes model design</li>
-								<li>Develops APIs</li>
-								<li>Validates integration points against system and application requirements</li>
+								<li><g:message code="services.site.mobility.text.p6.head3.bullet1" /></li>
+								<li><g:message code="services.site.mobility.text.p6.head3.bullet2" /></li>
+								<li><g:message code="services.site.mobility.text.p6.head3.bullet3" /></li>
+								<li><g:message code="services.site.mobility.text.p6.head3.bullet4" /></li>
 							</ul>							
 						</div> <!-- /service-details -->
 						

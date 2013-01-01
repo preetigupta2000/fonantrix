@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="layout" content="mainlayout">
+	<meta name="layout" content="main">
 	<r:require modules="contactstyles"/>
   </head>
 
 <body>
 	<div id="page-title">
 		
-		<h1>Contact Us</h1>
-		<p>You are welcome to contact us for discussing about your specific needs. We are here to identify the most suitable solutions for you.</p>
+		<h1><g:message code="contactus.site.heading" /></h1>
+		<p><g:message code="contactus.site.note" /></p>
 		
 	</div> <!-- /page-title -->
 	
@@ -29,35 +29,35 @@
 				
 				<div class="grid-8">
 					
-					<h3><span class="slash">//</span> Send a Message</h3>
+					<h3><span class="slash">//</span> <g:message code="contactus.site.sendmessage.heading" /></h3>
 					
-					<p>Contact us by filling out the form below or requesting a quote. We are available to discuss your specific project needs in greater detail to help find the best solution for you and your business.</p>
+					<p><g:message code="contactus.site.sendmessage.detail" /></p>
 					
 					<form method="post" action="sendemail">
 						<fieldset>
 							<div class="clearfix">
-								<label for="name"><span>Name:</span></label>
+								<label for="name"><span><g:message code="contactus.site.sendmessage.name" />:</span></label>
 								<div class="input">
 									<input tabindex="1" size="18" id="name" name="name" type="text" value="">
 								</div>
 							</div>
 							
 							<div class="clearfix">
-								<label for="email"><span>Email:</span></label>
+								<label for="email"><span><g:message code="contactus.site.sendmessage.email" />:</span></label>
 								<div class="input">
 									<input tabindex="2" size="25" id="email" name="email" type="text" value="" class="input-xlarge">
 								</div>
 							</div>
 							
 							<div class="clearfix">
-								<label for="message"><span>Message:</span></label>
+								<label for="message"><span><g:message code="contactus.site.sendmessage.message" />:</span></label>
 								<div class="input">
 									<textarea tabindex="3" class="input-xlarge" id="message" name="body" rows="7"></textarea>
 								</div>
 							</div>
 							
 							<div class="actions">
-								<button tabindex="3" type="submit" class="btn btn-warning btn-large">Send message</button>
+								<button tabindex="3" type="submit" class="btn btn-warning btn-large"><g:message code="contactus.site.sendmessage.button" /></button>
 							</div>
 						</fieldset>
 					</form>
@@ -69,7 +69,7 @@
 				
 					<div class="sidebar">
 						
-						<h3><span class="slash">//</span> More Information</h3>
+						<h3><span class="slash">//</span> <g:message code="contactus.site.info.heading" /></h3>
 						
 						<p>
 							<strong>Head Office: Address</strong> <br>
