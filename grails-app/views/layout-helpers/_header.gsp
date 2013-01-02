@@ -39,9 +39,9 @@
 					<span class="caret"></span>
 				</a>			
 				<ul class="dropdown-menu">
-		        	<li><a href="?lang=en">English</a></li>
-		            <li><a href="?lang=ar">Arabic</a></li>
-		            <li><a href="?lang=ja">Japanese</a></li>                        
+		        	<li class="language"><a href="?lang=en">English</a></li>
+		            <li class="language"><a href="?lang=ar">Arabic</a></li>
+		            <li class="language"><a href="?lang=ja">Japanese</a></li>                        
 	        	</ul>
 	        </li>
 		</ul>

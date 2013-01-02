@@ -86,7 +86,7 @@
 	</div> <!-- /content -->
 	<r:script disposition="defer">
 		$('#main-nav li').removeClass("active");
-		$('#main-nav li::nth-child(7)').addClass("active");
+		$('#main-nav li::nth-child(7)').not(".language").addClass("active");
 	</r:script>	
   </body>
 </html>

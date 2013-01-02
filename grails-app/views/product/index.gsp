@@ -97,7 +97,7 @@
 	</div> <!-- /content -->	
 	<script>
 		$('#main-nav li').removeClass("active");
-		$('#main-nav li::nth-child(4)').addClass("active");
+		$('#main-nav li::nth-child(4)').not(".language").addClass("active");
 	</script>		
   </body>
 </html>

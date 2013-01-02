@@ -287,7 +287,7 @@
 			$('#masthead-carousel').carousel ({ interval: false });
 		});
 		$('#main-nav li').removeClass("active");
-		$('#main-nav li::nth-child(1)').addClass("active");		
+		$('#main-nav li::nth-child(1)').not(".language").addClass("active");		
 	</script>	
   </body>
 </html>
