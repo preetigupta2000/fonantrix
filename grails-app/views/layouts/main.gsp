@@ -43,7 +43,7 @@
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
-	<body dir="ltr">
+	<body dir="${direction}">
 		<div id="wrapper" class="clearfix">
 			<g:render template="/layout-helpers/header"/>
 			
