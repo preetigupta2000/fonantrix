@@ -3,6 +3,7 @@ modules = {
 		resource url:'less/custom-bootstrap.less',attrs:[rel: "stylesheet/less", type:'css']
 		resource url:'less/focus.less',attrs:[rel: "stylesheet/less", type:'css']
 		resource url:'less/focus-responsive.less',attrs:[rel: "stylesheet/less", type:'css']
+		resource url:'css/bootstrap-editable.css'
 	}
 	
 	corestylesrtl {
@@ -97,6 +98,8 @@ modules = {
 		resource url:'js/bootstrap-transition.js'
 		resource url:'js/bootstrap-typeahead.js'
 		resource url:'js/bootstrap-transition.js'
+		
+		resource url:'js/bootstrap-editable/bootstrap-editable.min.js'
 	}
 	
 	corejs {

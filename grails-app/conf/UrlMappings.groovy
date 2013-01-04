@@ -6,7 +6,6 @@ class UrlMappings {
 				// apply constraints here
 			}
 		}
-
 		"/"(controller:"home")
 		"/home"(controller:"home")
 		"/about"(controller:"home", action:"about" )
@@ -23,6 +22,8 @@ class UrlMappings {
 		"/expertopinion"(controller:"home", action:"expertopinion" )
 		"/ourwork"(controller:"home", action:"ourwork" )
 		"/sendemail"(controller:"home", action:"sendemail" )
+		
+		"/admin/$id"(controller:"admin")
 		"500"(view:'/error')
 	}
 }
