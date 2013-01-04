@@ -5,19 +5,40 @@ modules = {
 		resource url:'less/focus-responsive.less',attrs:[rel: "stylesheet/less", type:'css']
 	}
 	
+	corestylesrtl {
+		resource url:'less/custom-bootstrap.less',attrs:[rel: "stylesheet/less", type:'css']
+		resource url:'css/focus-rtl.css'
+		resource url:'css/focus-responsive-rtl.css'
+	}
+	
 	homestyles	{
 		dependsOn "corestyles"
 		resource url:'css/pages/homepage.css'
 	}
 	
+	homestylesrtl	{
+		dependsOn "corestylesrtl"
+		resource url:'css/pages/homepage-rtl.css'
+	}
+	
 	aboutstyles	{
 		dependsOn "corestyles"
 		resource url:'css/pages/about.css'
 	}
 	
+	aboutstylesrtl	{
+		dependsOn "corestylesrtl"
+		resource url:'css/pages/about-rtl.css'
+	}
+	
 	servicestyles	{
 		dependsOn "corestyles"
 		resource url:'css/pages/services.css'
+	}
+	
+	servicestylesrtl	{
+		dependsOn "corestylesrtl"
+		resource url:'css/pages/services-rtl.css'
 	}
 	
 	faqstyles	{
@@ -30,33 +51,33 @@ modules = {
 		resource url:'css/pages/contact.css'
 	}
 	
+	contactstylesrtl	{
+		dependsOn "corestylesrtl"
+		resource url:'css/pages/contact.css'
+	}
+	
 	aboutstyles	{
 		dependsOn "corestyles"
 		resource url:'css/pages/about.css'
 	}
 	
-	servicestyles	{
-		dependsOn "corestyles"
-		resource url:'css/pages/services.css'
-	}
-	
-	faqstyles	{
-		dependsOn "corestyles"
-		resource url:'js/plugins/faq/faq.css'
-	}
-	
-	contactstyles	{
-		dependsOn "corestyles"
-		resource url:'css/pages/contact.css'
-	}
-
 	pricingstyles	{
 		dependsOn "corestyles"
 		resource url:'css/components/plans.css'
 	}
 	
+	pricingstylesrtl	{
+		dependsOn "corestyles"
+		resource url:'css/components/plans-rtl.css'
+	}
+	
 	casestudystyles	{
 		dependsOn "corestyles"
+		resource url:'css/pages/casestudy.css'
+	}
+	
+	casestudystylesrtl	{
+		dependsOn "corestylesrtl"
 		resource url:'css/pages/casestudy.css'
 	}
 	

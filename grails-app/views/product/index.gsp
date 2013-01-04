@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
 	<meta name="layout" content="main">
-	<r:require modules="pricingstyles"/>
+	<g:if test="${direction == 'rtl'}">
+	    <r:require modules="pricingstylesrtl"/>
+	</g:if>
+	<g:else>
+		<r:require modules="pricingstyles"/>
+	</g:else>	
   </head>
 
 <body>

@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
 	<meta name="layout" content="main">
-	<r:require modules="contactstyles"/>
+	<g:if test="${direction == 'rtl'}">
+	    <r:require modules="contactstylesrtl"/>
+	</g:if>
+	<g:else>
+		<r:require modules="contactstyles"/>
+	</g:else> 	
   </head>
 
 <body>
