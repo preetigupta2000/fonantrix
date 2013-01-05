@@ -23,7 +23,7 @@ class UrlMappings {
 		"/ourwork"(controller:"home", action:"ourwork" )
 		"/sendemail"(controller:"home", action:"sendemail" )
 		
-		"/admin/$id"(controller:"admin")
+		"/admin/$id?"(controller:"admin")
 		"500"(view:'/error')
 	}
 }

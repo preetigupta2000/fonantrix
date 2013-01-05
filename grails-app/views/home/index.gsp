@@ -129,7 +129,7 @@
 				<div class="grid-3">
 					<div class="work-item">
 												
-						<h3><a href="#" id="username" data-type="text" data-pk="1" data-name="username" data-url="admin" data-original-title="Enter service item1"><g:message code="home.site.service.item1.heading" /></a></h3>
+						<h3><a href="#" id="username" data-type="text" data-pk="57" data-name="home.site.service.item1.heading" data-url="admin" data-original-title="Enter service item1"><g:message code="home.site.service.item1.heading" /></a></h3>
 						
 						<a class="thumbnail">
 							<img src="${resource(dir: 'images/gallery', file: 'report-custom-mobile.jpg')}" alt="" />
@@ -286,15 +286,14 @@
 		</div> <!-- /container -->
 		
 	</div> <!-- /content -->
-
 	<script>
 		$(function () {
 			$('#masthead-carousel').carousel ({ interval: false });
 		});
 		$('#main-nav li').removeClass("active");
 		$('#main-nav li::nth-child(1)').not(".language").addClass("active");
-		$('#username').editable();	
-		$('#comments').editable();
+		$('#username').editable();
+		$('#comments').editable();	
 	</script>	
   </body>
 </html>

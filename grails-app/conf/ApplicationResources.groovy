@@ -83,23 +83,23 @@ modules = {
 	}
 	
 	libs {
-		resource url:'js/jquery-1.7.2.min.js'
+		resource url:'js/libs/jquery-1.7.2.min.js'
 		//Bootstrap JS components
-		resource url:'js/bootstrap-alert.js'
-		resource url:'js/bootstrap-button.js'
-		resource url:'js/bootstrap-carousel.js'
-		resource url:'js/bootstrap-collapse.js'
-		resource url:'js/bootstrap-dropdown.js'
-		resource url:'js/bootstrap-modal.js'
-		resource url:'js/bootstrap-tooltip.js'
-		resource url:'js/bootstrap-popover.js'
-		resource url:'js/bootstrap-scrollspy.js'
-		resource url:'js/bootstrap-tab.js'
-		resource url:'js/bootstrap-transition.js'
-		resource url:'js/bootstrap-typeahead.js'
-		resource url:'js/bootstrap-transition.js'
+		resource url:'js/libs/bootstrap-alert.js'
+		resource url:'js/libs/bootstrap-button.js'
+		resource url:'js/libs/bootstrap-carousel.js'
+		resource url:'js/libs/bootstrap-collapse.js'
+		resource url:'js/libs/bootstrap-dropdown.js'
+		resource url:'js/libs/bootstrap-modal.js'
+		resource url:'js/libs/bootstrap-tooltip.js'
+		resource url:'js/libs/bootstrap-popover.js'
+		resource url:'js/libs/bootstrap-scrollspy.js'
+		resource url:'js/libs/bootstrap-tab.js'
+		resource url:'js/libs/bootstrap-transition.js'
+		resource url:'js/libs/bootstrap-typeahead.js'
+		resource url:'js/libs/bootstrap-transition.js'
 		
-		resource url:'js/bootstrap-editable/bootstrap-editable.min.js'
+		resource url:'js/libs/bootstrap-editable/bootstrap-editable.js'
 	}
 	
 	corejs {
