@@ -135,7 +135,7 @@
 							<img src="${resource(dir: 'images/gallery', file: 'report-custom-mobile.jpg')}" alt="" />
 						</a> <!-- /img -->
 						
-						<p><a href="#" id="comments" data-type="textarea" data-name="comments" data-pk="1" data-url="admin" data-original-title="Enter item1 details"><g:message code="home.site.service.item1.summary" /></a></p>
+						<p><a href="#" id="comments" data-type="textarea" data-name="home.site.service.item1.summary" data-pk="1" data-url="admin" data-original-title="Enter item1 details"><g:message code="home.site.service.item1.summary" /></a></p>
 						
 						<p><a href="mobility" class="">Read More »</a></p>			
 					</div>
