@@ -93,3 +93,14 @@ log4j = {
 
 grails.lesscss.resources.compress  = true
 localizations.cache.size.kb = 512
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'fonantrix.authentication.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'fonantrix.authentication.UserRole'
+grails.plugins.springsecurity.authority.className = 'fonantrix.authentication.Role'
+
+grails.plugins.springsecurity.rememberMe.alwaysRemember = true
+grails.plugins.springsecurity.successHandler.alwaysUseDefault = true
+
+grails.plugins.springsecurity.logout.afterLogoutUrl = '/home/index'
+

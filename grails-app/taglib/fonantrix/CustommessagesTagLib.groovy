@@ -3,21 +3,24 @@ package fonantrix
 class CustommessagesTagLib {
 
 	static namespace = "fon"
+	def springSecurityService
 	
 	def message = { attrs, body ->
 		//out << "<g:message code=\"" + attrs.code + "\" />"
 		def g = grailsApplication.mainContext.getBean('org.codehaus.groovy.grails.plugins.web.taglib.ApplicationTagLib')
 		def reurnProp = g.message(code:attrs.code)
 		
-		boolean editable = false
+		boolean isLoggedIn = springSecurityService.isLoggedIn()
 		
+		boolean editable = false
 		if (attrs.type != null)
 			editable = true
+			
 		String retrunValue = reurnProp
 		String requiredValue = ""
 		String placementValue = ""
 		String styles = "editable"
-		if (editable)
+		if (isLoggedIn && editable)
 		{
 			if (attrs.required != null) 
 				requiredValue = " data-placeholder='" + attrs.required + "' "

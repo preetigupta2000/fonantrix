@@ -24,6 +24,10 @@ class UrlMappings {
 		"/sendemail"(controller:"home", action:"sendemail" )
 		
 		"/admin/$id?"(controller:"admin")
+		
+		"/login/$action?/$id?"(controller:"login")
+		"/logout/$action?/$id?"(controller:"logout")
+		
 		"500"(view:'/error')
 	}
 }
