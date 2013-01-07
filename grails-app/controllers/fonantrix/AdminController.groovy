@@ -6,7 +6,6 @@ import grails.converters.JSON
 class AdminController {
 
 	def index = {
-		println "inside index" + params.pk + params.name
 		def localization = Localization.findByCode( params.name )
 		def id = localization.id
 		if(localization) {
