@@ -1,5 +1,6 @@
 package fonantrix
 
+
 class CustommessagesTagLib {
 
 	static namespace = "fon"
@@ -7,6 +8,7 @@ class CustommessagesTagLib {
 	
 	def message = { attrs, body ->
 		//out << "<g:message code=\"" + attrs.code + "\" />"
+
 		def g = grailsApplication.mainContext.getBean('org.codehaus.groovy.grails.plugins.web.taglib.ApplicationTagLib')
 		def reurnProp = g.message(code:attrs.code)
 		

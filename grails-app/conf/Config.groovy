@@ -99,7 +99,7 @@ grails.plugins.springsecurity.userLookup.userDomainClassName = 'fonantrix.authen
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'fonantrix.authentication.UserRole'
 grails.plugins.springsecurity.authority.className = 'fonantrix.authentication.Role'
 
-grails.plugins.springsecurity.rememberMe.alwaysRemember = true
+//grails.plugins.springsecurity.rememberMe.alwaysRemember = true
 grails.plugins.springsecurity.successHandler.alwaysUseDefault = true
 
 grails.plugins.springsecurity.logout.afterLogoutUrl = '/home/index'

@@ -33,25 +33,22 @@
 			<li>
 				<a href="casestudy"><g:message code="header.site.casestudies" /></a>
 			</li>
-	        <li class="dropdown">
+	        <li class="dropdown hidden-phone">
 	           <a class="dropdown-toggle" href="#" data-toggle="dropdown"><g:message code="header.site.signin" /><span class="caret"></span></a>
 	           <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 	           <sec:ifNotLoggedIn>
 					<form action="${request.contextPath}/j_spring_security_check" method='POST' id='ajaxLoginForm' name='ajaxLoginForm'>
 					  <input id="username" type="email" name="j_username" size="30" placeholder="Username" />
-					  <input id="j_password" type="password" name="j_password" size="30" placeholder="Password" />
-					  <input id="remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="remember_me" value="1" />
-					  <label class="string optional" for="remember_me"> Remember me</label>
-					
+					  <input id="j_password" type="password" name="j_password" size="30" placeholder="Password" />					
 					  <a href="javascript:{}" onclick="document.getElementById('ajaxLoginForm').submit();" type="submit" name="commit" class="btn btn-primary btn-warning"><fon:message code="header.site.signin"/></a>
 					</form>
 				</sec:ifNotLoggedIn>
 				<sec:ifLoggedIn>
 					<div id="user-info">
-							<div class="profile-image">
-								<a><i class="icon-user"></i></a>
+							<div class="icon">
+								<i class="icon-user"></i>
 							</div>
-							<div>
+							<div class="info">
 								<p><strong>${sec.username()}</strong></p>
 								<p><small>${sec.username()}</small></p>
 							</div>	

@@ -2,11 +2,17 @@ package fonantrix
 
 import org.grails.plugins.localization.*
 import grails.converters.JSON
+import org.springframework.web.servlet.support.RequestContextUtils as RCU
 
 class AdminController {
 
 	def index = {
-		def localization = Localization.findByCode( params.name )
+		String currentLocale = RCU.getLocale(request)
+		println currentLocale
+		if (currentLocale == null)
+			currentLocale = "*"
+		def localization = Localization.findByCodeAndLocale( params.name, currentLocale)
+		
 		def id = localization.id
 		if(localization) {
 		 def oldCode = localization.code

@@ -593,3 +593,31 @@ margin-bottom:0;
 #footer a,#copyright a {
 color:#FFF;
 }
+
+#user-info div.icon{
+	float:left;
+}
+#user-info div.icon i {
+		font-size:40px;
+		color:rgba(100, 100, 100, 0.7);
+}
+#user-info div.info{
+	float:right;
+}
+#user-info div.info p {
+		margin-bottom: 5px;
+}
+#user-info div.info p strong {
+			font-size:13px;
+			font-weight:normal;
+			color:#5b544e;
+} 
+#user-info div.info p small {
+			font-size:12px;
+			font-weight:normal;
+			color:@black;
+}
+
+.dropdown-menu a {
+	margin-bottom:15px;
+}

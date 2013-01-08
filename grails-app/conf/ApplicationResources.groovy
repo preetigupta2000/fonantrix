@@ -1,8 +1,6 @@
 modules = {
 	corestyles {
 		resource url:'less/custom-bootstrap.less',attrs:[rel: "stylesheet/less", type:'css']
-		resource url:'less/focus.less',attrs:[rel: "stylesheet/less", type:'css']
-		resource url:'less/focus-responsive.less',attrs:[rel: "stylesheet/less", type:'css']
 		resource url:'css/bootstrap-editable.css'
 	}
 	
