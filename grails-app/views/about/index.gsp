@@ -13,8 +13,8 @@
 <body>
 	<div id="page-title">
 		
-		<h1><fon:message type="text" url="admin"  code="about.site.heading" /></h1>
-		<p><fon:message type="textarea" url="admin" code="about.site.note" /></p>
+		<h1><fon:message code="about.site.heading" required="Required" type="text" url="admin" /></h1>
+		<p><fon:message code="about.site.note" type="textarea" url="admin" /></p>
 		
 	</div> <!-- /page-title -->
 
@@ -105,7 +105,7 @@
 											
 						<p class="profile-title"><fon:message type="text" url="admin" code="about.site.ourteam.profile3.title" /></p>
 						
-						<p><g:message code="about.site.ourteam.profile3.comments" /></p>
+						<p><fon:message type="textarea" url="admin" code="about.site.ourteam.profile3.comments" /></p>
 						
 					</div> <!-- /profile -->
 					
@@ -119,9 +119,9 @@
 				
 				<div class="grid-12">
 					
-					<h2><span class="slash">//</span> <g:message code="about.site.chooseus.heading" /></h2>
+					<h2><span class="slash">//</span> <fon:message type="text" url="admin" code="about.site.chooseus.heading" /></h2>
 					
-					<p><g:message code="about.site.chooseus.note" /></p>
+					<p><fon:message type="textarea" url="admin" code="about.site.chooseus.note" /></p>
 					
 				</div> <!-- /grid-12 -->
 				
@@ -136,21 +136,21 @@
 					
 					<h3>
 						<i class="icon-star"></i>
-						 <g:message code="about.site.chooseus.reason1" />							
+						 <fon:message type="textarea" url="admin" code="about.site.chooseus.reason1" />							
 					</h3>
 				</div> <!-- /choose-item -->
 									
 				<div class="choose-item">
 					<h3>
 						<i class="icon-star"></i>
-						<g:message code="about.site.chooseus.reason2" />							
+						<fon:message type="textarea" url="admin" code="about.site.chooseus.reason2" />							
 					</h3>
 				</div> <!-- /choose-item -->
 
 				<div class="choose-item">
 					<h3>
 						<i class="icon-star"></i>
-						<g:message code="about.site.chooseus.reason3" />							
+						<fon:message type="textarea" url="admin" code="about.site.chooseus.reason3" />							
 					</h3>
 				</div> <!-- /choose-item -->
 				
@@ -158,19 +158,19 @@
 					
 					<h3>
 						<i class="icon-star"></i>
-						<g:message code="about.site.chooseus.reason4" />							
+						<fon:message type="textarea" url="admin" code="about.site.chooseus.reason4" />							
 					</h3>
 				</div> <!-- /choose-item -->
 				<div class="choose-item">
 					<h3>
 						<i class="icon-star"></i>
-						<g:message code="about.site.chooseus.reason5" />							
+						<fon:message type="textarea" url="admin" code="about.site.chooseus.reason5" />							
 					</h3>
 				</div> <!-- /choose-item -->				
 				<div class="choose-item">
 					<h3>
 						<i class="icon-star"></i>
-						<g:message code="about.site.chooseus.reason6" />							
+						<fon:message type="textarea" url="admin" code="about.site.chooseus.reason6" />							
 					</h3>
 				</div> <!-- /choose-item -->
 				</div> <!-- /grid-12 -->
@@ -182,6 +182,7 @@
 	<script>
 		$('#main-nav li').removeClass("active");
 		$('#main-nav li::nth-child(2)').not(".language").addClass("active");
+		$('.editable').editable();
 	</script>		
   </body>
 </html>

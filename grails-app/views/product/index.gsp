@@ -13,8 +13,8 @@
 <body>
 	<div id="page-title">
 		
-		<h1><g:message code="products.site.heading" /></h1>
-		<p><g:message code="products.site.note" /></p>
+		<h1><fon:message type="text" url="admin" code="products.site.heading" /></h1>
+		<p><fon:message type="textarea" url="admin" code="products.site.note" /></p>
 		
 	</div> <!-- /page-title -->
 
@@ -34,16 +34,16 @@
 						        <div class="plan-header">
 					                
 						        	<div class="plan-title">
-						        		<g:message code="products.site.product1.heading" />	        		
+						        		<fon:message type="text" url="admin" code="products.site.product1.heading" />	        		
 					        		</div> <!-- /plan-title -->
 					                
 						            <div class="plan-price">
-						            	<p><g:message code="products.site.product1.details" /></p>
+						            	<p><fon:message type="textarea" url="admin" code="products.site.product1.details" /></p>
 										<ul>
-											<li><g:message code="products.site.product1.feature1" /></li>
-											<li><g:message code="products.site.product1.feature2" /></li>
-											<li><g:message code="products.site.product1.feature3" /></li>
-											<li><g:message code="products.site.product1.feature4" /></li>
+											<li><fon:message type="textarea" url="admin" code="products.site.product1.feature1" /></li>
+											<li><fon:message type="textarea" url="admin" code="products.site.product1.feature2" /></li>
+											<li><fon:message type="textarea" url="admin" code="products.site.product1.feature3" /></li>
+											<li><fon:message type="textarea" url="admin" code="products.site.product1.feature4" /></li>
 										</ul>
 									</div> <!-- /plan-price -->
 									
@@ -65,16 +65,16 @@
 						        <div class="plan-header">
 					                
 						        	<div class="plan-title">
-						        		<g:message code="products.site.product2.heading" />	        		
+						        		<fon:message type="text" url="admin" code="products.site.product2.heading" />	        		
 					        		</div> <!-- /plan-title -->
 					                
 						            <div class="plan-price">
-						            	<p><g:message code="products.site.product2.details" /></p>
+						            	<p><fon:message type="textarea" url="admin" code="products.site.product2.details" /></p>
 										<ul>
-											<li><g:message code="products.site.product2.feature1" /></li>
-											<li><g:message code="products.site.product2.feature2" /></li>
-											<li><g:message code="products.site.product2.feature3" /></li>
-											<li><g:message code="products.site.product2.feature4" /></li>
+											<li><fon:message type="textarea" url="admin" code="products.site.product2.feature1" /></li>
+											<li><fon:message type="textarea" url="admin" code="products.site.product2.feature2" /></li>
+											<li><fon:message type="textarea" url="admin" code="products.site.product2.feature3" /></li>
+											<li><fon:message type="textarea" url="admin" code="products.site.product2.feature4" /></li>
 										</ul>
 									</div> <!-- /plan-price -->
 									
@@ -103,6 +103,7 @@
 	<script>
 		$('#main-nav li').removeClass("active");
 		$('#main-nav li::nth-child(4)').not(".language").addClass("active");
+		$('.editable').editable();		
 	</script>		
   </body>
 </html>

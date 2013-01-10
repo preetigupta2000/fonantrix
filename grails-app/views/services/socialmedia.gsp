@@ -14,9 +14,9 @@
 	<div id="page-title">
 		<h1><a href="services"><g:message code="services.site.heading" /></a> </h1>
 		<div class="service-icon-small service-web-design-small">
-			<i class="icon-tint"></i> <g:message code="services.site.item2.head" />
+			<i class="icon-tint"></i> <fon:message type="text" url="admin" code="services.site.item2.head" />
 		</div> <!-- /service-icon -->
-		<p><g:message code="services.site.socialmedia.note" /></p>
+		<p><fon:message type="textarea" url="admin" code="services.site.socialmedia.note" /></p>
 		
 	</div> <!-- /page-title -->
 
@@ -34,10 +34,10 @@
 						
 						<div class="service-details">
 							<img class="pull-right" src="${resource(dir: 'images/gallery', file: 'social-networking-logos.png')}" alt="" />
-							<p><g:message code="services.site.socialmedia.text.p1" /></p>						
-							<p><g:message code="services.site.socialmedia.text.p2" /></p>	
-							<h4><g:message code="services.site.socialmedia.head1.heading" /></h4>
-							<p><g:message code="services.site.socialmedia.head1.text.p1" /></p>												
+							<p><fon:message type="textarea" url="admin" code="services.site.socialmedia.text.p1" /></p>						
+							<p><fon:message type="textarea" url="admin" code="services.site.socialmedia.text.p2" /></p>	
+							<h4><fon:message type="text" url="admin" code="services.site.socialmedia.head1.heading" /></h4>
+							<p><fon:message type="textarea" url="admin" code="services.site.socialmedia.head1.text.p1" /></p>												
 						</div> <!-- /service-details -->
 						
 					</div> <!-- /service -->
@@ -53,6 +53,7 @@
 	<script>
 		$('#main-nav li').removeClass("active");
 		$('#main-nav li::nth-child(3)').addClass("active");
+		$('.editable').editable();
 	</script>	
   </body>
 </html>
