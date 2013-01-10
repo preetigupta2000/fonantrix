@@ -8,9 +8,10 @@ class AdminController {
 
 	def index = {
 		String currentLocale = RCU.getLocale(request)
-		println currentLocale
-		if (currentLocale == null)
+
+		if (currentLocale == null || currentLocale.equals("en") || currentLocale.equals("en_US"))
 			currentLocale = "*"
+		//println currentLocale
 		def localization = Localization.findByCodeAndLocale( params.name, currentLocale)
 		
 		def id = localization.id
