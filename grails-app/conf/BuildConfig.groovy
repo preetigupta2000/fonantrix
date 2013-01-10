@@ -58,5 +58,9 @@ grails.project.dependency.resolution = {
 		
 		compile ":localizations:1.4.4.6"
 		runtime ":spring-security-core:1.2.7.3"
+		
+		compile ':webxml:1.4.1'
+		compile ":heroku:1.0"
+		compile ':cloud-support:1.0.8'
     }
 }
