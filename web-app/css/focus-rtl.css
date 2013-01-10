@@ -594,30 +594,29 @@ margin-bottom:0;
 color:#FFF;
 }
 
-#user-info div.icon{
-	float:left;
+#nav .dropdown-menu #ajaxLoginForm a {
+	margin-bottom:15px;
+	color: #ffffff;
 }
-#user-info div.icon i {
-		font-size:40px;
-		color:rgba(100, 100, 100, 0.7);
-}
-#user-info div.info{
+#nav .dropdown-menu #ajaxLoginForm div.icon {
 	float:right;
 }
-#user-info div.info p {
-		margin-bottom: 5px;
+#nav .dropdown-menu #ajaxLoginForm div.icon	i {
+	color:rgba(100, 100, 100, 0.7);
 }
-#user-info div.info p strong {
-			font-size:13px;
-			font-weight:normal;
-			color:#5b544e;
+#nav .dropdown-menu #ajaxLoginForm div.info {
+	float:left;
+}
+#nav .dropdown-menu #ajaxLoginForm div.info p {
+	margin-bottom: 5px;
+}
+#nav .dropdown-menu #ajaxLoginForm div.info p strong {
+	font-size:13px;
+	font-weight:normal;
+	color:#5b544e;
 } 
-#user-info div.info p small {
-			font-size:12px;
-			font-weight:normal;
-			color:@black;
-}
-
-.dropdown-menu a {
-	margin-bottom:15px;
+#nav .dropdown-menu #ajaxLoginForm div.info p small {
+	font-size:12px;
+	font-weight:normal;
+	color:@black;
 }

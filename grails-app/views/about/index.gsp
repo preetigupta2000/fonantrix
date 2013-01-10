@@ -13,8 +13,8 @@
 <body>
 	<div id="page-title">
 		
-		<h1><g:message code="about.site.heading" /></h1>
-		<p><g:message code="about.site.note" /></p>
+		<h1><fon:message type="text" url="admin"  code="about.site.heading" /></h1>
+		<p><fon:message type="textarea" url="admin" code="about.site.note" /></p>
 		
 	</div> <!-- /page-title -->
 
@@ -26,22 +26,22 @@
 				
 				<div class="grid-6">
 					
-					<h2><span class="slash">//</span> <g:message code="about.site.item1.head" /></h2>
+					<h2><span class="slash">//</span> <fon:message type="text" url="admin" code="about.site.item1.head" /></h2>
 					
-					<p><g:message code="about.site.item1.text.p1" /></p>
+					<p><fon:message type="textarea" url="admin" code="about.site.item1.text.p1" /></p>
 					
-					<p><g:message code="about.site.item1.text.p2" /></p>
+					<p><fon:message type="textarea" url="admin" code="about.site.item1.text.p2" /></p>
 					
 				</div> <!-- /grid-6 -->
 				
 				
 				<div class="grid-6">
 					
-					<h2><span class="slash">//</span> <g:message code="about.site.item2.head" /></h2>
+					<h2><span class="slash">//</span> <fon:message type="text" url="admin" code="about.site.item2.head" /></h2>
 					
-					<p><g:message code="about.site.item2.text.p2" /></p>
+					<p><fon:message type="textarea" url="admin" code="about.site.item2.text.p2" /></p>
 					
-					<p><g:message code="about.site.item2.text.p2" /></p>
+					<p><fon:message type="textarea" url="admin" code="about.site.item2.text.p2" /></p>
 				
 				</div> <!-- /grid-6 -->
 				
@@ -55,9 +55,9 @@
 				
 				<div class="grid-12">
 					
-					<h2><span class="slash">//</span> <g:message code="about.site.ourteam.heading" /></h2>
+					<h2><span class="slash">//</span> <fon:message type="text" url="admin" code="about.site.ourteam.heading" /></h2>
 					
-					<p><g:message code="about.site.ourteam.note" /></p>
+					<p><fon:message type="textarea" url="admin" code="about.site.ourteam.note" /></p>
 					
 				</div> <!-- /grid-12 -->
 				
@@ -72,9 +72,9 @@
 						
 						<img src="${resource(dir: 'images/profiles', file: 'profile-1.png')}" alt="Profile Pic" />						
 											
-						<p class="profile-title"><g:message code="about.site.ourteam.profile1.title" /></p>
+						<p class="profile-title"><fon:message type="text" url="admin" code="about.site.ourteam.profile1.title" /></p>
 						
-						<p><g:message code="about.site.ourteam.profile1.comments" /></p>
+						<p><fon:message type="textarea" url="admin" code="about.site.ourteam.profile1.comments" /></p>
 						
 					</div> <!-- /profile -->
 					
@@ -88,9 +88,9 @@
 						<img src="${resource(dir: 'images/profiles', file: 'profile-2.png')}" alt="Profile Pic" />						
 						
 					
-						<p class="profile-title"><g:message code="about.site.ourteam.profile2.title" /></p>
+						<p class="profile-title"><fon:message type="text" url="admin" code="about.site.ourteam.profile2.title" /></p>
 						
-						<p><g:message code="about.site.ourteam.profile2.comments" /></p>
+						<p><fon:message type="textarea" url="admin" code="about.site.ourteam.profile2.comments" /></p>
 						
 					</div> <!-- /profile -->
 					
@@ -103,7 +103,7 @@
 						
 						<img src="${resource(dir: 'images/profiles', file: 'profile-3.png')}" alt="Profile Pic" />
 											
-						<p class="profile-title"><g:message code="about.site.ourteam.profile3.title" /></p>
+						<p class="profile-title"><fon:message type="text" url="admin" code="about.site.ourteam.profile3.title" /></p>
 						
 						<p><g:message code="about.site.ourteam.profile3.comments" /></p>
 						

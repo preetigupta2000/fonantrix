@@ -23,7 +23,7 @@
 				
 						<div class="masthead-details">
 							
-							<h2><fon:message code="home.site.carousel.item1.head" addstyle="smalltextarea" required="Required" placement="right" type="textarea" url="admin" /></h2>
+							<h2><fon:message code="home.site.carousel.item1.head" addstyle="biggertext" required="Required" type="text" url="admin" /></h2>
 							
 							<p><fon:message code="home.site.carousel.item1.text.p1" type="textarea" url="admin" /></p>
 							
@@ -37,7 +37,7 @@
 				
 						<div class="masthead-details">
 							
-							<h2><fon:message code="home.site.carousel.item2.head" required="Required" placement="right" type="textarea" url="admin" /></h2>
+							<h2><fon:message code="home.site.carousel.item2.head" addstyle="biggertext" required="Required" type="text" url="admin" /></h2>
 							
 							<p><fon:message code="home.site.carousel.item2.text.p1" type="textarea" url="admin" /></p>
 							
@@ -51,7 +51,7 @@
 				
 						<div class="masthead-details">
 							
-							<h2><fon:message code="home.site.carousel.item3.head" required="Required" placement="right" type="textarea" url="admin" /></h2>
+							<h2><fon:message code="home.site.carousel.item3.head" addstyle="biggertext" required="Required" type="text" url="admin" /></h2>
 							
 							<p><fon:message code="home.site.carousel.item3.text.p1" type="textarea" url="admin" /></p>
 							
@@ -65,7 +65,7 @@
 				
 						<div class="masthead-details">
 							
-							<h2><fon:message code="home.site.carousel.item4.head" required="Required" placement="right" type="textarea" url="admin" /></h2>
+							<h2><fon:message code="home.site.carousel.item4.head" addstyle="biggertext" required="Required" type="text" url="admin" /></h2>
 							
 							<p><fon:message code="home.site.carousel.item4.text.p1" type="textarea" url="admin" /></p>
 							
@@ -79,7 +79,7 @@
 				
 						<div class="masthead-details">
 							
-							<h2><fon:message code="home.site.carousel.item5.head" required="Required" placement="right" type="textarea" url="admin"/></h2>
+							<h2><fon:message code="home.site.carousel.item5.head" addstyle="biggertext" required="Required" type="text" url="admin"/></h2>
 							
 							<p><fon:message code="home.site.carousel.item5.text.p1" type="textarea" url="admin" /></p>
 							

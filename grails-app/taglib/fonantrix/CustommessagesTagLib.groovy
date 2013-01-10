@@ -28,8 +28,8 @@ class CustommessagesTagLib {
 				requiredValue = " data-placeholder='" + attrs.required + "' "
 			if (attrs.placement != null)
 				placementValue = " data-placement='" + attrs.placement + "' "
-			if (attrs.style != null)
-				styles += "," +  attrs.addstyle
+			if (attrs.addstyle != null)
+				styles += " " +  attrs.addstyle
 			retrunValue = "<a href='#' class='" + styles + "' id='" + attrs.code + "'" + requiredValue + placementValue + "data-pk='1' data-type='" + attrs.type + "' data-name='" + attrs.code + "' data-url='" + attrs.url + "' data-original-title='Update item'>" + reurnProp + "</a>"
 			
 		}

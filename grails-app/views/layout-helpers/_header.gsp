@@ -44,7 +44,7 @@
 					</form>
 				</sec:ifNotLoggedIn>
 				<sec:ifLoggedIn>
-					<div id="user-info">
+					<form action="logout" method='POST' id='ajaxLoginForm' name='ajaxLoginForm'>
 							<div class="icon">
 								<i class="icon-user"></i>
 							</div>
@@ -52,8 +52,8 @@
 								<p><strong>${sec.username()}</strong></p>
 								<p><small>${sec.username()}</small></p>
 							</div>	
-					</div>
-					<a href="logout" class="btn btn-primary btn-warning"><fon:message code="header.site.logout"/></a>			
+						<a href="javascript:{}" onclick="document.getElementById('ajaxLoginForm').submit();" type="submit" class="btn btn-primary btn-warning"><fon:message code="header.site.logout"/></a>
+					</form>			
 				</sec:ifLoggedIn>
 	           </div>
 	        </li> 			
