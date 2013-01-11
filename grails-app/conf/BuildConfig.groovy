@@ -58,5 +58,6 @@ grails.project.dependency.resolution = {
 		
 		compile ":localizations:1.4.4.6"
 		runtime ":spring-security-core:1.2.7.3"
+
     }
 }
