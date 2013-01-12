@@ -25,6 +25,13 @@
         <!-- iPad (Retina) ICON-->
         <link  rel="apple-touch-icon" sizes="144x144" href="${resource(dir: 'images', file: 'ipad-touch-icon-retina.png')}" />
                     
+		<g:if test="${direction == 'rtl'}">
+		    <link rel="stylesheet" href="${resource(dir: 'css/less', file: 'custom-bootstrap-rtl.css')}" type="text/css">
+		</g:if>
+		<g:else>
+			<link rel="stylesheet" href="${resource(dir: 'css/less', file: 'custom-bootstrap.css')}" type="text/css">
+		</g:else>
+		
 	    <g:layoutHead/>	    
 		<r:layoutResources/>
 		

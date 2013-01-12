@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="layout" content="main">
-	<g:if test="${direction == 'rtl'}">
-	    <r:require modules="aboutstylesrtl"/>
-	</g:if>
-	<g:else>
-		<r:require modules="aboutstyles"/>
-	</g:else>		
+	<meta name="layout" content="main">	
   </head>
 
 <body>

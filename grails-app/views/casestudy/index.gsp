@@ -2,12 +2,6 @@
 <html lang="en">
   <head>
 	<meta name="layout" content="main">
-	<g:if test="${direction == 'rtl'}">
-	    <r:require modules="casestudystylesrtl"/>
-	</g:if>
-	<g:else>
-		<r:require modules="casestudystyles"/>
-	</g:else> 		
   </head>
 
 <body>
