@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html manifest="cache.appcache"><!--<![endif]-->
 	<head>
 		<meta http-equiv="Content-Type" content="text/html">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -48,6 +48,7 @@
 	</head>
 	<body dir="${direction}">
 		<div id="wrapper" class="clearfix">
+			<g:include view="/layout-helpers/appcache_init.gsp"/>
 			<g:render template="/layout-helpers/header"/>
 			
 			<g:layoutBody/>
