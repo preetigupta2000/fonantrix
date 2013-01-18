@@ -41,14 +41,13 @@
 		<![endif]-->
 		
 		<!--  Not Required as became depends on pages css r:require modules="corestyles"/ -->
-		<r:require modules="corejs"/>
+		<r:require modules="chartjs"/>
       
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
-	<body dir="${direction}">
+	<body>
 		<div id="wrapper" class="clearfix">
-			<g:include view="/layout-helpers/appcache_init.gsp"/>
 			<g:render template="/layout-helpers/header"/>
 			
 			<g:layoutBody/>

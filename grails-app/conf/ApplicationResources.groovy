@@ -15,14 +15,20 @@ modules = {
 		resource url:'js/libs/bootstrap-transition.js'
 		resource url:'js/libs/bootstrap-typeahead.js'
 		resource url:'js/libs/bootstrap-transition.js'
-		
-		resource url:'js/libs/bootstrap-editable/bootstrap-editable.js'
 	}
 	
 	corejs {
 		dependsOn "libs"
+		resource url:'js/libs/bootstrap-editable/bootstrap-editable.js'
 		resource url:'js/index.js'
 		resource url:'js/focus.js'
 		resource url:'js/plugins/faq/faq.js'
+	}
+	
+	chartjs {
+		dependsOn "libs"
+		resource url:'js/highcharts/highcharts.js'
+		resource url:'js/highcharts/modules/exporting.js'
+		resource url:'js/index.js'
 	}
 }

@@ -7,6 +7,7 @@ class UrlMappings {
 			}
 		}
 		"/"(controller:"home")
+		"/chart"(controller:"chart")
 		"/home"(controller:"home")
 		"/about"(controller:"home", action:"about" )
 		"/services"(controller:"home", action:"services" )
