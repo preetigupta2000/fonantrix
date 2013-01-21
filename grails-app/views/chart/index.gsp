@@ -4,7 +4,12 @@
 	<meta name="layout" content="chartmain">
   </head>
 
-<body>		
+<body>
+	<div id="page-title">
+		<h1>Customer Demo</h1>
+		<p>Reports Dashboard</p>
+	</div> <!-- /page-title -->
+	
 	<div id="content">
 		<div class="container">	
 			<div class="row">
