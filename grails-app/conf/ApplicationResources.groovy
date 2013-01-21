@@ -15,13 +15,13 @@ modules = {
 		resource url:'js/libs/bootstrap-transition.js'
 		resource url:'js/libs/bootstrap-typeahead.js'
 		resource url:'js/libs/bootstrap-transition.js'
+		resource url:'js/focus.js'
 	}
 	
 	corejs {
 		dependsOn "libs"
 		resource url:'js/libs/bootstrap-editable/bootstrap-editable.js'
 		resource url:'js/index.js'
-		resource url:'js/focus.js'
 		resource url:'js/plugins/faq/faq.js'
 	}
 	

@@ -9,7 +9,7 @@
 		
 		<h1><fon:message type="text" url="admin" code="casestudy.site.heading" /></h1>
 		<p><fon:message type="textarea" url="admin" code="casestudy.site.note" /></p>
-		
+		<a href="chart">Customer Demo</a>
 	</div> <!-- /page-title -->
 
 	<div id="content">

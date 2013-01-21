@@ -1,0 +1,54 @@
+{
+    "charts": [
+        {
+        	"type": "line",
+        	"title": "Alerts",
+        	"subtitle": "",  
+        	"xAxisTitle": "",
+        	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
+        	"yAxistitle": "Alert",
+        	"plotLinescolor": "#808080",
+        	"seriesData": "[{ name: 'Open Count', data: [0, 0, 0, 0, 0, 24474, 1049, 0]}, {name: 'Close Count', data: [0, 0, 0, 0, 0, 0, 0, 0]}]"
+        },
+        {
+        	"type": "line",        
+        	"title": "Alert Rank",
+        	"subtitle": "",  
+        	"xAxisTitle": "",
+        	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
+        	"yAxistitle": "Rank",
+        	"plotLinescolor": "#808080",
+        	"seriesData": "[{ name: 'Lowest', data: [0, 0, 0, 0, 0, 1, 1, 0]}, {name: 'Average', data: [0, 0, 0, 0, 0, 99, 97, 0]},{name: 'Highest', data: [0, 0, 0, 0, 0, 100, 100, 0]}]"
+        },
+        {
+        	"type": "line",        
+        	"title": "Time to Intervene",
+        	"subtitle": "",  
+        	"xAxisTitle": "",
+        	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
+        	"yAxistitle": "Minutes",
+        	"plotLinescolor": "#808080",
+        	"seriesData": "[{ name: 'Lowest', data: [0, 0, 0, 0, 0, 0, 0, 0]}, {name: 'Average', data: [0, 0, 0, 0, 0, 0, 0, 0]},{name: 'Highest', data: [0, 0, 0, 0, 0, 0, 0, 0]}]"
+        },
+        {
+            "type": "line",
+        	"title": "Time to Close",
+        	"subtitle": "",
+        	"xAxisTitle": "",        	
+        	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
+        	"yAxistitle": "Minutes",
+        	"plotLinescolor": "#808080",
+        	"seriesData": "[{ name: 'Lowest', data: [0, 0, 0, 0, 0, 0, 0, 0]}, {name: 'Average', data: [0, 0, 0, 0, 0, 0, 0, 0]},{name: 'Highest', data: [0, 0, 0, 0, 0, 0, 0, 0]}]"
+        },
+        {
+            "type": "bar",
+        	"title": "Alert Type Trends",
+        	"subtitle": "Percentage of Alerts Across Components",
+        	"xAxisTitle": "Alert Type Trends",
+        	"xAxisjson": "['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",
+        	"yAxistitle": "Percentage of Alerts",
+        	"plotLinescolor": "#808080",
+        	"seriesData": "[{showInLegend:false, name: 'Percentage', data: [31, 29, 28, 10, 0], text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],count: [1119, 1040, 1008, 371, 16]}]"
+        }         
+    ]    
+}

@@ -1,5 +1,5 @@
 import groovy.json.JsonSlurper
-import fonantrix.Carousel
+import fonantrix.Chart
 import fonantrix.authentication.User
 import fonantrix.authentication.Role
 import fonantrix.authentication.UserRole
@@ -21,13 +21,13 @@ class BootStrap {
 			UserRole.create adminUser, adminRole, true
 		}
 		
-		String jsonHomeData = new File(servletContext.getRealPath("/json/home.json")).text
-		if (!Carousel.count()) {
+		String jsonChartData = new File(servletContext.getRealPath("/json/chart.json")).text
+		if (!Chart.count()) {
 			def slurper = new JsonSlurper()
-			def allCarousels = slurper.parseText(jsonHomeData)
-			allCarousels.carousels.each
+			def allCharts = slurper.parseText(jsonChartData)
+			allCharts.charts.each
 			{
-				new Carousel(name: it.name, description: it.description, description2: it.description2, imageName: it.imageName, imageDir: it.imageDir, sequence: it.sequence).save(failOnError: true)
+				new Chart(type: it.type, title: it.title, subtitle: it.subtitle, xAxisTitle: it.xAxisTitle, xAxisjson: it.xAxisjson, yAxistitle: it.yAxistitle, plotLinescolor: it.plotLinescolor, seriesData: it.seriesData).save(failOnError: true)
 			}
 		}
     }

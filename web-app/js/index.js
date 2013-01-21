@@ -36,71 +36,139 @@ com.fonantrix.application.site = (function() {
  	//JS Library Dependencies
  
  	//DOM Dependencies
- 	var idContainer = "container";
  	
 	
  	/********************************************************/
  	/*                 PUBLIC MEMBERS                     */
  	/********************************************************/
+ 	function drawChart(params) {
+		for (var i=0;i<params.length;i++) {
+			var contianerName = "container" + i ;
+			if (params[i].type === "line") {
+				lineChart(params[i], contianerName)
+			} else if (params[i].type === "bar") {
+				barChart(params[i], contianerName)
+			}
+		}
+ 	}
+	
+	function barChart(param, contianerName){
+ 		  chart = new Highcharts.Chart({
+ 	            chart: {
+ 	                renderTo: contianerName,
+ 	                type: 'column'
+ 	            },
+ 	            title: {
+ 	                text: param.title
+ 	            },
+ 	            subtitle: {
+ 	                text: param.subtitle
+ 	            },
+ 	            xAxis: {
+ 	                categories: eval("(" + param.xAxisjson + ')')
+ 	            },
+ 	            yAxis: {
+ 	                min: 0,
+ 	                title: {
+ 	                    text: param.yAxistitle
+ 	                }
+ 	            },
+ 	            legend: {
+ 	                layout: 'vertical',
+ 	                backgroundColor: '#FFFFFF',
+ 	                align: 'left',
+ 	                verticalAlign: 'top',
+ 	                x: 100,
+ 	                y: 70,
+ 	                floating: true,
+ 	                shadow: true,
+ 	                showInLegend: false
+ 	            },
+ 	            tooltip: {
+ 	            	style: {
+ 	                    fontSize: '8pt',
+ 	                    width: '100px',
+ 	                    wrap:'hard',
+ 	                    padding: '2px'
+ 	                },
+ 	                positioner: function () {
+ 	                	return { x: 80, y: 50 };
+ 	                },                
+ 	                formatter: function() {
+ 	                    return ''+
+ 	                        'Alert Defination : ' + this.series.options.text[this.key] + ' Alert Count: ' + this.series.options.count[this.key]
+ 	                    	+ ' Percentage of Alerts: ' + this.y;
+ 	                }
+ 	            },
+ 	            plotOptions: {
+ 	                column: {
+ 	                    pointPadding: 0.2,
+ 	                    borderWidth: 0,
+ 	                    stacking: 'normal',
+ 	                    dataLabels: {
+ 	                       enabled: true,
+ 	                       color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+ 	                       formatter: function() {
+ 	                          return this.y +'%';
+ 	                       } 	                        
+ 	                    } 	                    
+ 	                }            
+ 	            },
+ 	            series:  eval("(" + param.seriesData + ')'),
+	            credits: {
+	                enabled: false
+	            } 	            
+ 	        });
+ 	}
  	
-	function displayChart() {
+	function lineChart(param, contianerName) {
         chart = new Highcharts.Chart({
 	            chart: {
-	                renderTo: idContainer,
+	                renderTo: contianerName,
 	                type: 'line',
-	                marginRight: 130,
-	                marginBottom: 25
+	                marginRight: 10
 	            },
 	            title: {
-	                text: 'Monthly Average Temperature',
+	                text: param.title,
 	                x: -20 //center
 	            },
-	            subtitle: {
-	                text: 'Source: WorldClimate.com',
-	                x: -20
-	            },
 	            xAxis: {
-	                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-	                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+	                categories: eval("(" + param.xAxisjson + ')')
 	            },
 	            yAxis: {
+	            	min: 0,
+	                labels: {
+	                    formatter: function() {
+	                        return this.value;
+	                    }
+	                },	            	
 	                title: {
-	                    text: 'Temperature (°C)'
+	                    text: param.yAxistitle
 	                },
 	                plotLines: [{
 	                    value: 0,
 	                    width: 1,
-	                    color: '#808080'
-	                }]
+	                    color:  param.plotLinescolor
+	                }]               
 	            },
 	            tooltip: {
 	                formatter: function() {
 	                        return '<b>'+ this.series.name +'</b><br/>'+
-	                        this.x +': '+ this.y +'°C';
+	                        this.x +': '+ this.y;
 	                }
 	            },
-	            legend: {
-	                layout: 'vertical',
-	                align: 'right',
-	                verticalAlign: 'top',
-	                x: -10,
-	                y: 100,
-	                borderWidth: 0
-	            },
-	            series: [{
-	                name: 'Tokyo',
-	                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-	            }, {
-	                name: 'New York',
-	                data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
-	            }, {
-	                name: 'Berlin',
-	                data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
-	            }, {
-	                name: 'London',
-	                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-	            }]
-	    });		
+	            plotOptions: {
+	                line: {
+	                    dataLabels: {
+	                        enabled: true
+	                    }
+	                }
+	            },	            
+	            series: eval("(" + param.seriesData + ')'),
+	            credits: {
+	                enabled: false
+	            }
+	    });
 	}
  	/********************************************************/
  	/*                 ONE TIME INIT FUNCTION              */
@@ -154,7 +222,7 @@ com.fonantrix.application.site = (function() {
  	/********************************************************/
  
  	return	{
- 		"drawChart":displayChart
+ 		"drawChart":drawChart
  	}
  
 })();
