@@ -87,23 +87,18 @@ com.fonantrix.application.site = (function() {
 	            series: [{
 	                type: 'column',
 	                showInLegend:false,
-	                name: 'Jane',
-	                data: [3, 2, 1, 3, 4]
+	                name: 'Percentage',
+	                data: [131, 129, 128, 110, 20]
 	            }, {
 	                type: 'column',
 	                showInLegend:false,
-	                name: 'John',
-	                data: [2, 3, 5, 7, 6]
-	            }, {
-	                type: 'column',
-	                showInLegend:false,
-	                name: 'Joe',
-	                data: [4, 3, 3, 9, 0]
+	                name: 'Count',
+	                data: [1119, 1040, 1008, 371, 26]
 	            }, {
 	                type: 'spline',
 	                showInLegend:false,
 	                name: 'Average',
-	                data: [3, 2.67, 3, 6.33, 3.33],
+	                data: [713, 541.67, 813, 311.33, 183.33],
 	                marker: {
 	                	lineWidth: 2,
 	                	lineColor: Highcharts.getOptions().colors[3],
@@ -114,20 +109,24 @@ com.fonantrix.application.site = (function() {
 	                showInLegend:false,
 	                name: 'Total consumption',
 	                data: [{
-	                    name: 'Jane',
+	                    name: 'Alert',
 	                    y: 13,
 	                    color: '#4572A7' // Jane's color
 	                }, {
-	                    name: 'John',
+	                    name: 'Rank',
 	                    y: 23,
 	                    color: '#AA4643' // John's color
 	                }, {
-	                    name: 'Joe',
+	                    name: 'Intervene',
 	                    y: 19,
 	                    color: '#89A54E' // Joe's color
+	                }, {
+	                    name: 'Time to Close',
+	                    y: 12,
+	                    color: '#80699B' // Joe's color
 	                }],
-	                center: [80, 50],
-	                size: 80,
+	                center: [40, 10],
+	                size: 50,
 	                showInLegend: false,
 	                dataLabels: {
 	                    enabled: false

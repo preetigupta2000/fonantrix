@@ -8,7 +8,7 @@
         	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Alert",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{ name: 'Open Count', data: [4, 24, 234, 247, 2447, 24474, 1049, 345]}, {name: 'Close Count', data: [5, 45, 256, 5667, 12345, 1567, 17890, 456]}]"
+        	"seriesData": "[{ name: 'Open Count', data: [8, 16.9, 109.5, 147, 1200, 24474, 5049, 345]}, {name: 'Close Count', data: [5, 25, 256, 356, 2400, 18000, 7890, 456]}]"
         },
         {
         	"type": "line",        
@@ -18,7 +18,7 @@
         	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Rank",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{ name: 'Lowest', data: [5, 78, 45, 23, 67, 12, 32, 48]}, {name: 'Average', data: [3, 23, 36, 47, 45, 99, 97, 23]},{name: 'Highest', data: [9, 56, 34, 56, 68, 100, 100, 56]}]"
+        	"seriesData": "[{ name: 'Lowest', data: [5, 78, 36, 47, 57, 99, 97, 48]}, {name: 'Average', data: [3, 23, 32, 23, 40, 27, 43, 23]},{name: 'Highest', data: [9, 47, 45, 56, 68, 100, 100, 56]}]"
         },
         {
         	"type": "line",        
@@ -28,7 +28,7 @@
         	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Minutes",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{ name: 'Lowest', data: [6, 78, 45, 34, 26, 76, 87, 45]}, {name: 'Average', data: [6, 34, 25, 56, 78, 45, 67, 80]},{name: 'Highest', data: [7, 23, 12, 41, 52, 64, 70, 87]}]"
+        	"seriesData": "[{ name: 'Lowest', data: [6, 12, 28, 34, 26, 36, 47, 45]}, {name: 'Average', data: [6, 23, 25, 41, 52, 45, 57, 80]},{name: 'Highest', data: [7, 34, 45, 56, 78, 64, 70, 87]}]"
         },
         {
             "type": "line",
@@ -38,7 +38,7 @@
         	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Minutes",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{ name: 'Lowest', data: [12, 4, 57, 98, 56, 76, 54, 63]}, {name: 'Average', data: [72, 81, 90, 12, 54, 63, 72, 81]},{name: 'Highest', data: [5, 67, 43, 52, 65, 78, 98, 92]}]"
+        	"seriesData": "[{ name: 'Lowest', data: [12, 4, 57, 78, 56, 76, 54, 63]}, {name: 'Average', data: [72, 81, 90, 42, 54, 63, 72, 81]},{name: 'Highest', data: [5, 67, 43, 52, 65, 78, 98, 92]}]"
         },
         {
             "type": "bar",
