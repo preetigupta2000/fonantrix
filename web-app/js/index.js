@@ -48,9 +48,96 @@ com.fonantrix.application.site = (function() {
 				lineChart(params[i], contianerName)
 			} else if (params[i].type === "bar") {
 				barChart(params[i], contianerName)
+			} else {
+				combinationChart(params[i], contianerName)
 			}
 		}
  	}
+	
+	function combinationChart(param, contianerName){
+		  chart = new Highcharts.Chart({
+	            chart: {
+	                renderTo: contianerName
+	            },
+	            title: {
+	                text: param.title
+	            },
+	            xAxis: {
+	                categories: eval("(" + param.xAxisjson + ')')
+	            },
+	            yAxis: {
+	                min: 0,
+	                title: {
+	                    text: param.yAxistitle
+	                }
+	            },
+	            tooltip: {
+	                formatter: function() {
+	                    var s;
+	                    if (this.point.name) { // the pie chart
+	                        s = ''+
+	                            this.point.name +': '+ this.y +' fruits';
+	                    } else {
+	                        s = ''+
+	                            this.x  +': '+ this.y;
+	                    }
+	                    return s;
+	                }
+	            },
+	            series: [{
+	                type: 'column',
+	                showInLegend:false,
+	                name: 'Jane',
+	                data: [3, 2, 1, 3, 4]
+	            }, {
+	                type: 'column',
+	                showInLegend:false,
+	                name: 'John',
+	                data: [2, 3, 5, 7, 6]
+	            }, {
+	                type: 'column',
+	                showInLegend:false,
+	                name: 'Joe',
+	                data: [4, 3, 3, 9, 0]
+	            }, {
+	                type: 'spline',
+	                showInLegend:false,
+	                name: 'Average',
+	                data: [3, 2.67, 3, 6.33, 3.33],
+	                marker: {
+	                	lineWidth: 2,
+	                	lineColor: Highcharts.getOptions().colors[3],
+	                	fillColor: 'white'
+	                }
+	            }, {
+	                type: 'pie',
+	                showInLegend:false,
+	                name: 'Total consumption',
+	                data: [{
+	                    name: 'Jane',
+	                    y: 13,
+	                    color: '#4572A7' // Jane's color
+	                }, {
+	                    name: 'John',
+	                    y: 23,
+	                    color: '#AA4643' // John's color
+	                }, {
+	                    name: 'Joe',
+	                    y: 19,
+	                    color: '#89A54E' // Joe's color
+	                }],
+	                center: [80, 50],
+	                size: 80,
+	                showInLegend: false,
+	                dataLabels: {
+	                    enabled: false
+	                }
+	            }],
+	            credits: {
+	                enabled: false
+	            } 	            
+	        });
+	}
 	
 	function barChart(param, contianerName){
  		  chart = new Highcharts.Chart({
@@ -96,22 +183,14 @@ com.fonantrix.application.site = (function() {
  	                },                
  	                formatter: function() {
  	                    return ''+
- 	                        'Alert Defination : ' + this.series.options.text[this.key] + ' Alert Count: ' + this.series.options.count[this.key]
+ 	                        'Alert Defination : ' + this.series.options.text[this.key] + ' Alert Count: ' + this.series.options.value[this.key]
  	                    	+ ' Percentage of Alerts: ' + this.y;
  	                }
  	            },
  	            plotOptions: {
  	                column: {
  	                    pointPadding: 0.2,
- 	                    borderWidth: 0,
- 	                    stacking: 'normal',
- 	                    dataLabels: {
- 	                       enabled: true,
- 	                       color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
- 	                       formatter: function() {
- 	                          return this.y +'%';
- 	                       } 	                        
- 	                    } 	                    
+ 	                    borderWidth: 0	                    
  	                }            
  	            },
  	            series:  eval("(" + param.seriesData + ')'),

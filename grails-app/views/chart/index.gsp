@@ -13,9 +13,12 @@
 	<div id="content">
 		<div class="container">	
 			<div class="row">
-				<div class="grid-12">
+				<div class="grid-6">
+					<div id="container5" style="min-width: 300px; height: 250px; margin: 0 auto"></div>
+				</div>
+				<div class="grid-6">
 					<div id="container4" style="min-width: 300px; height: 250px; margin: 0 auto"></div>
-				</div>								
+				</div>				
 			</div> <!-- /row -->
 			<div class="row">
 				<div class="grid-6">
