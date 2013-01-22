@@ -58,7 +58,7 @@
         	"xAxisjson": "['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",
         	"yAxistitle": "Alerts",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{showInLegend:false, name: 'Percentage', data: [131, 129, 128, 110, 20], text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [1119, 1040, 1008, 371, 26]},{showInLegend:false, name: 'Counts', data: [1119, 1040, 1008, 371, 26], text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [131, 129, 128, 110, 20]}]"
+        	"seriesData": "[{type: 'column', showInLegend:false, name: 'Percentage', data: [131, 129, 128, 110, 20]}, {type: 'column', showInLegend:false, name: 'Count', data: [1119, 1040, 1008, 371, 26]}, {type: 'spline', showInLegend:false, name: 'Average', data: [713, 541.67, 813, 311.33, 183.33], marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[3], fillColor: 'white'} }, {type: 'pie', showInLegend:false, name: 'Total consumption', data: [{ name: 'Alert', y: 13, color: '#4572A7'}, {name: 'Rank', y: 23, color: '#AA4643'}, {name: 'Intervene', y: 19, color: '#89A54E'}, {name: 'Time to Close', y: 12, color: '#80699B'}], center: [25, 25], size: 40, showInLegend: false, dataLabels: {enabled: false}}]"
         }  
     ]    
 }

@@ -84,54 +84,7 @@ com.fonantrix.application.site = (function() {
 	                    return s;
 	                }
 	            },
-	            series: [{
-	                type: 'column',
-	                showInLegend:false,
-	                name: 'Percentage',
-	                data: [131, 129, 128, 110, 20]
-	            }, {
-	                type: 'column',
-	                showInLegend:false,
-	                name: 'Count',
-	                data: [1119, 1040, 1008, 371, 26]
-	            }, {
-	                type: 'spline',
-	                showInLegend:false,
-	                name: 'Average',
-	                data: [713, 541.67, 813, 311.33, 183.33],
-	                marker: {
-	                	lineWidth: 2,
-	                	lineColor: Highcharts.getOptions().colors[3],
-	                	fillColor: 'white'
-	                }
-	            }, {
-	                type: 'pie',
-	                showInLegend:false,
-	                name: 'Total consumption',
-	                data: [{
-	                    name: 'Alert',
-	                    y: 13,
-	                    color: '#4572A7' // Jane's color
-	                }, {
-	                    name: 'Rank',
-	                    y: 23,
-	                    color: '#AA4643' // John's color
-	                }, {
-	                    name: 'Intervene',
-	                    y: 19,
-	                    color: '#89A54E' // Joe's color
-	                }, {
-	                    name: 'Time to Close',
-	                    y: 12,
-	                    color: '#80699B' // Joe's color
-	                }],
-	                center: [40, 10],
-	                size: 50,
-	                showInLegend: false,
-	                dataLabels: {
-	                    enabled: false
-	                }
-	            }],
+	            series: eval("(" + param.seriesData + ')'),
 	            credits: {
 	                enabled: false
 	            } 	            
