@@ -8,7 +8,7 @@
         	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Alert",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{ name: 'Open Count', data: [0, 0, 0, 0, 0, 24474, 1049, 0]}, {name: 'Close Count', data: [0, 0, 0, 0, 0, 0, 0, 0]}]"
+        	"seriesData": "[{ name: 'Open Count', data: [4, 24, 234, 247, 2447, 24474, 1049, 345]}, {name: 'Close Count', data: [5, 45, 256, 5667, 12345, 1567, 17890, 456]}]"
         },
         {
         	"type": "line",        
@@ -18,7 +18,7 @@
         	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Rank",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{ name: 'Lowest', data: [0, 0, 0, 0, 0, 1, 1, 0]}, {name: 'Average', data: [0, 0, 0, 0, 0, 99, 97, 0]},{name: 'Highest', data: [0, 0, 0, 0, 0, 100, 100, 0]}]"
+        	"seriesData": "[{ name: 'Lowest', data: [5, 78, 45, 23, 67, 12, 32, 48]}, {name: 'Average', data: [3, 23, 36, 47, 45, 99, 97, 23]},{name: 'Highest', data: [9, 56, 34, 56, 68, 100, 100, 56]}]"
         },
         {
         	"type": "line",        
@@ -28,7 +28,7 @@
         	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Minutes",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{ name: 'Lowest', data: [0, 0, 0, 0, 0, 0, 0, 0]}, {name: 'Average', data: [0, 0, 0, 0, 0, 0, 0, 0]},{name: 'Highest', data: [0, 0, 0, 0, 0, 0, 0, 0]}]"
+        	"seriesData": "[{ name: 'Lowest', data: [6, 78, 45, 34, 26, 76, 87, 45]}, {name: 'Average', data: [6, 34, 25, 56, 78, 45, 67, 80]},{name: 'Highest', data: [7, 23, 12, 41, 52, 64, 70, 87]}]"
         },
         {
             "type": "line",
@@ -38,7 +38,7 @@
         	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Minutes",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{ name: 'Lowest', data: [0, 0, 0, 0, 0, 0, 0, 0]}, {name: 'Average', data: [0, 0, 0, 0, 0, 0, 0, 0]},{name: 'Highest', data: [0, 0, 0, 0, 0, 0, 0, 0]}]"
+        	"seriesData": "[{ name: 'Lowest', data: [12, 4, 57, 98, 56, 76, 54, 63]}, {name: 'Average', data: [72, 81, 90, 12, 54, 63, 72, 81]},{name: 'Highest', data: [5, 67, 43, 52, 65, 78, 98, 92]}]"
         },
         {
             "type": "bar",
@@ -48,7 +48,17 @@
         	"xAxisjson": "['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",
         	"yAxistitle": "Percentage of Alerts",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{showInLegend:false, name: 'Percentage', data: [31, 29, 28, 10, 0], text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],count: [1119, 1040, 1008, 371, 16]}]"
-        }         
+        	"seriesData": "[{showInLegend:false, name: 'Percentage', data: [131, 129, 128, 110, 20], text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [1119, 1040, 1008, 371, 26]},{showInLegend:false, name: 'Counts', data: [1119, 1040, 1008, 371, 26], text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [131, 129, 128, 110, 20]}]"
+        },
+        {
+            "type": "combination",
+        	"title": "Alert Summay",
+        	"subtitle": "Alerts Components",
+        	"xAxisTitle": "Alerts",
+        	"xAxisjson": "['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",
+        	"yAxistitle": "Alerts",
+        	"plotLinescolor": "#808080",
+        	"seriesData": "[{showInLegend:false, name: 'Percentage', data: [131, 129, 128, 110, 20], text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [1119, 1040, 1008, 371, 26]},{showInLegend:false, name: 'Counts', data: [1119, 1040, 1008, 371, 26], text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [131, 129, 128, 110, 20]}]"
+        }  
     ]    
 }
