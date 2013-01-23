@@ -6736,6 +6736,9 @@ body {
   font-weight: normal;
   color: #000000;
 }
+#demo-tabs {
+  margin: 0 0px 0.5em;
+}
 /*------------------------------------------------------------------
 
 [Responsive Stylesheet]

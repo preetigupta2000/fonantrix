@@ -5,11 +5,13 @@
   </head>
 
 <body>
-	<div id="page-title">
-		<h1>Customer Demo</h1>
-		<p>Reports Dashboard</p>
-	</div> <!-- /page-title -->
-	
+	<div id="demo-tabs">
+	    <ul class="nav nav-tabs">
+		    <li class="active"><a href="#home" data-toggle="tab">Report DashBoard</a></li>
+		    <li><a href="#profile" data-toggle="tab">Jqgrid</a></li>
+		    <li><a href="#messages" data-toggle="tab">E-Commerce</a></li>
+	    </ul>
+
 	<div id="content">
 		<div class="container">	
 			<div class="row">
@@ -39,7 +41,10 @@
 		</div> <!-- /container -->
 		
 	</div> <!-- /content -->
+	</div> <!-- /demo-tabs -->	
 	<script>
+		$('#main-nav li').removeClass("active");
+		$('#main-nav li::nth-child(6)').not(".language").addClass("active");	
 		var charts = ${charts};
 		$(function () {
 			com.fonantrix.application.site.drawChart(charts);

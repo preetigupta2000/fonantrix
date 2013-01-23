@@ -57,7 +57,11 @@ com.fonantrix.application.site = (function() {
 	function combinationChart(param, contianerName){
 		  chart = new Highcharts.Chart({
 	            chart: {
-	                renderTo: contianerName
+	                renderTo: contianerName,
+	                animation: {
+	                    duration: 1500,
+	                    easing: 'easeInQuad'
+	                }	                
 	            },
 	            title: {
 	                text: param.title
@@ -95,7 +99,11 @@ com.fonantrix.application.site = (function() {
  		  chart = new Highcharts.Chart({
  	            chart: {
  	                renderTo: contianerName,
- 	                type: 'column'
+ 	                type: 'column',
+	                animation: {
+	                    duration: 1500,
+	                    easing: 'easeInQuad'
+	                }	 	                
  	            },
  	            title: {
  	                text: param.title
@@ -157,7 +165,11 @@ com.fonantrix.application.site = (function() {
 	            chart: {
 	                renderTo: contianerName,
 	                type: 'line',
-	                marginRight: 10
+	                marginRight: 10,
+	                animation: {
+	                    duration: 200,
+	                    easing: 'linear'
+	                }		                
 	            },
 	            title: {
 	                text: param.title,
