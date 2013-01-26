@@ -55,7 +55,7 @@ com.fonantrix.application.site = (function() {
  	}
 	
 	function combinationChart(param, contianerName){
-		  chart = new Highcharts.Chart({
+		  comchart = new Highcharts.Chart({
 	            chart: {
 	                renderTo: contianerName,
 	                animation: {
@@ -93,10 +93,11 @@ com.fonantrix.application.site = (function() {
 	                enabled: false
 	            } 	            
 	        });
+		  return comchart;
 	}
 	
 	function barChart(param, contianerName){
- 		  chart = new Highcharts.Chart({
+ 		  barchart = new Highcharts.Chart({
  	            chart: {
  	                renderTo: contianerName,
  	                type: 'column',
@@ -158,10 +159,11 @@ com.fonantrix.application.site = (function() {
 	                enabled: false
 	            } 	            
  	        });
+ 		  return barchart;
  	}
  	
 	function lineChart(param, contianerName) {
-        chart = new Highcharts.Chart({
+        linechart = new Highcharts.Chart({
 	            chart: {
 	                renderTo: contianerName,
 	                type: 'line',
@@ -212,6 +214,7 @@ com.fonantrix.application.site = (function() {
 	                enabled: false
 	            }
 	    });
+        return linechart;
 	}
  	/********************************************************/
  	/*                 ONE TIME INIT FUNCTION              */

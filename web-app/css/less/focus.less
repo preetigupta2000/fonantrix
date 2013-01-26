@@ -589,6 +589,56 @@ body {
 	}
 }
 
-#demo-tabs{
-	 margin: 0 0px 0.5em;
+/* 
+Tab Sample Stylesheet
+by Design Shack - www.designshack.co.uk
+*/
+
+/* 
+#tabs - the main area for the tabs to be placed in - a 'container' for them to go in
+#tabs li - defining the basic content of the list area, shouldn't need to change this
+#tabs a - defines what appears around a tab - alter the font colour, background etc here for a default, non mouseover, non selected tab
+#tabs a:hover - defines a hovered over tab - again, you can change the mouseover background and font colour
+#tabs #selected a - defines the tab for the current page - mouseover colour and font can be changed
+*/
+
+#tabs {
+	font: 11px Verdana, Arial, Sans-Serif; /* alter this to change the font on the navigation bar */
+	text-align: left;
+	display: block;
+}
+
+/* Internet explorer fix */
+* html #tabs {height: 25px;}
+
+#tabs li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	margin-bottom: -1px;
+}
+
+/* Internet explorer fix */
+* html #tabs li {height: 25px;}
+
+#tabs a {
+	font-weight: normal;
+	padding: 5px 9px; 
+	height: 19px; 
+	text-decoration: none;
+	color: #333;
+	background:  #EEEEEE;
+}
+
+#tabs a:hover {
+	color: #333;
+	background: #C7C7C7;
+	text-decoration: none;
+	padding: 5px 9px;
+}
+
+#tabs .active a {
+	color: #333;
+	background: #C7C7C7;
+	text-decoration: none;
 }
