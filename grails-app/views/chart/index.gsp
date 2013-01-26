@@ -40,10 +40,10 @@
 				</div>
 				
 				<div id="grid" class="tab-pane fade in">
-					<p>I am in Grid</p>
+					<img src="${resource(dir: 'images', file: 'commingsoon.jpg')}" alt="Coming Soon" />
 				</div>
 				<div id="commerce" class="tab-pane fade in">
-					<p>I am in e-commerce</p>
+					<img src="${resource(dir: 'images', file: 'commingsoon.jpg')}" alt="Coming Soon" />
 				</div>	
 			
 		</div> <!-- /content -->
