@@ -16,6 +16,7 @@ modules = {
 		resource url:'js/libs/bootstrap-typeahead.js'
 		resource url:'js/libs/bootstrap-transition.js'
 		resource url:'js/focus.js'
+		resource url:'js/libs/utils.js'
 	}
 	
 	corejs {
@@ -30,6 +31,10 @@ modules = {
 		resource url:'js/highcharts/highcharts.js'
 		resource url:'js/highcharts/modules/exporting.js'
 		resource url:'js/highcharts/themes/grid.js'
+		resource url:'js/highcharts/themes/dark-blue.js'
+		resource url:'js/highcharts/themes/dark-green.js'
+		resource url:'js/highcharts/themes/gray.js'
+		resource url:'js/highcharts/themes/skies.js'
 		resource url:'js/index.js'
 	}
 }

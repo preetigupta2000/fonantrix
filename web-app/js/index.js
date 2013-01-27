@@ -1,25 +1,5 @@
 /*
 -----------------
-GLOBAL Util Module
------------------
-*/
-
-function namespace(namespaceString) {
-    var parts = namespaceString.split('.'),
-        parent = window,
-        currentPart = '';
-
-    for(var i = 0, length = parts.length; i < length; i++) {
-        currentPart = parts[i];
-        parent[currentPart] = parent[currentPart] || {};
-        parent = parent[currentPart];
-    }
-
-    return parent;
-}
-
-/*
------------------
 Anonymouse Module
 -----------------
 
@@ -41,7 +21,14 @@ com.fonantrix.application.site = (function() {
  	/********************************************************/
  	/*                 PUBLIC MEMBERS                     */
  	/********************************************************/
- 	function drawChart(params) {
+	function updateTheme(params, theme) {
+		drawChart(params, theme);
+	}
+ 	function drawChart(params, theme) {
+		// Apply the theme
+ 		if (typeof theme != "undefined") {
+ 			var highchartsOptions = Highcharts.setOptions(eval("Highcharts.theme" + "." + theme));
+ 		}
 		for (var i=0;i<params.length;i++) {
 			var contianerName = "container" + i ;
 			if (params[i].type === "line") {
@@ -268,7 +255,8 @@ com.fonantrix.application.site = (function() {
  	/********************************************************/
  
  	return	{
- 		"drawChart":drawChart
+ 		"drawChart":drawChart,
+ 		"changeTheme":updateTheme
  	}
  
 })();
