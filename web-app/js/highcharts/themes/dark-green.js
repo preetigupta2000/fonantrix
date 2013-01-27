@@ -3,7 +3,7 @@
  * @author Torstein Hønsi
  */
 
-Highcharts.theme = {
+Highcharts.theme.green = {
 	colors: ["#DDDF0D", "#55BF3B", "#DF5353", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
 		"#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
 	chart: {
@@ -18,6 +18,7 @@ Highcharts.theme = {
 		borderWidth: 2,
 		className: 'dark-container',
 		plotBackgroundColor: 'rgba(255, 255, 255, .1)',
+		plotBackgroundImage: null,
 		plotBorderColor: '#CCCCCC',
 		plotBorderWidth: 1
 	},
@@ -258,6 +259,3 @@ Highcharts.theme = {
 	textColor: '#C0C0C0',
 	maskColor: 'rgba(255,255,255,0.3)'
 };
-
-// Apply the theme
-var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
