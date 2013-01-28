@@ -37,25 +37,17 @@ com.fonantrix.application.site = (function() {
 	}
 	
  	function drawChart(params, theme) {
- 		if (comchart != null) {
- 			comchart.destroy();
- 		}
- 		if (barchart != null) {
- 			barchart.destroy();
- 		}
- 		if (linechart != null) {
- 			linechart.destroy();
- 		}
- 		//alert(defaultOptions);
+ 		
 		// Apply the theme
- 		if (typeof theme != "undefined") {
- 			//Highcharts.setOptions(defaultOptions);
- 			//var highchartsOptions = Highcharts.setOptions(eval("Highcharts.theme" + "." + theme));
- 			var Options1 = Highcharts.getOptions();
- 			Highcharts.merge(Options1, eval("Highcharts.theme" + "." + theme))
- 		} else {
- 			defaultOptions = Highcharts.getOptions();
+ 		if (typeof theme == "undefined") {
+ 			theme = "default";
  		}
+ 		if (comchart != null)
+ 			comchart.options.colors = [];
+ 		if (barchart != null)
+ 			barchart.options.colors = [];
+ 		var highchartsOptions = Highcharts.setOptions(eval("Highcharts.theme" + "." + theme));
+ 		
 		for (var i=0;i<params.length;i++) {
 			var contianerName = "container" + i ;
 			if (params[i].type === "line") {

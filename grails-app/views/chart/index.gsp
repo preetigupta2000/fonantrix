@@ -5,6 +5,7 @@
 	<style type="text/css">
 		.btn-group { display: -moz-inline-box;}
 		#page-title { padding-bottom: 10px; margin-bottom: 1.5em;}
+		.row { margin-bottom: 10px; }
 	</style>
   </head>
 
@@ -95,7 +96,7 @@
 		    $('#tabs a[href="#home"]').tab('show');
 			$('#tabs a[href="#home"]').parent().attr('id', 'selected');
 			*/
-			app.drawChart(charts, "grid");	
+			app.drawChart(charts);	
 		});
 
 		function changeTheme(value) {

@@ -10,6 +10,7 @@ Highcharts.theme.skies = {
       borderWidth: 0,    
       plotShadow: true,
       plotBackgroundImage: 'images/skies.jpg',
+	  plotBackgroundColor: null,
       plotBackgroundColor: {
          linearGradient: [0, 0, 250, 500],
          stops: [
@@ -17,7 +18,10 @@ Highcharts.theme.skies = {
             [1, 'rgba(255, 255, 255, 0)']
          ]
       },
-      plotBorderWidth: 1
+      plotBorderWidth: 1,
+      plotBorderColor: "#C0C0C0",
+      className: null,
+      plotBackgroundColor: null
    },
    title: {
       style: {

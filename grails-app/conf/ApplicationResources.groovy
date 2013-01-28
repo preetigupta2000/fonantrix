@@ -30,6 +30,7 @@ modules = {
 		dependsOn "libs"
 		resource url:'js/highcharts/highcharts.js'
 		resource url:'js/highcharts/modules/exporting.js'
+		resource url:'js/highcharts/themes/default.js'
 		resource url:'js/highcharts/themes/grid.js'
 		resource url:'js/highcharts/themes/dark-blue.js'
 		resource url:'js/highcharts/themes/dark-green.js'

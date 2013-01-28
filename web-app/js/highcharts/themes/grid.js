@@ -2,7 +2,6 @@
  * Grid theme for Highcharts JS
  * @author Torstein Hønsi
  */
-namespace("Highcharts.theme");
 Highcharts.theme.grid = {
 	colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
 	chart: {
@@ -17,7 +16,7 @@ Highcharts.theme.grid = {
 		plotBackgroundColor: 'rgba(255, 255, 255, .9)',
 		plotBackgroundImage: null,
 		plotShadow: true,
-		plotBorderWidth: 1,
+		plotBorderWidth: 1
 	},
 	title: {
 		style: {
