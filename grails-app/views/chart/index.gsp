@@ -13,7 +13,7 @@
 		<h1><a href="casestudy">Case Study</a>&nbsp; <h2>DashBoard</h2></h1>
 		<p>Following is a sample dashboard demonstrating dynamic chart and a responsive design for mobil delivery. The background (analytic) is based on cloud Redis instance and can be easily extended for any other reporting database.</p>
 		<div class="btn-group-wrap">
-			<button type="submit" class="btn btn-warning btn-mini">Refresh Status</button>
+			<a href="javascript:refreshChart();"><button type="submit" class="btn btn-warning btn-mini">Refresh Status</button></a>
 			<button type="submit" class="btn btn-warning btn-mini">Enable Dynamic Mode</button>	
 			<span class="btn-group">
 				<button class="btn btn-warning btn-mini">Skins</button>
@@ -80,6 +80,7 @@
 		$('#main-nav li').removeClass("active");
 		$('#main-nav li::nth-child(6)').not(".language").addClass("active");	
 		var charts = ${charts};
+		var app = com.fonantrix.application.site;
 		$(document).ready(function() {
 			/*
 			$('#tabs a').click(function(e) {
@@ -94,11 +95,15 @@
 		    $('#tabs a[href="#home"]').tab('show');
 			$('#tabs a[href="#home"]').parent().attr('id', 'selected');
 			*/
-	    	com.fonantrix.application.site.drawChart(charts, "grid");	
+			app.drawChart(charts, "grid");	
 		});
 
 		function changeTheme(value) {
-			com.fonantrix.application.site.changeTheme(charts, value);
+			app.changeTheme(charts, value);
+		}
+
+		function refreshChart() {
+			app.redrawChart();
 		}
 	</script>	
   </body>
