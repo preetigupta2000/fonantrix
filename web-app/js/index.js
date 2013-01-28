@@ -21,13 +21,40 @@ com.fonantrix.application.site = (function() {
  	/********************************************************/
  	/*                 PUBLIC MEMBERS                     */
  	/********************************************************/
+	var comchart = null;
+	var barchart = null;
+	var linechart = null;
+	var defaultOptions = null;
+	
 	function updateTheme(params, theme) {
 		drawChart(params, theme);
 	}
+	
+	function redrawCharts () {
+		comchart.redraw();
+		barchart.redraw();
+		linechart.redraw();
+	}
+	
  	function drawChart(params, theme) {
+ 		if (comchart != null) {
+ 			comchart.destroy();
+ 		}
+ 		if (barchart != null) {
+ 			barchart.destroy();
+ 		}
+ 		if (linechart != null) {
+ 			linechart.destroy();
+ 		}
+ 		//alert(defaultOptions);
 		// Apply the theme
  		if (typeof theme != "undefined") {
- 			var highchartsOptions = Highcharts.setOptions(eval("Highcharts.theme" + "." + theme));
+ 			//Highcharts.setOptions(defaultOptions);
+ 			//var highchartsOptions = Highcharts.setOptions(eval("Highcharts.theme" + "." + theme));
+ 			var Options1 = Highcharts.getOptions();
+ 			Highcharts.merge(Options1, eval("Highcharts.theme" + "." + theme))
+ 		} else {
+ 			defaultOptions = Highcharts.getOptions();
  		}
 		for (var i=0;i<params.length;i++) {
 			var contianerName = "container" + i ;
@@ -80,7 +107,6 @@ com.fonantrix.application.site = (function() {
 	                enabled: false
 	            } 	            
 	        });
-		  return comchart;
 	}
 	
 	function barChart(param, contianerName){
@@ -146,7 +172,6 @@ com.fonantrix.application.site = (function() {
 	                enabled: false
 	            } 	            
  	        });
- 		  return barchart;
  	}
  	
 	function lineChart(param, contianerName) {
@@ -201,7 +226,6 @@ com.fonantrix.application.site = (function() {
 	                enabled: false
 	            }
 	    });
-        return linechart;
 	}
  	/********************************************************/
  	/*                 ONE TIME INIT FUNCTION              */
@@ -256,7 +280,8 @@ com.fonantrix.application.site = (function() {
  
  	return	{
  		"drawChart":drawChart,
- 		"changeTheme":updateTheme
+ 		"changeTheme":updateTheme,
+ 		"redrawChart":redrawCharts
  	}
  
 })();
