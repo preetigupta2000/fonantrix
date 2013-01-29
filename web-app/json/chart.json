@@ -8,7 +8,16 @@
         	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Alert",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{ name: 'Open Count', data: [8, 16.9, 109.5, 147, 1200, 24474, 5049, 345]}, {name: 'Close Count', data: [5, 25, 256, 356, 2400, 18000, 7890, 456]}]"
+        	"seriesData": "[{ name: 'Open Count', data: [8, 16.9, 109.5, 147, 1200, 24474, 5049, 345]}]",
+        	"seriesData1": "[{name: 'Close Count', data: [5, 25, 256, 356, 2400, 18000, 7890, 456]}]",
+        	"seriesData2": "",
+        	"seriesData3": "",
+        	"seriesData4": "",
+        	"seriesData5": "",
+        	"seriesData6": "",
+        	"seriesData7": "",
+        	"seriesData8": "",
+        	"seriesData9": ""
         },
         {
         	"type": "line",        
@@ -18,7 +27,16 @@
         	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Rank",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{ name: 'Lowest', data: [5, 78, 36, 47, 57, 99, 97, 48]}, {name: 'Average', data: [3, 23, 32, 23, 40, 27, 43, 23]},{name: 'Highest', data: [9, 47, 45, 56, 68, 100, 100, 56]}]"
+        	"seriesData": "[{name: 'Lowest', data: [5, 78, 36, 47, 57, 99, 97, 48]}]",
+        	"seriesData1": "[{name: 'Average', data: [3, 23, 32, 23, 40, 27, 43, 23]}]",
+        	"seriesData2": "[{name: 'Highest', data: [9, 47, 45, 56, 68, 100, 100, 56]}]",
+        	"seriesData3": "",
+        	"seriesData4": "",
+        	"seriesData5": "",
+        	"seriesData6": "",
+        	"seriesData7": "",
+        	"seriesData8": "",
+        	"seriesData9": ""        	
         },
         {
         	"type": "line",        
@@ -28,7 +46,16 @@
         	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Minutes",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{ name: 'Lowest', data: [6, 12, 28, 34, 26, 36, 47, 45]}, {name: 'Average', data: [6, 23, 25, 41, 52, 45, 57, 80]},{name: 'Highest', data: [7, 34, 45, 56, 78, 64, 70, 87]}]"
+        	"seriesData": "[{ name: 'Lowest', data: [6, 12, 28, 34, 26, 36, 47, 45]}]",
+			"seriesData1": "[{name: 'Average', data: [6, 23, 25, 41, 52, 45, 57, 80]}]",
+			"seriesData2": "[{name: 'Highest', data: [7, 34, 45, 56, 78, 64, 70, 87]}]",
+        	"seriesData3": "",
+        	"seriesData4": "",
+        	"seriesData5": "",
+        	"seriesData6": "",
+        	"seriesData7": "",
+        	"seriesData8": "",
+        	"seriesData9": ""         	
         },
         {
             "type": "line",
@@ -38,7 +65,16 @@
         	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Minutes",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{ name: 'Lowest', data: [12, 4, 57, 78, 56, 76, 54, 63]}, {name: 'Average', data: [72, 81, 90, 42, 54, 63, 72, 81]},{name: 'Highest', data: [5, 67, 43, 52, 65, 78, 98, 92]}]"
+        	"seriesData": "[{ name: 'Lowest', data: [12, 4, 57, 78, 56, 76, 54, 63]}]",
+			"seriesData1": "[{name: 'Average', data: [72, 81, 90, 42, 54, 63, 72, 81]}]",
+			"seriesData2": "[{name: 'Highest', data: [5, 67, 43, 52, 65, 78, 98, 92]}]",
+        	"seriesData3": "",
+        	"seriesData4": "",
+        	"seriesData5": "",
+        	"seriesData6": "",
+        	"seriesData7": "",
+        	"seriesData8": "",
+        	"seriesData9": ""         	
         },
         {
             "type": "bar",
@@ -48,7 +84,16 @@
         	"xAxisjson": "['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",
         	"yAxistitle": "Percentage of Alerts",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{showInLegend:false, name: 'Percentage', data: [131, 129, 128, 110, 20], text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [1119, 1040, 1008, 371, 26]},{showInLegend:false, name: 'Counts', data: [1119, 1040, 1008, 371, 26], text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [131, 129, 128, 110, 20]}]"
+        	"seriesData": "[{showInLegend:false, name: 'Percentage', data: [131, 129, 128, 110, 20], text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [1119, 1040, 1008, 371, 26]}]",
+			"seriesData1": "[{showInLegend:false, name: 'Counts', data: [1119, 1040, 1008, 371, 26], text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [131, 129, 128, 110, 20]}]",
+			"seriesData2": "",
+        	"seriesData3": "",
+        	"seriesData4": "",
+        	"seriesData5": "",
+        	"seriesData6": "",
+        	"seriesData7": "",
+        	"seriesData8": "",
+        	"seriesData9": ""           	
         },
         {
             "type": "combination",
@@ -58,7 +103,16 @@
         	"xAxisjson": "['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",
         	"yAxistitle": "Alerts",
         	"plotLinescolor": "#808080",
-        	"seriesData": "[{type: 'column', showInLegend:false, name: 'Percentage', data: [131, 129, 128, 110, 20]}, {type: 'column', showInLegend:false, name: 'Count', data: [1119, 1040, 1008, 371, 26]}, {type: 'spline', showInLegend:false, name: 'Average', data: [713, 541.67, 813, 311.33, 183.33], marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[3], fillColor: 'white'} }, {type: 'pie', showInLegend:false, name: 'Total consumption', data: [{ name: 'Alert', y: 13, color: '#4572A7'}, {name: 'Rank', y: 23, color: '#AA4643'}, {name: 'Intervene', y: 19, color: '#89A54E'}, {name: 'Time to Close', y: 12, color: '#80699B'}], center: [25, 25], size: 40, showInLegend: false, dataLabels: {enabled: false}}]"
+        	"seriesData": "[{type: 'column', showInLegend:false, name: 'Percentage', data: [131, 129, 128, 110, 20]}]",
+			"seriesData1": "[{type: 'column', showInLegend:false, name: 'Count', data: [1119, 1040, 1008, 371, 26]}]",
+			"seriesData2": "[{type: 'spline', showInLegend:false, name: 'Average', data: [713, 541.67, 813, 311.33, 183.33], marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[3], fillColor: 'white'} }]",
+        	"seriesData3": "[{type: 'pie', showInLegend:false, name: 'Total consumption', data: [{ name: 'Alert', y: 13, color: '#4572A7'}, {name: 'Rank', y: 23, color: '#AA4643'}, {name: 'Intervene', y: 19, color: '#89A54E'},{name: 'Time to Close', y: 12, color: '#80699B'}], center: [25, 25], size: 40, showInLegend: false, dataLabels: {enabled: false}}]",
+        	"seriesData4": "",
+        	"seriesData5": "",
+        	"seriesData6": "",
+        	"seriesData7": "",
+        	"seriesData8": "",
+        	"seriesData9": ""          	
         }  
     ]    
 }

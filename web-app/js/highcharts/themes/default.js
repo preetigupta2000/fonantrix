@@ -27,6 +27,7 @@ Highcharts.theme.default = {
     },
     chart: {
         borderColor: "#4572A7",     
+        borderWidth: 1,
         borderRadius: 5,
         defaultSeriesType: "line",
         ignoreHiddenSeries: true,
@@ -40,6 +41,7 @@ Highcharts.theme.default = {
         },
         borderWidth: 0,
         backgroundColor: "#FFFFFF",
+        plotBackgroundColor: null,
         plotBorderColor: "#C0C0C0",
         plotShadow: false,
         plotBorderWidth: 1,
@@ -75,6 +77,12 @@ Highcharts.theme.default = {
 	xAxis: {
 		gridLineWidth: 0
 	},
+	yAxis: {
+		alternateGridColor: null,
+		minorTickInterval: null,
+		lineWidth: 0,
+		tickWidth: 0
+	},	
     plotOptions: {
         line: {
             allowPointSelect: false,

@@ -42,10 +42,6 @@ com.fonantrix.application.site = (function() {
  		if (typeof theme == "undefined") {
  			theme = "default";
  		}
- 		if (comchart != null)
- 			comchart.options.colors = [];
- 		if (barchart != null)
- 			barchart.options.colors = [];
  		var highchartsOptions = Highcharts.setOptions(eval("Highcharts.theme" + "." + theme));
  		
 		for (var i=0;i<params.length;i++) {

@@ -55,6 +55,7 @@ Highcharts.theme.blue = {
 	},
 	yAxis: {
 		gridLineColor: '#333333',
+		gridLineWidth: 1,
 		labels: {
 			style: {
 				color: '#A0A0A0'

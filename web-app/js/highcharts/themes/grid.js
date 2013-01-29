@@ -13,6 +13,7 @@ Highcharts.theme.grid = {
 			]
 		},
 		borderWidth: 2,
+		borderRadius: 5,
 		plotBackgroundColor: 'rgba(255, 255, 255, .9)',
 		plotBackgroundImage: null,
 		plotShadow: true,
@@ -31,6 +32,7 @@ Highcharts.theme.grid = {
 		}
 	},
 	xAxis: {
+		gridLineColor: "#C0C0C0",
 		gridLineWidth: 1,
 		lineColor: '#000',
 		tickColor: '#000',
@@ -51,7 +53,9 @@ Highcharts.theme.grid = {
 		}
 	},
 	yAxis: {
+		gridLineColor: '#C0C0C0',
 		minorTickInterval: 'auto',
+		minorGridLineWidth: 1,
 		lineColor: '#000',
 		lineWidth: 1,
 		tickWidth: 1,
@@ -88,5 +92,29 @@ Highcharts.theme.grid = {
 		style: {
 			color: '#99b'
 		}
-	}
+	},
+	exporting: {
+		buttons: {
+			exportButton: {
+				symbolFill: '#A8BF77'
+			},
+			printButton: {
+				symbolFill: '#779ABF'
+			}
+		}
+	},
+	navigation: {
+		buttonOptions: {
+			backgroundColor: {
+				linearGradient: [0, 0, 0, 20],
+				stops: [
+                    [0.4, "#F7F7F7"],
+                    [0.6, "#E3E3E3"]
+				]
+			},
+			borderColor: '#B0B0B0',
+			symbolStroke: '#A0A0A0',
+			hoverSymbolStroke: '#4572A5'
+		}
+	}	
 };

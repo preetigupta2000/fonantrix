@@ -27,7 +27,9 @@ class BootStrap {
 			def allCharts = slurper.parseText(jsonChartData)
 			allCharts.charts.each
 			{
-				new Chart(type: it.type, title: it.title, subtitle: it.subtitle, xAxisTitle: it.xAxisTitle, xAxisjson: it.xAxisjson, yAxistitle: it.yAxistitle, plotLinescolor: it.plotLinescolor, seriesData: it.seriesData).save(failOnError: true)
+				new Chart(type: it.type, title: it.title, subtitle: it.subtitle, xAxisTitle: it.xAxisTitle, xAxisjson: it.xAxisjson, yAxistitle: it.yAxistitle, plotLinescolor: it.plotLinescolor, 
+							seriesData: it.seriesData, seriesData1: it.seriesData1, seriesData2: it.seriesData2, seriesData3: it.seriesData3, seriesData4: it.seriesData4, seriesData5: it.seriesData5,
+							seriesData6: it.seriesData6, seriesData7: it.seriesData7, seriesData8: it.seriesData8, seriesData9: it.seriesData9).save(failOnError: true)
 			}
 		}
     }

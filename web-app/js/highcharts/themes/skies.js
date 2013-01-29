@@ -11,6 +11,7 @@ Highcharts.theme.skies = {
       plotShadow: true,
       plotBackgroundImage: 'images/skies.jpg',
 	  plotBackgroundColor: null,
+	  backgroundColor: null,
       plotBackgroundColor: {
          linearGradient: [0, 0, 250, 500],
          stops: [
@@ -37,6 +38,7 @@ Highcharts.theme.skies = {
    },
    xAxis: {
       gridLineWidth: 0,
+      gridLineColor: '#C0C0C0',
       lineColor: '#C0D0E0',
       tickColor: '#C0D0E0',
       labels: {
@@ -53,6 +55,8 @@ Highcharts.theme.skies = {
       }
    },
    yAxis: {
+	  minorTickInterval: null,	   
+	  gridLineColor: '#C0C0C0',
       alternateGridColor: 'rgba(255, 255, 255, .5)',
       lineColor: '#C0D0E0',
       tickColor: '#C0D0E0',
@@ -86,5 +90,29 @@ Highcharts.theme.skies = {
       style: {
          color: '#3E576F'
       }
-   }
+   },
+	exporting: {
+		buttons: {
+			exportButton: {
+				symbolFill: '#A8BF77'
+			},
+			printButton: {
+				symbolFill: '#779ABF'
+			}
+		}
+	},
+	navigation: {
+		buttonOptions: {
+			backgroundColor: {
+				linearGradient: [0, 0, 0, 20],
+				stops: [
+                    [0.4, "#F7F7F7"],
+                    [0.6, "#E3E3E3"]
+				]
+			},
+			borderColor: '#B0B0B0',
+			symbolStroke: '#A0A0A0',
+			hoverSymbolStroke: '#4572A5'
+		}
+	}	   
 };
