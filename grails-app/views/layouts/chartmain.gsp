@@ -48,11 +48,11 @@
 	</head>
 	<body dir="${direction}">
 		<div id="wrapper" class="clearfix">
-			<!--  g:render template="/layout-helpers/header"/ -->
+			<g:render template="/layout-helpers/header"/>
 			
 			<g:layoutBody/>
 			
-			<!-- g:render template="/layout-helpers/footer"/-->
+			<g:render template="/layout-helpers/footer"/>
 		</div> <!-- /wrapper -->
 		<r:layoutResources />
 	</body>

@@ -90,7 +90,7 @@ com.fonantrix.application.site = (function() {
 	                    return s;
 	                }
 	            },
-	            series: eval("(" + param.seriesData + ')'),
+	            series: eval("(" + getSeriesValue(param) + ')'),
 	            credits: {
 	                enabled: false
 	            } 	            
@@ -155,7 +155,7 @@ com.fonantrix.application.site = (function() {
  	                    borderWidth: 0	                    
  	                }            
  	            },
- 	            series:  eval("(" + param.seriesData + ')'),
+ 	            series:  eval("(" + getSeriesValue(param) + ')'),
 	            credits: {
 	                enabled: false
 	            } 	            
@@ -209,12 +209,39 @@ com.fonantrix.application.site = (function() {
 	                    }
 	                }
 	            },	            
-	            series: eval("(" + param.seriesData + ')'),
+	            series: eval("(" + getSeriesValue(param) + ")"),
 	            credits: {
 	                enabled: false
 	            }
 	    });
 	}
+	
+	function getSeriesValue(param) {
+		var returnSeries = "["
+		if (param.seriesData.trim().length > 0)
+			returnSeries +=  param.seriesData + ",";
+		if (param.seriesData1.trim().length > 0)
+			returnSeries +=  param.seriesData1 + ",";
+		if (param.seriesData2.trim().length > 0)
+			returnSeries +=  param.seriesData2 + ",";
+		if (param.seriesData3.trim().length > 0)
+			returnSeries +=  param.seriesData3 + ",";		
+		if (param.seriesData4.trim().length > 0)
+			returnSeries +=  param.seriesData4 + ",";
+		if (param.seriesData5.trim().length > 0)
+			returnSeries +=  param.seriesData5 + ",";
+		if (param.seriesData6.trim().length > 0)
+			returnSeries +=  param.seriesData6 + ",";
+		if (param.seriesData7.trim().length > 0)
+			returnSeries +=  param.seriesData7 + ",";
+		if (param.seriesData8.trim().length > 0)
+			returnSeries +=  param.seriesData8 + ",";
+		if (param.seriesData9.trim().length > 0)
+			returnSeries +=  param.seriesData9 + ",";
+		returnSeries = returnSeries.substring(0,returnSeries.lastIndexOf(','))
+		returnSeries += "]";
+		return returnSeries;
+	} 
  	/********************************************************/
  	/*                 ONE TIME INIT FUNCTION              */
  	/********************************************************/
