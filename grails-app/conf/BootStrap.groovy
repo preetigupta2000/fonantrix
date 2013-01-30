@@ -33,12 +33,13 @@ class BootStrap {
 			allCharts.charts.each
 			{
 				def jsonSeries = it
-				new Chart(type: it.type, title: it.title, subtitle: it.subtitle, xAxisTitle: it.xAxisTitle, xAxisjson: it.xAxisjson, yAxistitle: it.yAxistitle, 
+				def aChart  = new Chart(type: it.type, title: it.title, subtitle: it.subtitle, xAxisTitle: it.xAxisTitle, xAxisjson: it.xAxisjson, yAxistitle: it.yAxistitle, 
 							plotLinescolor: it.plotLinescolor).save(failOnError: true)
-				
-				if(jsonSeries.products) {
+				def aSeries
+				if(jsonSeries.seriess) {
 					jsonSeries.seriess.each	{
-						new Series(no: it.no, value: it.value, data: it.data, additionalNodes: it.additionalNodes).save(failOnError: true)
+						aSeries = new Series(no: it.no, value: it.value, dataValue: it.data, additionalNodes: it.additionalNodes)
+						aChart.addToSeriess(aSeries).save(failOnError: true)
 					}
 				}
 				/*if (i == 0) {

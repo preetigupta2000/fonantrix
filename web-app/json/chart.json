@@ -5,7 +5,7 @@
         	"title": "Alerts",
         	"subtitle": "",  
         	"xAxisTitle": "",
-        	"xAxisjson": "'Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17'",
+        	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
         	"yAxistitle": "Alert",
         	"plotLinescolor": "#808080",
         	"seriess": [{
@@ -150,16 +150,16 @@
         				},
 						{
 				        	"no": 3,
-				        	"value": "type: 'spline', showInLegend:false, name: 'Average'",
-				        	"data": "[713, 541.67, 813, 311.33, 183.33]",
-				        	"additionalNodes": "marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[3], fillColor: 'white'}"
-        				},
-						{
-				        	"no": 4,
 				        	"value": "type: 'pie', showInLegend:false, name: 'Total consumption'",
 				        	"data": "[{ name: 'Alert', y: 13, color: '#4572A7'}, {name: 'Rank', y: 23, color: '#AA4643'}, {name: 'Intervene', y: 19, color: '#89A54E'},{name: 'Time to Close', y: 12, color: '#80699B'}]",
 				        	"additionalNodes": "center: [25, 25], size: 40, showInLegend: false, dataLabels: {enabled: false}"
-        				}
+        				},
+						{
+				        	"no": 4,
+				        	"value": "type: 'spline', showInLegend:false, name: 'Average'",
+				        	"data": "[713, 541.67, 813, 311.33, 183.33]",
+				        	"additionalNodes": "marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[3], fillColor: 'white'}"
+        				}        				
         	]    	
         }  
     ]    

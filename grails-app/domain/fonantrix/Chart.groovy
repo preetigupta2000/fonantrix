@@ -17,7 +17,7 @@ class Chart {
     }
 
 	static mapping = {
+		seriess lazy: false
 		xAxisjson type:'text'
-		sort "no"
 	}
 }

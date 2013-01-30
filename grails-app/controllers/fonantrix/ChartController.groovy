@@ -6,8 +6,12 @@ import groovy.json.JsonBuilder
 class ChartController {
 
     def index() { 
+
+		def chartList = Chart.list()
 		
-		(Chart.list()).eachWithIndex { chart, index ->
+		def mergeData = [];
+		
+		chartList.eachWithIndex { chart, index ->
 			def data = [
 				type : chart.type,
 				title : chart.title,
@@ -17,16 +21,23 @@ class ChartController {
 				xAxisjson : chart.xAxisjson,
 				yAxistitle : chart.yAxistitle,
 				plotLinescolor : chart.plotLinescolor,
-				seriess : chart.seriess.collect {[
-					no: it.no,
+				series : chart.seriess.collect {[
 					value: it.value,
-					data: it.data,
+					data: it.dataValue,
 					additionalNodes : it.additionalNodes]}
 			]
+			mergeData.push(data)
 		}
-		def json = new JsonBuilder(data)
+		//System.out.println("mergeData:" + mergeData)
+		def json = new JsonBuilder(mergeData)
 		
+		//System.out.println(json.toString())
 		render(view: "/chart/index",  model:[charts:json.toString()])
+		/*
+		def jsonstring = Chart.list() as JSON
+		System.out.println(jsonstring)
+		render(view: "/chart/index",  model:[charts:jsonstring])
+		*/
 	}
 	
 }
