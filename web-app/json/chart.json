@@ -5,7 +5,7 @@
         	"title": "Alerts",
         	"subtitle": "",  
         	"xAxisTitle": "",
-        	"xAxisjson": "['Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17']",
+        	"xAxisjson": "'Jan10', 'Jan11', 'Jan12', 'Jan13', 'Jan14', 'Jan15','Jan16', 'Jan17'",
         	"yAxistitle": "Alert",
         	"plotLinescolor": "#808080",
         	"seriesData": "{name: 'Open Count', data: [8, 16.9, 109.5, 147, 1200, 24474, 5049, 345]}",
