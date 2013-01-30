@@ -1,5 +1,6 @@
 import groovy.json.JsonSlurper
 import fonantrix.Chart
+import fonantrix.Series
 import fonantrix.authentication.User
 import fonantrix.authentication.Role
 import fonantrix.authentication.UserRole
@@ -31,10 +32,16 @@ class BootStrap {
 			int i = 0
 			allCharts.charts.each
 			{
-				new Chart(type: it.type, title: it.title, subtitle: it.subtitle, xAxisTitle: it.xAxisTitle, xAxisjson: it.xAxisjson, yAxistitle: it.yAxistitle, plotLinescolor: it.plotLinescolor, 
-							seriesData: it.seriesData, seriesData1: it.seriesData1, seriesData2: it.seriesData2, seriesData3: it.seriesData3, seriesData4: it.seriesData4, seriesData5: it.seriesData5,
-							seriesData6: it.seriesData6, seriesData7: it.seriesData7, seriesData8: it.seriesData8, seriesData9: it.seriesData9).save(failOnError: true)
-				if (i == 0) {
+				def jsonSeries = it
+				new Chart(type: it.type, title: it.title, subtitle: it.subtitle, xAxisTitle: it.xAxisTitle, xAxisjson: it.xAxisjson, yAxistitle: it.yAxistitle, 
+							plotLinescolor: it.plotLinescolor).save(failOnError: true)
+				
+				if(jsonSeries.products) {
+					jsonSeries.seriess.each	{
+						new Series(no: it.no, value: it.value, data: it.data, additionalNodes: it.additionalNodes).save(failOnError: true)
+					}
+				}
+				/*if (i == 0) {
 					jedis.set("charts.1.type", it.type)
 					jedis.set("charts.1.title", it.title)
 					jedis.set("charts.1.subtitle", it.subtitle)
@@ -42,10 +49,10 @@ class BootStrap {
 					jedis.lpush("charts.1.xAxisjson", it.xAxisjson)
 					jedis.lpush("charts.1.yAxistitle", it.yAxistitle)
 					jedis.lpush("charts.1.plotLinescolor", it.plotLinescolor)
-					jedis.set("charts.1.seriesData1", it.seriesData1)
-					jedis.set("charts.1.seriesData2", it.seriesData2)
+					jedis.hmset("charts.1.seriesData1", it.seriesData1)
+					jedis.hmset("charts.1.seriesData2", it.seriesData2)
 					i = 1;
-				}
+				}*/
 			}
 		}
 		//assert jedis.get("charts.1.type")
