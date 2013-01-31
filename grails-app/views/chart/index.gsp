@@ -15,6 +15,7 @@
 		<p>Following is a sample dashboard demonstrating dynamic chart and a responsive design for mobil delivery. The background (analytic) is based on cloud Redis instance and can be easily extended for any other reporting database.</p>
 		<div class="btn-group-wrap">
 			<a href="javascript:refreshChart();"><button type="submit" class="btn btn-warning btn-mini">Refresh Status</button></a>
+			<a href="updatechart"><button type="submit" class="btn btn-warning btn-mini">Refresh Status with Redis</button></a>
 			<button type="submit" class="btn btn-warning btn-mini">Enable Dynamic Mode</button>	
 			<span class="btn-group">
 				<button class="btn btn-warning btn-mini">Skins</button>

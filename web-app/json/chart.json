@@ -11,13 +11,13 @@
         	"seriess": [{
 				        	"no": 1,
 				        	"value": "name: 'Open Count'",
-				        	"data": "[8, 16.9, 109.5, 147, 1200, 24474, 5049, 345]",
+				        	"data": "8, 16.9, 109.5, 147, 1200, 24474, 5049, 345",
 				        	"additionalNodes": ""
         				},
 						{
 				        	"no": 2,
 				        	"value": "name: 'Close Count'",
-				        	"data": "[5, 25, 256, 356, 2400, 18000, 7890, 456]",
+				        	"data": "5, 25, 256, 356, 2400, 18000, 7890, 456",
 				        	"additionalNodes": ""
         				}
         	]
@@ -33,19 +33,19 @@
 			"seriess": [{
 				        	"no": 1,
 				        	"value": "name: 'Lowest'",
-				        	"data": "[5, 78, 36, 47, 57, 99, 97, 48]",
+				        	"data": "5, 78, 36, 47, 57, 99, 97, 48",
 				        	"additionalNodes": ""
         				},
 						{
 				        	"no": 2,
 				        	"value": "name: 'Average'",
-				        	"data": "[3, 23, 32, 23, 40, 27, 43, 23]",
+				        	"data": "3, 23, 32, 23, 40, 27, 43, 23",
 				        	"additionalNodes": ""
         				},
 						{
 				        	"no": 3,
 				        	"value": "name: 'Highest'",
-				        	"data": "[9, 47, 45, 56, 68, 100, 100, 56]",
+				        	"data": "9, 47, 45, 56, 68, 100, 100, 56",
 				        	"additionalNodes": ""
         				}
         	]
@@ -61,19 +61,19 @@
 			"seriess": [{
 				        	"no": 1,
 				        	"value": "name: 'Lowest'",
-				        	"data": "[6, 12, 28, 34, 26, 36, 47, 45]",
+				        	"data": "6, 12, 28, 34, 26, 36, 47, 45",
 				        	"additionalNodes": ""
         				},
 						{
 				        	"no": 2,
 				        	"value": "name: 'Average'",
-				        	"data": "[6, 23, 25, 41, 52, 45, 57, 80]",
+				        	"data": "6, 23, 25, 41, 52, 45, 57, 80",
 				        	"additionalNodes": ""
         				},
 						{
 				        	"no": 3,
 				        	"value": "name: 'Highest'",
-				        	"data": "[7, 34, 45, 56, 78, 64, 70, 87]",
+				        	"data": "7, 34, 45, 56, 78, 64, 70, 87",
 				        	"additionalNodes": ""
         				}
         	]
@@ -89,19 +89,19 @@
 			"seriess": [{
 				        	"no": 1,
 				        	"value": "name: 'Lowest'",
-				        	"data": "[12, 4, 57, 78, 56, 76, 54, 63]",
+				        	"data": "12, 4, 57, 78, 56, 76, 54, 63",
 				        	"additionalNodes": ""
         				},
 						{
 				        	"no": 2,
 				        	"value": "name: 'Average'",
-				        	"data": "[72, 81, 90, 42, 54, 63, 72, 81]",
+				        	"data": "72, 81, 90, 42, 54, 63, 72, 81",
 				        	"additionalNodes": ""
         				},
 						{
 				        	"no": 3,
 				        	"value": "name: 'Highest'",
-				        	"data": "[5, 67, 43, 52, 65, 78, 98, 92]",
+				        	"data": "5, 67, 43, 52, 65, 78, 98, 92",
 				        	"additionalNodes": ""
         				}
         	]         	
@@ -117,13 +117,13 @@
 			"seriess": [{
 				        	"no": 1,
 				        	"value": "showInLegend:false, name: 'Percentage'",
-				        	"data": "[131, 129, 128, 110, 20]",
+				        	"data": "131, 129, 128, 110, 20",
 				        	"additionalNodes": "text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [1119, 1040, 1008, 371, 26]"
         				},
 						{
 				        	"no": 2,
 				        	"value": "showInLegend:false, name: 'Counts'",
-				        	"data": "[1119, 1040, 1008, 371, 26]",
+				        	"data": "1119, 1040, 1008, 371, 26",
 				        	"additionalNodes": "text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [131, 129, 128, 110, 20]"
         				}
         	]           	
@@ -139,25 +139,25 @@
 			"seriess": [{
 				        	"no": 1,
 				        	"value": "type: 'column', showInLegend:false, name: 'Percentage'",
-				        	"data": "[131, 129, 128, 110, 20]",
+				        	"data": "131, 129, 128, 110, 20",
 				        	"additionalNodes": ""
         				},
 						{
 				        	"no": 2,
 				        	"value": "type: 'column', showInLegend:false, name: 'Count'",
-				        	"data": "[1119, 1040, 1008, 371, 26]",
+				        	"data": "1119, 1040, 1008, 371, 26",
 				        	"additionalNodes": ""
         				},
 						{
 				        	"no": 3,
 				        	"value": "type: 'pie', showInLegend:false, name: 'Total consumption'",
-				        	"data": "[{ name: 'Alert', y: 13, color: '#4572A7'}, {name: 'Rank', y: 23, color: '#AA4643'}, {name: 'Intervene', y: 19, color: '#89A54E'},{name: 'Time to Close', y: 12, color: '#80699B'}]",
+				        	"data": "{ name: 'Alert', y: 13, color: '#4572A7'}, {name: 'Rank', y: 23, color: '#AA4643'}, {name: 'Intervene', y: 19, color: '#89A54E'},{name: 'Time to Close', y: 12, color: '#80699B'}",
 				        	"additionalNodes": "center: [25, 25], size: 40, showInLegend: false, dataLabels: {enabled: false}"
         				},
 						{
 				        	"no": 4,
 				        	"value": "type: 'spline', showInLegend:false, name: 'Average'",
-				        	"data": "[713, 541.67, 813, 311.33, 183.33]",
+				        	"data": "713, 541.67, 813, 311.33, 183.33",
 				        	"additionalNodes": "marker: { lineWidth: 2, lineColor: Highcharts.getOptions().colors[3], fillColor: 'white'}"
         				}        				
         	]    	

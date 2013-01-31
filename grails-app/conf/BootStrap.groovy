@@ -29,7 +29,7 @@ class BootStrap {
 		if (!Chart.count()) {
 			def slurper = new JsonSlurper()
 			def allCharts = slurper.parseText(jsonChartData)
-			int i = 0
+			int i = 1
 			allCharts.charts.each
 			{
 				def jsonSeries = it
@@ -37,30 +37,36 @@ class BootStrap {
 							plotLinescolor: it.plotLinescolor).save(failOnError: true)
 				def aSeries
 				// adding chart info to redis
-				jedis.set("charts.1.type", it.type)
-				jedis.set("charts.1.title", it.title)
-				jedis.set("charts.1.subtitle", it.subtitle)
-				jedis.set("charts.1.xAxisTitle", it.xAxisTitle)
-				jedis.lpush("charts.1.xAxisjson", it.xAxisjson)
-				jedis.set("charts.1.yAxistitle", it.yAxistitle)
-				jedis.set("charts.1.plotLinescolor", it.plotLinescolor)
+				jedis.set("charts." + i + ".type", it.type)
+				jedis.set("charts." + i + ".title", it.title)
+				jedis.set("charts." + i + ".subtitle", it.subtitle)
+				jedis.set("charts." + i + ".xAxisTitle", it.xAxisTitle)
+				jedis.lpush("charts." + i + ".xAxisjson", it.xAxisjson)
+				jedis.set("charts." + i + ".yAxistitle", it.yAxistitle)
+				jedis.set("charts." + i + ".plotLinescolor", it.plotLinescolor)
 					
 				if(jsonSeries.seriess) {
 					jsonSeries.seriess.each	{
 						aSeries = new Series(no: it.no, value: it.value, dataValue: it.data, additionalNodes: it.additionalNodes)
 						aChart.addToSeriess(aSeries).save(failOnError: true)
 						// adding series data to redis
-						jedis.set("charts.1.series" + it.no, it.value)
-						jedis.set("charts.1.series" + it.no + ".additionalNodes", it.additionalNodes)
-						jedis.lpush("charts.1.series"+ it.no + ".dataValue", it.data)
+						jedis.set("charts." + i + ".series" + it.no, it.value)
+						jedis.set("charts." + i + ".series" + it.no + ".additionalNodes", it.additionalNodes)
+						if (!jedis.exists("charts." + + i + ".series"+ it.no + ".dataValue")) {
+							if (it.type)
+							def dataArray = it.data.split(",")
+							for( element in dataArray){
+								jedis.rpush("charts." + + i + ".series"+ it.no + ".dataValue", element.trim())
+							}
+						}
 					}
 				}
+				i++;
 			}
 		}
-		//assert jedis.get("charts.1.type")
-		System.out.println(jedis.get("charts.1.type"))
-		System.out.println(jedis.get("charts.1.plotLinescolor"))
-		System.out.println(jedis.get("charts.1.series1"))
+		//System.out.println(jedis.get("charts.1.type"))
+		//System.out.println(jedis.get("charts.1.plotLinescolor"))
+		//System.out.println(jedis.get("charts.1.series1"))
 		System.out.println(jedis.lrange("charts.1.series1.dataValue",0,-1))
     }
     def destroy = {

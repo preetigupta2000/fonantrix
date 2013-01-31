@@ -6,8 +6,10 @@ class UrlMappings {
 				// apply constraints here
 			}
 		}
-		"/"(controller:"home")
 		"/chart"(controller:"chart")
+		"/updatechart"(controller:"chart", action:"getLatestData")
+		
+		"/"(controller:"home")
 		"/home"(controller:"home")
 		"/about"(controller:"home", action:"about" )
 		"/services"(controller:"home", action:"services" )

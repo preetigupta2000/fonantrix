@@ -114,5 +114,3 @@ redis {
 	timeout = 2000 //default in milliseconds
 	password = "somepassword" //defaults to no password
 }
-
-grails.converters.json.default.deep = true

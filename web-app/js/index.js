@@ -222,7 +222,7 @@ com.fonantrix.application.site = (function() {
 		for (var i = 0; i < myData.length; i++){
 			returnSeries += "{";
 			returnSeries +=  myData[i].value + ",";
-			returnSeries += " data:" + myData[i].data
+			returnSeries += " data:[" + myData[i].data + "]"
 			if ( myData[i].additionalNodes.trim().length > 0) {
 				returnSeries += ", " + myData[i].additionalNodes;
 			}

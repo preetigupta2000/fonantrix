@@ -1,14 +1,13 @@
 package fonantrix
 
-import grails.converters.JSON
 import groovy.json.JsonBuilder
+
+import redis.clients.jedis.*
 
 class ChartController {
 
-    def index() { 
-
+    def index() {
 		def chartList = Chart.list()
-		
 		def mergeData = [];
 		
 		chartList.eachWithIndex { chart, index ->
@@ -28,16 +27,28 @@ class ChartController {
 			]
 			mergeData.push(data)
 		}
-		//System.out.println("mergeData:" + mergeData)
 		def json = new JsonBuilder(mergeData)
-		
-		//System.out.println(json.toString())
 		render(view: "/chart/index",  model:[charts:json.toString()])
-		/*
-		def jsonstring = Chart.list() as JSON
-		System.out.println(jsonstring)
-		render(view: "/chart/index",  model:[charts:jsonstring])
-		*/
+	}
+	
+	def getLatestData() {
+		Jedis jedis = new Jedis("localhost")
+		def keys = jedis.keys("charts.*.series*.*Value");
+		def val = jedis.lrange("charts.6.series2.dataValue",0,-1)
+		System.out.println("data1:" + val)
+		for (i in keys) {
+			int index = jedis.llen(i)
+			System.out.println("index:" + index)
+			String data = jedis.lindex(i, index-1)
+			System.out.println("value:" + data)
+			data = Float.parseFloat(data) * 2 
+			System.out.println("value2:" + data)
+			jedis.rpush(i, data)
+		}
+		val = jedis.lrange("charts.6.series2.dataValue",0,-1)
+		System.out.println("data2:" + val)
+		render('')
+		return
 	}
 	
 }
