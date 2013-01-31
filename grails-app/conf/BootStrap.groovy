@@ -36,28 +36,32 @@ class BootStrap {
 				def aChart  = new Chart(type: it.type, title: it.title, subtitle: it.subtitle, xAxisTitle: it.xAxisTitle, xAxisjson: it.xAxisjson, yAxistitle: it.yAxistitle, 
 							plotLinescolor: it.plotLinescolor).save(failOnError: true)
 				def aSeries
+				// adding chart info to redis
+				jedis.set("charts.1.type", it.type)
+				jedis.set("charts.1.title", it.title)
+				jedis.set("charts.1.subtitle", it.subtitle)
+				jedis.set("charts.1.xAxisTitle", it.xAxisTitle)
+				jedis.lpush("charts.1.xAxisjson", it.xAxisjson)
+				jedis.set("charts.1.yAxistitle", it.yAxistitle)
+				jedis.set("charts.1.plotLinescolor", it.plotLinescolor)
+					
 				if(jsonSeries.seriess) {
 					jsonSeries.seriess.each	{
 						aSeries = new Series(no: it.no, value: it.value, dataValue: it.data, additionalNodes: it.additionalNodes)
 						aChart.addToSeriess(aSeries).save(failOnError: true)
+						// adding series data to redis
+						jedis.set("charts.1.series" + it.no, it.value)
+						jedis.set("charts.1.series" + it.no + ".additionalNodes", it.additionalNodes)
+						jedis.lpush("charts.1.series"+ it.no + ".dataValue", it.data)
 					}
 				}
-				/*if (i == 0) {
-					jedis.set("charts.1.type", it.type)
-					jedis.set("charts.1.title", it.title)
-					jedis.set("charts.1.subtitle", it.subtitle)
-					jedis.set("charts.1.xAxisTitle", it.xAxisTitle)
-					jedis.lpush("charts.1.xAxisjson", it.xAxisjson)
-					jedis.lpush("charts.1.yAxistitle", it.yAxistitle)
-					jedis.lpush("charts.1.plotLinescolor", it.plotLinescolor)
-					jedis.hmset("charts.1.seriesData1", it.seriesData1)
-					jedis.hmset("charts.1.seriesData2", it.seriesData2)
-					i = 1;
-				}*/
 			}
 		}
 		//assert jedis.get("charts.1.type")
 		System.out.println(jedis.get("charts.1.type"))
+		System.out.println(jedis.get("charts.1.plotLinescolor"))
+		System.out.println(jedis.get("charts.1.series1"))
+		System.out.println(jedis.lrange("charts.1.series1.dataValue",0,-1))
     }
     def destroy = {
     }
