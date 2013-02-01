@@ -118,29 +118,22 @@
         	]         	
         },
         {
-            "type": "bar",
-        	"title": "Alert Type Trends",
-        	"subtitle": "Percentage of Alerts Across Components",
-        	"xAxisTitle": "Alert Type Trends",
-        	"xAxisjson": "'1', '2', '3', '4', '5', '6', '7', '8', '9', '10'",
-        	"yAxistitle": "Percentage of Alerts",
+            "type": "spline",
+        	"title": "Live random data",
+        	"subtitle": "",
+        	"xAxisTitle": "Value",
+        	"xAxisjson": "type: 'datetime', tickPixelInterval: 150",
+        	"yAxistitle": "Value",
         	"plotLinescolor": "#808080",
 			"seriess": [{
 				        	"no": 1,
-				        	"type": "",
-				        	"name": "Percentage",				        	
-				        	"data": "131, 129, 128, 110, 20",
-				        	"additionalNodes": "showInLegend:false, text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [1119, 1040, 1008, 371, 26]"
-        				},
-						{
-				        	"no": 2,
-				        	"type": "",
-				        	"name": "Counts",				        	
-				        	"data": "1119, 1040, 1008, 371, 26",
-				        	"additionalNodes": "showInLegend:false, text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [131, 129, 128, 110, 20]"
+				        	"type": "function",
+				        	"name": "Random data",				        	
+				        	"data": "(function() { var data = [], time = (new Date()).getTime(), i; for (i = -19; i <= 0; i++) { data.push({ x: time + i * 1000, y: Math.random()}); } return data; })()",
+				        	"additionalNodes": ""
         				}
         	]           	
-        },
+        },        
         {
             "type": "combination",
         	"title": "Alert Summay",
@@ -154,14 +147,14 @@
 				        	"type": "column",
 				        	"name": "Percentage",				        	
 				        	"data": "131, 129, 128, 110, 20",
-				        	"additionalNodes": "showInLegend:false"
+				        	"additionalNodes": "showInLegend:false, text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [1119, 1040, 1008, 371, 26]"
         				},
 						{
 				        	"no": 2,
 				        	"type": "column",
 				        	"name": "Count",				        	
 				        	"data": "1119, 1040, 1008, 371, 26",
-				        	"additionalNodes": "showInLegend:false"
+				        	"additionalNodes": "showInLegend:false, text:['High no tone rate across channels in the same network','High network no tone rate','High zone no tone rate','Videos failing to play due to splice error','Alert when the number of videos in Dispatch is greater than 5 for any inserters'],value: [131, 129, 128, 110, 20]"
         				},
 						{
 				        	"no": 3,

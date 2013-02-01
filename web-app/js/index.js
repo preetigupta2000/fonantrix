@@ -21,10 +21,7 @@ com.fonantrix.application.site = (function() {
  	/********************************************************/
  	/*                 PUBLIC MEMBERS                     */
  	/********************************************************/
-	var comchart = null;
-	var barchart = null;
-	var linechart = null;
-	var defaultOptions = null;
+	var chartArray = new Array();
 	
 	function updateTheme(params, theme) {
 		drawChart(params, theme);
@@ -46,24 +43,24 @@ com.fonantrix.application.site = (function() {
  		
 		for (var i=0;i<params.length;i++) {
 			var contianerName = "container" + i ;
+			var returnChartName
 			if (params[i].type === "line") {
-				lineChart(params[i], contianerName)
+				returnChartName = lineChart(params[i], contianerName) 
 			} else if (params[i].type === "bar") {
-				barChart(params[i], contianerName)
-			} else {
-				combinationChart(params[i], contianerName)
+				returnChartName = barChart(params[i], contianerName)
+			} else if (params[i].type === "spline") {
+				returnChartName = splineChart(params[i], contianerName)				
+			} else if (params[i].type === "combination") {
+				returnChartName = combinationChart(params[i], contianerName)
 			}
+			chartArray[contianerName] = returnChartName;
 		}
  	}
 	
 	function combinationChart(param, contianerName){
 		  comchart = new Highcharts.Chart({
 	            chart: {
-	                renderTo: contianerName,
-	                animation: {
-	                    duration: 1500,
-	                    easing: 'easeInQuad'
-	                }	                
+	                renderTo: contianerName             
 	            },
 	            title: {
 	                text: param.title
@@ -78,11 +75,24 @@ com.fonantrix.application.site = (function() {
 	                }
 	            },
 	            tooltip: {
+ 	            	style: {
+ 	                    fontSize: '8pt',
+ 	                    width: '100px',
+ 	                    wrap:'hard',
+ 	                    padding: '2px'
+ 	                },
+ 	                positioner: function () {
+ 	                	return { x: 80, y: 50 };
+ 	                },  	                
 	                formatter: function() {
 	                    var s;
 	                    if (this.point.name) { // the pie chart
 	                        s = ''+
 	                            this.point.name +': '+ this.y +' fruits';
+	                    } if (this.series.type == "column") {
+	                    	
+	                    	s = 'Alert Defination : ' + this.series.options.text[this.key] + ' Alert Count: ' + this.series.options.value[this.key]
+ 	                    	+ ' Percentage of Alerts: ' + this.y;
 	                    } else {
 	                        s = ''+
 	                            this.x  +': '+ this.y;
@@ -95,6 +105,72 @@ com.fonantrix.application.site = (function() {
 	                enabled: false
 	            } 	            
 	        });
+		  return comchart;
+	}
+	
+	function splineChart(param, contianerName){
+        Highcharts.setOptions({
+            global: {
+                useUTC: false
+            }
+        });		
+		splinechart = new Highcharts.Chart({
+            chart: {
+	                renderTo: contianerName,
+	                type: 'spline',
+	                animation: {
+	                    duration: 1500,
+	                    easing: 'easeInQuad'
+	                },
+	                events: {
+	                    load: function() {
+	    
+	                        // set up the updating of the chart each second
+	                        var series = this.series[0];
+	                        setInterval(function() {
+	                            var x = (new Date()).getTime(), // current time
+	                                y = Math.random();
+	                            series.addPoint([x, y], true, true);
+	                        }, 1000);
+	                    }
+	                }	                
+	            },
+	            title: {
+	                text: param.title
+	            },
+	            subtitle: {
+	                text: param.subtitle
+	            },
+	            xAxis: {
+	                type: 'datetime',
+	                tickPixelInterval: 150
+	            },
+	            yAxis: {
+	                title: {
+	                    text: param.yAxistitle
+	                },
+	                plotLines: [{
+	                    value: 0,
+	                    width: 1,
+	                    color: '#808080'
+	                }]	                
+	            },
+	            tooltip: {
+	                formatter: function() {
+	                        return '<b>'+ this.series.name +'</b><br/>'+
+	                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+	                        Highcharts.numberFormat(this.y, 2);
+	                }
+	            },	            
+	            legend: {
+	            	enabled: false
+	            },
+	            exporting: {
+	            	enabled: false
+	            },	            
+	            series:  eval("(" + getSeriesValue(param) + ')')
+	    });
+		return splinechart;
 	}
 	
 	function barChart(param, contianerName){
@@ -105,7 +181,7 @@ com.fonantrix.application.site = (function() {
 	                animation: {
 	                    duration: 1500,
 	                    easing: 'easeInQuad'
-	                }	 	                
+	                }     
  	            },
  	            title: {
  	                text: param.title
@@ -160,6 +236,7 @@ com.fonantrix.application.site = (function() {
 	                enabled: false
 	            } 	            
  	        });
+ 		  return barchart;
  	}
  	
 	function lineChart(param, contianerName) {
@@ -171,7 +248,7 @@ com.fonantrix.application.site = (function() {
 	                animation: {
 	                    duration: 200,
 	                    easing: 'linear'
-	                }		                
+	                }                
 	            },
 	            title: {
 	                text: param.title,
@@ -214,19 +291,25 @@ com.fonantrix.application.site = (function() {
 	                enabled: false
 	            }
 	    });
+        return linechart;
 	}
 	//[{ name: 'Open Count', data: [8, 16.9, 109.5, 147, 1200, 24474, 5049, 345]}, {name: 'Close Count', data: [5, 25, 256, 356, 2400, 18000, 7890, 456]}]
 	function getSeriesValue(param) {
 		var returnSeries = "["
 		var myData = param.series;
-		alert("myData" + myData[0].dataValue);
+		//alert("myData" + myData[0].data);
 		for (var i = 0; i < myData.length; i++){
 			returnSeries += "{";
-			if (myData[i].type.trim().length > 0)
+			if (myData[i].type.trim().length > 0 && myData[i].type.toLowerCase() != "function")
 				returnSeries +=  "type:\"" + myData[i].type + "\",";
 			returnSeries +=  "name:\"" + myData[i].name + "\",";
-			returnSeries += " data:[" + myData[i].dataValue + "]"
-			if ( myData[i].additionalNodes.trim().length > 0) {
+			
+			if (myData[i].type.toLowerCase() == "function")
+				returnSeries += " data:" + (myData[i].data).substring(1, (myData[i].data).length-1) + ""
+			else
+				returnSeries += " data:" + myData[i].data + ""
+			
+				if ( myData[i].additionalNodes.trim().length > 0) {
 				returnSeries += ", " + myData[i].additionalNodes;
 			}
 			returnSeries += "},";

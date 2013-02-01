@@ -35,13 +35,15 @@ class BootStrap {
 					def jsonSeries = it
 					loadingChartDatatoRedis(jedis, it, i)
 					
-					System.out.println(jedis.lrange("charts." + i + "xAxisjson",0,-1))
+					//System.out.println((jedis.lrange("charts." + i + ".xAxisjson",0,-1)).toListString())
+					//System.out.println("jedis:" + (jedis.lrange("charts." + i + ".xAxisjson",0,-1)))
 					
-					def aChart  = new Chart(type: jedis.get("charts." + i + ".type"), 
+					def aChart  = new Chart(number: i,
+								  type: jedis.get("charts." + i + ".type"), 
 								  title: jedis.get("charts." + i + ".title"), 
 								  subtitle: jedis.get("charts." + i + ".subtitle"), 
 								  xAxisTitle: jedis.get("charts." + i + ".xAxisTitle"), 
-								  xAxisjson: (jedis.lrange("charts." + i + "xAxisjson",0,-1))[], 
+								  xAxisjson: (jedis.lrange("charts." + i + ".xAxisjson",0,-1).toListString()), 
 								  yAxistitle: jedis.get("charts." + i + ".yAxistitle"), 
 								  plotLinescolor:  jedis.get("charts." + i + ".plotLinescolor")).save(failOnError: true)
 					def aSeries
@@ -51,9 +53,9 @@ class BootStrap {
 							aSeries = new Series(no: it.no, 
 									  type: jedis.get("charts." + i + ".series" + it.no + ".type"), 
 									  name: jedis.get("charts." + i + ".series" + it.no + ".name"), 
-									  dataValue: jedis.lrange("charts." + i + ".series" + it.no + ".dataValue",0,-1)[], 
+									  dataValue: jedis.lrange("charts." + i + ".series" + it.no + ".dataValue",0,-1).toListString(), 
 									  additionalNodes: jedis.get("charts." + i + ".series" + it.no + ".additionalNodes"))
-							System.out.println("name" + jedis.lrange("charts." + i + ".series" + it.no + ".dataValue",0,-1))
+							//System.out.println("name" + jedis.lrange("charts." + i + ".series" + it.no + ".dataValue",0,-1))
 							aChart.addToSeriess(aSeries).save(failOnError: true)
 	
 					}
@@ -63,7 +65,7 @@ class BootStrap {
 			//System.out.println(jedis.get("charts.1.type"))
 			//System.out.println(jedis.get("charts.1.plotLinescolor"))
 			//System.out.println(jedis.get("charts.1.series1"))
-			System.out.println(jedis.lrange("charts.1.series1.dataValue",0,-1))
+			//System.out.println(jedis.lrange("charts.1.series1.dataValue",0,-1))
 	    }
     }
 	
@@ -76,9 +78,11 @@ class BootStrap {
 		//jedis.lpush("charts." + i + ".xAxisjson", it.xAxisjson)
 		if (!jedis.exists("charts." + i + ".xAxisjson")) {
 			def jsonArray = it.xAxisjson.split(",")
-			System.out.prinltn(jsonArray)
+			//System.out.println("jsonArray:" + jsonArray)
 			for( element in jsonArray){
+				//System.out.println("element:" + element.trim())
 				jedis.rpush("charts." + i + ".xAxisjson", element.trim())
+				//System.out.println("output" + jedis.lrange("charts." + i + ".xAxisjson",0,-1))
 			}
 		}
 		jedis.set("charts." + i + ".yAxistitle", it.yAxistitle)
@@ -91,8 +95,10 @@ class BootStrap {
 		jedis.set("charts." + i + ".series" + it.no + ".name", it.name)
 		jedis.set("charts." + i + ".series" + it.no + ".additionalNodes", it.additionalNodes)
 		if (!jedis.exists("charts." + + i + ".series"+ it.no + ".dataValue")) {
-			if (it.type.equals("pie")) {
-				jedis.rpush("charts." + + i + ".series"+ it.no + ".dataValue", it.data)
+			if (it.type.equals("pie") || it.type.equals("function")) {
+				System.out.println("data: " + it.data);
+				System.out.println("charts." + i + ".series"+ it.no + ".dataValue")
+				jedis.rpush("charts." + i + ".series"+ it.no + ".dataValue", it.data)
 			} else {
 				def dataArray = it.data.split(",")
 				for( element in dataArray){

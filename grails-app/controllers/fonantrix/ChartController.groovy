@@ -30,31 +30,37 @@ class ChartController {
 		}
 		def json = new JsonBuilder(mergeData)
 		
-		System.out.println("mergeData:" + mergeData)
+		//System.out.println("mergeData:" + mergeData)
 		render(view: "/chart/index",  model:[charts:json.toString()])
 	}
 	
 	def getLatestData() {
 		Jedis jedis = new Jedis("localhost")
 		def keys = jedis.keys("charts.*.series*.*Value");
-		def val = jedis.lrange("charts.6.series2.dataValue",0,-1)
-		//System.out.println("data1:" + val)
+		
 		for (i in keys) {
 			int index = jedis.llen(i)
+			def splitKey = i.split("\\.");
+			def chartNumber = splitKey[1]
+			def seriesNo = splitKey[2].substring(6)
+
+			//loading chart based on extracted chart no
+			Chart chart = Chart.findByNumber(chartNumber)
+			//loading series of the above loaded chart
+			Series series = Series.findByChartAndNo(chart, seriesNo)
+			
 			if (index != 1) {
-				//System.out.println("index:" + index)
 				String data = jedis.lindex(i, index-1)
-				//System.out.println("value:" + data)
 				data = Float.parseFloat(data) * 2 
-				//System.out.println("value2:" + data)
 				jedis.rpush(i, data)
 			}
+			series.setDataValue(jedis.lrange(i,0,-1).toListString())
+			series.save()
 		}
-		val = jedis.lrange("charts.6.series2.dataValue",0,-1)
-		//System.out.println("data2:" + val)
+		//val = jedis.lrange("charts.6.series2.dataValue",0,-1)
 		
-		render('')
-		return
+		forward controller: "chart", action: "index"
 	}
+	
 	
 }
