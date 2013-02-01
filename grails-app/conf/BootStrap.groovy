@@ -96,8 +96,8 @@ class BootStrap {
 		jedis.set("charts." + i + ".series" + it.no + ".additionalNodes", it.additionalNodes)
 		if (!jedis.exists("charts." + + i + ".series"+ it.no + ".dataValue")) {
 			if (it.type.equals("pie") || it.type.equals("function")) {
-				System.out.println("data: " + it.data);
-				System.out.println("charts." + i + ".series"+ it.no + ".dataValue")
+				//System.out.println("data: " + it.data);
+				//System.out.println("charts." + i + ".series"+ it.no + ".dataValue")
 				jedis.rpush("charts." + i + ".series"+ it.no + ".dataValue", it.data)
 			} else {
 				def dataArray = it.data.split(",")

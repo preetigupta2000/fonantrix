@@ -48,7 +48,7 @@
 							<div id="container5" style="min-width: 300px; height: 250px; margin: 0 auto"></div>
 						</div>
 						<div class="grid-6">
-							<div id="container4" style="min-width: 300px; height: 250px; margin: 0 auto"></div>
+							<div id="container4" style="min-width: 300px; height: 250px; margin: 0 auto" data-highcharts-chart="0"></div>
 						</div>				
 					</div> <!-- /row -->
 					<div class="row">
