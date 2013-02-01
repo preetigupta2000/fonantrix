@@ -5,7 +5,8 @@ class Series implements Comparable {
 	static belongsTo = [chart: Chart]
 		
 	int no
-	String value
+	String type
+	String name
 	String dataValue
 	String additionalNodes
 	

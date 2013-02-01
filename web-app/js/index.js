@@ -37,7 +37,7 @@ com.fonantrix.application.site = (function() {
 	}
 	
  	function drawChart(params, theme) {
- 		
+ 				
 		// Apply the theme
  		if (typeof theme == "undefined") {
  			theme = "default";
@@ -219,10 +219,13 @@ com.fonantrix.application.site = (function() {
 	function getSeriesValue(param) {
 		var returnSeries = "["
 		var myData = param.series;
+		alert("myData" + myData[0].dataValue);
 		for (var i = 0; i < myData.length; i++){
 			returnSeries += "{";
-			returnSeries +=  myData[i].value + ",";
-			returnSeries += " data:[" + myData[i].data + "]"
+			if (myData[i].type.trim().length > 0)
+				returnSeries +=  "type:\"" + myData[i].type + "\",";
+			returnSeries +=  "name:\"" + myData[i].name + "\",";
+			returnSeries += " data:[" + myData[i].dataValue + "]"
 			if ( myData[i].additionalNodes.trim().length > 0) {
 				returnSeries += ", " + myData[i].additionalNodes;
 			}
