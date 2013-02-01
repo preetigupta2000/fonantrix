@@ -21,10 +21,7 @@ com.fonantrix.application.site = (function() {
  	/********************************************************/
  	/*                 PUBLIC MEMBERS                     */
  	/********************************************************/
-	var comchart = null;
-	var barchart = null;
-	var linechart = null;
-	var defaultOptions = null;
+	var chartArray = new Array();
 	
 	function updateTheme(params, theme) {
 		drawChart(params, theme);
@@ -46,13 +43,15 @@ com.fonantrix.application.site = (function() {
  		
 		for (var i=0;i<params.length;i++) {
 			var contianerName = "container" + i ;
+			var returnChartName
 			if (params[i].type === "line") {
-				lineChart(params[i], contianerName)
+				returnChartName = lineChart(params[i], contianerName) 
 			} else if (params[i].type === "bar") {
-				barChart(params[i], contianerName)
+				returnChartName = barChart(params[i], contianerName)
 			} else {
-				combinationChart(params[i], contianerName)
+				returnChartName = combinationChart(params[i], contianerName)
 			}
+			chartArray[contianerName] = returnChartName;
 		}
  	}
 	
@@ -95,6 +94,7 @@ com.fonantrix.application.site = (function() {
 	                enabled: false
 	            } 	            
 	        });
+		  return comchart;
 	}
 	
 	function barChart(param, contianerName){
@@ -160,6 +160,7 @@ com.fonantrix.application.site = (function() {
 	                enabled: false
 	            } 	            
  	        });
+ 		  return barchart;
  	}
  	
 	function lineChart(param, contianerName) {
@@ -214,18 +215,19 @@ com.fonantrix.application.site = (function() {
 	                enabled: false
 	            }
 	    });
+        return linechart;
 	}
 	//[{ name: 'Open Count', data: [8, 16.9, 109.5, 147, 1200, 24474, 5049, 345]}, {name: 'Close Count', data: [5, 25, 256, 356, 2400, 18000, 7890, 456]}]
 	function getSeriesValue(param) {
 		var returnSeries = "["
 		var myData = param.series;
-		alert("myData" + myData[0].dataValue);
+		//alert("myData" + myData[0].data);
 		for (var i = 0; i < myData.length; i++){
 			returnSeries += "{";
 			if (myData[i].type.trim().length > 0)
 				returnSeries +=  "type:\"" + myData[i].type + "\",";
 			returnSeries +=  "name:\"" + myData[i].name + "\",";
-			returnSeries += " data:[" + myData[i].dataValue + "]"
+			returnSeries += " data:" + myData[i].data + ""
 			if ( myData[i].additionalNodes.trim().length > 0) {
 				returnSeries += ", " + myData[i].additionalNodes;
 			}

@@ -5,6 +5,7 @@ class Chart {
 	SortedSet Series
 	static hasMany = [seriess: Series]
 	
+	int number
 	String type
 	String title
 	String subtitle
