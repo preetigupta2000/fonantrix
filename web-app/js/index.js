@@ -239,16 +239,33 @@ com.fonantrix.application.site = (function() {
  		  return barchart;
  	}
  	
+	function getLineData() {
+		  $.ajax('dynamicchart', function(response) {
+		        var point = [ 
+		            response.timestamp * 1000,
+		            response.loadavg - 0
+		        ];;
+		        series.addPoint(point, true, shiftalong);
+		    })		
+	}
+	
 	function lineChart(param, contianerName) {
         linechart = new Highcharts.Chart({
 	            chart: {
 	                renderTo: contianerName,
 	                type: 'line',
+	                number: param.number,
 	                marginRight: 10,
-	                animation: {
-	                    duration: 200,
-	                    easing: 'linear'
-	                }                
+	                events: {
+	                    load: function() {
+	    
+	                        // set up the updating of the chart each second
+	                        var series = this.series[0];
+	                        setInterval(function() {
+	                        	getLineData(param.number, );
+	                        }, 1000);
+	                    }
+	                }	                
 	            },
 	            title: {
 	                text: param.title,
@@ -300,6 +317,7 @@ com.fonantrix.application.site = (function() {
 		//alert("myData" + myData[0].data);
 		for (var i = 0; i < myData.length; i++){
 			returnSeries += "{";
+			returnSeries +=  "number:\"" + myData[i].no + "\",";
 			if (myData[i].type.trim().length > 0 && myData[i].type.toLowerCase() != "function")
 				returnSeries +=  "type:\"" + myData[i].type + "\",";
 			returnSeries +=  "name:\"" + myData[i].name + "\",";

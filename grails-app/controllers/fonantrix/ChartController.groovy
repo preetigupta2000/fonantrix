@@ -34,7 +34,7 @@ class ChartController {
 		render(view: "/chart/index",  model:[charts:json.toString()])
 	}
 	
-	def getLatestData() {
+	def refreshData() {
 		Jedis jedis = new Jedis("localhost")
 		def keys = jedis.keys("charts.*.series*.*Value");
 		
@@ -62,5 +62,25 @@ class ChartController {
 		forward controller: "chart", action: "index"
 	}
 	
-	
+	def getDynamicData(chartNo, SerieNo, xAxis) {
+		Jedis jedis = new Jedis("localhost")
+		def key = jedis.keys("charts." + chartNo + ".series"+ SerieNo + ".dataValue")[0];
+		
+
+		int index = jedis.llen(key)
+		//loading chart based on extracted chart no
+		Chart chart = Chart.findByNumber(chartNo)
+		//loading series of the above loaded chart
+		Series series = Series.findByChartAndNo(chart, SerieNo)
+		String data
+		if (index != 1) {
+			data = jedis.lindex(i, index-1)
+			data = Float.parseFloat(data) * 2
+			jedis.rpush(i, data)
+		}
+		series.setDataValue(jedis.lrange(i,0,-1).toListString())
+		series.save()
+
+		render (xAxis , data)
+	}
 }

@@ -7,7 +7,8 @@ class UrlMappings {
 			}
 		}
 		"/chart"(controller:"chart")
-		"/updatechart"(controller:"chart", action:"getLatestData")
+		"/updatechart"(controller:"chart", action:"refreshData")
+		"/dynamicchart"(controller:"chart", action:"getDynamicData")
 		
 		"/"(controller:"home")
 		"/home"(controller:"home")
