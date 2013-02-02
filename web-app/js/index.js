@@ -122,6 +122,7 @@ com.fonantrix.application.site = (function() {
             chart: {
 	                renderTo: contianerName,
 	                type: 'spline',
+	                zoomType: 'xy',
 	                events: {
 	                    load: function() {
 	    
@@ -196,7 +197,7 @@ com.fonantrix.application.site = (function() {
  	                min: 0,
  	                title: {
  	                    text: param.yAxistitle
- 	                }
+ 	                }   	                
  	            },
  	            legend: {
  	                layout: 'vertical',
@@ -239,23 +240,43 @@ com.fonantrix.application.site = (function() {
  		  return barchart;
  	}
  	
+	function getLineData(chartNo, contianerName) {
+	    var chart = chartArray[contianerName]
+    	for (var i=0; i<chart.series.length; i++){
+		    var series = chart.series[i]
+            var seriesno = series.options.id
+  		  	$.get('dynamicchart?chartNo=' + chartNo + "&SerieNo=" + seriesno, function(response) {
+		        series.addPoint(parseInt(response), true, true);
+			    series.redraw();
+		    });
+    	}
+	}
+	
 	function lineChart(param, contianerName) {
         linechart = new Highcharts.Chart({
 	            chart: {
 	                renderTo: contianerName,
 	                type: 'line',
 	                marginRight: 10,
-	                animation: {
-	                    duration: 200,
-	                    easing: 'linear'
-	                }                
+	                zoomType: 'xy',
+	                events: {
+	                    load: function() {
+	    if (contianerName == "container0") {
+	                        // set up the updating of the chart each second
+		                        setInterval(function() {
+		                        	getLineData(param.number, contianerName);
+		                        }, 10000);
+	    }
+	                    }
+	                }
 	            },
 	            title: {
 	                text: param.title,
 	                x: -20 //center
 	            },
 	            xAxis: {
-	                categories: eval("(" + param.xAxisjson + ')')
+	                //categories: eval("(" + param.xAxisjson + ')')
+	            	type: 'datetime'
 	            },
 	            yAxis: {
 	            	min: 0,
@@ -300,6 +321,7 @@ com.fonantrix.application.site = (function() {
 		//alert("myData" + myData[0].data);
 		for (var i = 0; i < myData.length; i++){
 			returnSeries += "{";
+			returnSeries +=  "id:" + myData[i].no + ",";
 			if (myData[i].type.trim().length > 0 && myData[i].type.toLowerCase() != "function")
 				returnSeries +=  "type:\"" + myData[i].type + "\",";
 			returnSeries +=  "name:\"" + myData[i].name + "\",";

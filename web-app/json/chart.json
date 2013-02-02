@@ -99,22 +99,22 @@
 				        	"type": "",
 				        	"name": "Lowest",				        	
 				        	"data": "12, 4, 57, 78, 56, 76, 54, 63",
-				        	"additionalNodes": ""
+				        	"additionalNodes": "pointStart: Date.UTC(2013, 0, 1), pointInterval: 24 * 3600 * 1000 /* one day*/"
         				},
 						{
 				        	"no": 2,
 				        	"type": "",
 				        	"name": "Average",				        	
 				        	"data": "72, 81, 90, 42, 54, 63, 72, 81",
-				        	"additionalNodes": ""
+				        	"additionalNodes": "pointStart: Date.UTC(2013, 0, 1), pointInterval: 24 * 3600 * 1000 /* one day*/"
         				},
 						{
 				        	"no": 3,
 				        	"type": "",
 				        	"name": "Highest",				        	
 				        	"data": "5, 67, 43, 52, 65, 78, 98, 92",
-				        	"additionalNodes": ""
-        				}
+				        	"additionalNodes": "pointStart: Date.UTC(2013, 0, 1), pointInterval: 24 * 3600 * 1000 /* one day*/"
+        				},        				
         	]         	
         },
         {

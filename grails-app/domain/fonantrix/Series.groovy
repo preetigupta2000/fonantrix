@@ -14,6 +14,7 @@ class Series implements Comparable {
     }
 	
 	static mapping = {
+		dataValue type:'text'
 		additionalNodes type:'text'
 	}
 	
