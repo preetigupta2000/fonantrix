@@ -64,25 +64,23 @@ class ChartController {
 		forward controller: "chart", action: "index"
 	}
 	
-	def getDynamicData(chartNo, SerieNo, xAxis) {
+	def getDynamicData() {
 		Jedis jedis = new Jedis("localhost")
-		def key = jedis.keys("charts." + chartNo + ".series"+ SerieNo + ".dataValue")[0];
-		
-
+		def key = "charts." + params.chartNo + ".series"+ params.SerieNo + ".dataValue";
+	
 		int index = jedis.llen(key)
 		//loading chart based on extracted chart no
-		Chart chart = Chart.findByNumber(chartNo)
+		Chart chart = Chart.findByNumber(params.chartNo)
 		//loading series of the above loaded chart
-		Series series = Series.findByChartAndNo(chart, SerieNo)
-		String data
+		Series series = Series.findByChartAndNo(chart, params.SerieNo)
+		def data
 		if (index != 1) {
-			data = jedis.lindex(i, index-1)
-			data = Float.parseFloat(data) * 2
-			jedis.rpush(i, data)
+			data = jedis.lindex(key, index-1)
+			data = Float.parseFloat(data) + 1
+			jedis.rpush(key, data.toString())
 		}
-		series.setDataValue(jedis.lrange(i,0,-1).toListString())
+		series.setDataValue(jedis.lrange(key,0,-1).toListString())
 		series.save()
-
-		render (xAxis , data)
+		render ( data + ", " + params.SerieNo)
 	}
 }

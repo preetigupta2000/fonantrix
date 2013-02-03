@@ -22,6 +22,7 @@ com.fonantrix.application.site = (function() {
  	/*                 PUBLIC MEMBERS                     */
  	/********************************************************/
 	var chartArray = new Array();
+	var dynamicMode = false;
 	
 	function updateTheme(params, theme) {
 		drawChart(params, theme);
@@ -241,18 +242,23 @@ com.fonantrix.application.site = (function() {
  	}
  	
 	function getLineData(chartNo, contianerName) {
-	    var chart = chartArray[contianerName]
-    	for (var i=0; i<chart.series.length; i++){
-		    var series = chart.series[i]
-            var seriesno = series.options.id
-  		  	$.get('dynamicchart?chartNo=' + chartNo + "&SerieNo=" + seriesno, function(response) {
-		        series.addPoint(parseInt(response), true, true);
-			    series.redraw();
-		    });
-    	}
+		if (com.fonantrix.application.site.dynamicMode) {
+		    var chart = chartArray[contianerName]
+	    	for (var i=0; i<chart.series.length; i++){
+			    var series = chart.series[i]
+	            var seriesno = series.options.id
+	  		  	$.get('dynamicchart?chartNo=' + chartNo + "&SerieNo=" + seriesno, function(response) {
+	  		  		seriesno = parseInt(response.split(",")[1].trim())
+	  		  		var data = parseInt(response.split(",")[0])
+	  		  		series = chart.get(seriesno)
+			        series.addPoint(parseInt(data), true, true);
+				    series.redraw();
+			    });
+	    	}
+		}
 	}
 	
-	function lineChart(param, contianerName) {
+	function lineChart(param, contianerName) {		
         linechart = new Highcharts.Chart({
 	            chart: {
 	                renderTo: contianerName,
@@ -262,22 +268,24 @@ com.fonantrix.application.site = (function() {
 	                zoomType: 'xy',
 	                events: {
 	                    load: function() {
-	    if (contianerName == "container0") {
 	                        // set up the updating of the chart each second
 		                        setInterval(function() {
 		                        	getLineData(param.number, contianerName);
-		                        }, 10000);
-	    }
+		                        }, 5000);
 	                    }
 	                }
 	            },
+	    		rangeSelector: {
+	    			enabled: true
+	    		},	            
 	            title: {
 	                text: param.title,
 	                x: -20 //center
 	            },
 	            xAxis: {
 	                //categories: eval("(" + param.xAxisjson + ')')
-	            	type: 'datetime'
+	            	type: 'datetime',
+	            	tickPixelInterval: 150
 	            },
 	            yAxis: {
 	            	min: 0,
@@ -322,11 +330,7 @@ com.fonantrix.application.site = (function() {
 		//alert("myData" + myData[0].data);
 		for (var i = 0; i < myData.length; i++){
 			returnSeries += "{";
-<<<<<<< HEAD
 			returnSeries +=  "id:" + myData[i].no + ",";
-=======
-			returnSeries +=  "number:\"" + myData[i].no + "\",";
->>>>>>> branch 'master' of https://github.com/preetigupta2000/fonantrix.git
 			if (myData[i].type.trim().length > 0 && myData[i].type.toLowerCase() != "function")
 				returnSeries +=  "type:\"" + myData[i].type + "\",";
 			returnSeries +=  "name:\"" + myData[i].name + "\",";
@@ -399,7 +403,8 @@ com.fonantrix.application.site = (function() {
  	return	{
  		"drawChart":drawChart,
  		"changeTheme":updateTheme,
- 		"redrawChart":redrawCharts
+ 		"redrawChart":redrawCharts,
+ 		"dynamicMode":dynamicMode
  	}
  
 })();
