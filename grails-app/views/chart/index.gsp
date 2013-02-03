@@ -14,9 +14,9 @@
 		<h1><a href="casestudy">Case Study</a>&nbsp; <h2>DashBoard</h2></h1>
 		<p>Following is a sample dashboard demonstrating dynamic chart and a responsive design for mobil delivery. The background (analytic) is based on cloud Redis instance and can be easily extended for any other reporting database.</p>
 		<div class="btn-group-wrap">
-			<a href="javascript:refreshChart();"><button type="submit" class="btn btn-warning btn-mini">Refresh Status</button></a>
-			<a href="updatechart"><button type="submit" class="btn btn-warning btn-mini">Refresh Status with Redis</button></a>
-			<button type="submit" class="btn btn-warning btn-mini">Enable Dynamic Mode</button>	
+			<!-- a href="javascript:refreshChart();"><button type="submit" class="btn btn-warning btn-mini">Refresh Status</button></a -->
+			<a href="updatechart"><button type="submit" class="btn btn-warning btn-mini">Refresh Status</button></a>
+			<a href="javascript:enableDynamicMode();"><button id="dynamicMode" type="submit" class="btn btn-warning btn-mini">Enable Dynamic Mode</button></a>
 			<span class="btn-group">
 				<button class="btn btn-warning btn-mini">Skins</button>
 	            <button class="btn btn-warning btn-mini dropdown-toggle" data-toggle="dropdown">
@@ -84,20 +84,7 @@
 		var charts = ${charts};
 		var app = com.fonantrix.application.site;
 		$(document).ready(function() {
-			/*
-			$('#tabs a').click(function(e) {
-			    e.preventDefault();
-			    window.location.hash = $(this).attr('href');
-			    $(this).tab('show');
-			    $(this).parent().parent().find("li").removeProp("id");
-			    $(this).parent().attr('id', 'selected');
-			    if ($(this.hash).selector === "#home")
-			    	com.fonantrix.application.site.drawChart(charts);
-			})
-		    $('#tabs a[href="#home"]').tab('show');
-			$('#tabs a[href="#home"]').parent().attr('id', 'selected');
-			*/
-			app.drawChart(charts);	
+			app.drawChart(charts);
 		});
 
 		function changeTheme(value) {
@@ -106,6 +93,20 @@
 
 		function refreshChart() {
 			app.redrawChart();
+		}
+
+		function enableDynamicMode(button) {
+			if ($("#dynamicMode").text() == "Enable Dynamic Mode") {
+				app.dynamicMode = true;
+				$("#dynamicMode").html("Disable Dynamic Mode");
+				$("#dynamicMode").css("background-color", "#da8205");
+				$("#dynamicMode").css("background-image", "-moz-linear-gradient(center top , #DA8300, #DA8400)");
+			} else {
+				app.dynamicMode = false;
+				$("#dynamicMode").html("Enable Dynamic Mode");
+				$("#dynamicMode").css("background-color", "#FAA732");
+				$("#dynamicMode").css("background-image", "-moz-linear-gradient(center top , #FBB450, #F89406)");
+			}
 		}
 	</script>	
   </body>

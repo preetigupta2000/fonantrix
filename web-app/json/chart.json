@@ -37,21 +37,21 @@
 				        	"type": "",
 				        	"name": "Lowest",				        	
 				        	"data": "5, 78, 36, 47, 57, 99, 97, 48",
-				        	"additionalNodes": ""
+				        	"additionalNodes": "pointStart: Date.UTC(2012, 0, 1), pointInterval: 24 * 3600 * 1000 /* one day*/"
         				},
 						{
 				        	"no": 2,
 				        	"type": "",
 				        	"name": "Average",				        	
 				        	"data": "3, 23, 32, 23, 40, 27, 43, 23",
-				        	"additionalNodes": ""
+				        	"additionalNodes": "pointStart: Date.UTC(2012, 0, 1), pointInterval: 24 * 3600 * 1000 /* one day*/"
         				},
 						{
 				        	"no": 3,
 				        	"type": "",
 				        	"name": "Highest",				        	
 				        	"data": "9, 47, 45, 56, 68, 100, 100, 56",
-				        	"additionalNodes": ""
+				        	"additionalNodes": "pointStart: Date.UTC(2012, 0, 1), pointInterval: 24 * 3600 * 1000 /* one day*/"
         				}
         	]
         },
@@ -68,21 +68,21 @@
 				        	"type": "",
 				        	"name": "Lowest",
 				        	"data": "6, 12, 28, 34, 26, 36, 47, 45",
-				        	"additionalNodes": ""
+				        	"additionalNodes": "pointStart: Date.UTC(2013, 0, 1), pointInterval: 24 * 3600 * 1000 /* one day*/"
         				},
 						{
 				        	"no": 2,
 				        	"type": "",
 				        	"name": "Average",				        	
 				        	"data": "6, 23, 25, 41, 52, 45, 57, 80",
-				        	"additionalNodes": ""
+				        	"additionalNodes": "pointStart: Date.UTC(2013, 0, 1), pointInterval: 24 * 3600 * 1000 /* one day*/"
         				},
 						{
 				        	"no": 3,
 				        	"type": "",
 				        	"name": "Highest",				        	
 				        	"data": "7, 34, 45, 56, 78, 64, 70, 87",
-				        	"additionalNodes": ""
+				        	"additionalNodes": "pointStart: Date.UTC(2013, 0, 1), pointInterval: 24 * 3600 * 1000 /* one day*/"
         				}
         	]
         },
