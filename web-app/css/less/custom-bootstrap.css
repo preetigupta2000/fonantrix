@@ -6789,9 +6789,11 @@ by Design Shack - www.designshack.co.uk
 }
 .alert {
   padding: 0px 10px 0px 10px;
-  background-color: #EEEEEE;
-  border: 1px solid #EEEEEE;
-  color: #333333;
+  /*
+	background-color: #EEEEEE;
+	border: 1px solid #EEEEEE;
+	color: #333333; */
+
 }
 /*------------------------------------------------------------------
 
