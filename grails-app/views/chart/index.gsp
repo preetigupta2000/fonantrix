@@ -43,6 +43,11 @@
 	    </ul>
 		<div class="tab-content">
 				<div id="home" class="tab-pane fade in" -->
+				<div class="row">
+					<div class="grid-12">
+						<p class="alert alert-success pull-right">* Click and drag in the plot area to zoom in</p>
+					</div>
+				</div>
 					<div class="row">
 						<div class="grid-6">
 							<div id="container5" style="min-width: 300px; height: 250px; margin: 0 auto"></div>
