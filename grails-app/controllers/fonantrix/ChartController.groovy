@@ -58,23 +58,17 @@ class ChartController {
 			Chart chart = Chart.findByNumber(chartNumber)
 			//loading series of the above loaded chart
 			Series series = Series.findByChartAndNo(chart, seriesNo)
-			
-			if (index != 1) {
+			redisService.withRedis { Jedis redis ->
 				String data
-				redisService.withRedis { Jedis redis ->
-					data = redis.lindex(i, index-1)
-				} 
-				data = Float.parseFloat(data) + 10
-				redisService.withRedis { Jedis redis ->
+				if (index != 1) {
+					data = redis.lindex(i, index-1) 
+					data = Float.parseFloat(data) + 10
 					redis.rpush(i, data)
 				}
+				List<String> idList = redis.lrange(i, 0, -1)
+				series.setDataValue(idList.toListString())
+				series.save()
 			}
-			List<String> idList = redisService.withRedis { Jedis redis ->
-				redis.lrange(i, 0, -1)
-			}
-			
-			series.setDataValue(idList.toListString())
-			series.save()
 		}
 		//val = jedis.lrange("charts.6.series2.dataValue",0,-1)
 		
@@ -94,20 +88,16 @@ class ChartController {
 		//loading series of the above loaded chart
 		Series series = Series.findByChartAndNo(chart, params.SerieNo)
 		def data
-		if (index != 1) {
-			redisService.withRedis { Jedis redis ->
+		redisService.withRedis { Jedis redis ->
+			if (index != 1) {
 				data = redis.lindex(key, index-1)
-			}
-			data = Float.parseFloat(data) + 1
-			redisService.withRedis { Jedis redis ->
+				data = Float.parseFloat(data) + 1
 				redis.rpush(key, data.toString())
 			}
+			List<String> idList = redis.lrange(key,0,-1)
+			series.setDataValue(idList.toListString())
+			series.save()
 		}
-		List<String> idList = redisService.withRedis { Jedis redis ->
-			redis.lrange(key,0,-1)
-		}
-		series.setDataValue(idList.toListString())
-		series.save()
 		render ( data + ", " + params.SerieNo)
 	}
 }

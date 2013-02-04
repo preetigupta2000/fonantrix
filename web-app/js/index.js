@@ -365,8 +365,8 @@ com.fonantrix.application.site = (function() {
 	    		if (series.type == "line") {
 			        var data = series.data;
 			        var new_data = (function(){
-			            for(var i=0,d=[];i<10;i++)
-			                d.push(Math.random()*50|0)
+			            for(var i=0,d=[];i<8;i++)
+			                d.push(Math.random()*250|0)
 			            return d;
 			        })();
 			        series.options.pointStart = data[data.length-1].x;
