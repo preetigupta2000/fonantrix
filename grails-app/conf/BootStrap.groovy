@@ -10,6 +10,7 @@ class BootStrap {
 
     def init = { servletContext ->
 		
+			//Jedis jedis = new Jedis(System.getenv("REDISTOGO_URL"))
 			Jedis jedis = new Jedis("localhost")
 		
 			def adminRole;

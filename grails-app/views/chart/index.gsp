@@ -45,7 +45,7 @@
 				<div id="home" class="tab-pane fade in" -->
 				<div class="row">
 					<div class="grid-12">
-						<p class="alert alert-success pull-right">* Click and drag in the plot area to zoom in</p>
+						<p class="alert alert-info pull-right">* Click and drag in the plot area to zoom in</p>
 					</div>
 				</div>
 					<div class="row">
