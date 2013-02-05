@@ -77,7 +77,10 @@ environments {
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
-		URI redisURI = new URI(System.env.REDISTOGO_URL)
+System.out.println("inside production")
+		URI redisURI = new URI(System.env.("REDISTOGO_URL"))
+System.out.println("inside production" + redisURI)
+		
 		redis {
 			poolConfig {
 				// jedis pool specific tweaks here, see jedis docs & src
