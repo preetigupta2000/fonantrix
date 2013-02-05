@@ -78,7 +78,7 @@ environments {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
 System.out.println("inside production")
-		URI redisURI = new URI(System.env.("REDISTOGO_URL"))
+		URI redisURI = new URI(System.env.REDISTOGO_URL)
 System.out.println("inside production" + redisURI)
 		
 		redis {
