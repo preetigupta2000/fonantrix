@@ -77,16 +77,18 @@ environments {
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
+		URI redisURI = new URI(System.env.REDISTOGO_URL)
+
 		redis {
 			poolConfig {
 				// jedis pool specific tweaks here, see jedis docs & src
 				// ex: testWhileIdle = true
 			}			
-			URI redisURI = new URI(System.getenv("REDISTOGO_URL"));
 				port = redisURI.getPort()
 				host = redisURI.getHost()
 				timeout = Protocol.DEFAULT_TIMEOUT
 				password = redisURI.getUserInfo().split(":",2)[1]
+				
 		}
     }
 }
