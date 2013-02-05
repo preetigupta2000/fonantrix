@@ -13,20 +13,8 @@ class BootStrap {
     def init = { servletContext ->
 		
 			//Jedis jedis = new Jedis(System.getenv("REDISTOGO_URL"))
-			//Jedis jedis = new Jedis("localhost")
+			Jedis jedis = new Jedis("localhost")
 		
-		if (Environment.current == Environment.PRODUCTION) {
-			try {
-				URI redisUri = new URI(System.getenv("REDISCLOUD_URL"));
-				JedisPool pool = new JedisPool(new JedisPoolConfig(),
-							redisUri.getHost(),
-							redisUri.getPort(),
-							Protocol.DEFAULT_TIMEOUT,
-							redisUri.getUserInfo().split(":",2)[1]);
-			} catch (URISyntaxException e) {
-					   // URI couldn't be parsed.
-			}
-		}
 			def adminRole;
 			if (!Role.count()) {
 				adminRole = new Role(authority: 'ROLE_ADMIN').save(failOnError: true, flush: true)
