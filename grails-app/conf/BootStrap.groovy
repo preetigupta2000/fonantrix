@@ -5,6 +5,7 @@ import fonantrix.authentication.User
 import fonantrix.authentication.Role
 import fonantrix.authentication.UserRole
 import redis.clients.jedis.*
+import grails.util.Environment
 
 class BootStrap {
 
@@ -15,6 +16,19 @@ class BootStrap {
 			//Jedis jedis = new Jedis(System.getenv("REDISTOGO_URL"))
 			//Jedis jedis = new Jedis("localhost")
 		
+		
+		if (Environment.current == Environment.PRODUCTION) {
+			try {
+				URI redisUri = new URI(System.getenv("REDISCLOUD_URL"));
+				JedisPool pool = new JedisPool(new JedisPoolConfig(),
+							redisUri.getHost(),
+							redisUri.getPort(),
+							Protocol.DEFAULT_TIMEOUT,
+							redisUri.getUserInfo().split(":",2)[1]);
+			} catch (URISyntaxException e) {
+					   // URI couldn't be parsed.
+			}
+		}
 		
 			def adminRole;
 			if (!Role.count()) {
