@@ -85,8 +85,8 @@ environments {
 			URI redisURI = new URI(System.getenv("REDISTOGO_URL"));
 				port = redisURI.getPort()
 				host = redisURI.getHost()
-				timeout = Protocol.DEFAULT_TIMEOUT //default in milliseconds
-				password = redisURI.getUserInfo().split(":",2)[1] //defaults to no password
+				timeout = Protocol.DEFAULT_TIMEOUT
+				password = redisURI.getUserInfo().split(":",2)[1]
 		}
     }
 }
