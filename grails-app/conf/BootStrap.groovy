@@ -19,7 +19,12 @@ class BootStrap {
 		
 		if (Environment.current == Environment.PRODUCTION) {
 			try {
-				URI redisUri = new URI(System.getenv("REDISCLOUD_URL"));
+				URI redisUri = new URI(System.getenv("REDISTOGO_URL"));
+				System.out.println("redisUri:" + redisUri)
+				System.out.println("redisUri Host:" + redisUri.getHost())
+				System.out.println("redisUri Port:" + redisUri.getPort())
+				System.out.println("redisUri userinfo:" + redisUri.getUserInfo().split(":",2)[1])
+				
 				JedisPool pool = new JedisPool(new JedisPoolConfig(),
 							redisUri.getHost(),
 							redisUri.getPort(),
