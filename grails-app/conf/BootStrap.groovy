@@ -31,6 +31,7 @@ class BootStrap {
 				grailsApplication.config.redis.port = redisUri.getPort()
 				grailsApplication.config.redis.host = redisUri.getHost()
 				grailsApplication.config.redis.timeout = Protocol.DEFAULT_TIMEOUT
+				grailsApplication.config.redis.username = redisUri.getUserInfo().split(":",2)[0]
 				grailsApplication.config.redis.password = redisUri.getUserInfo().split(":",2)[1]
 				
 								
