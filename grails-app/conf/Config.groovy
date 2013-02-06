@@ -63,37 +63,10 @@ environments {
     development {
         grails.logging.jul.usebridge = true
 		grails.resources.debug = true  // Add this line in development environment.
-		redis {
-			poolConfig {
-				// jedis pool specific tweaks here, see jedis docs & src
-				// ex: testWhileIdle = true
-			}
-			port = 6379
-			host = "localhost"
-			timeout = 2000 //default in milliseconds
-			password = "somepassword" //defaults to no password
-		}
     }
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
-		URI redisUri = new URI(System.getenv("REDISTOGO_URL"));
-		
-		System.out.println("redisUri:" + redisUri)
-		System.out.println("redisUri Host:" + redisUri.getHost())
-		System.out.println("redisUri Port:" + redisUri.getPort())
-		System.out.println("redisUri userinfo:" + redisUri.getUserInfo().split(":",2)[1])
-		
-		redis {
-			poolConfig {
-				// jedis pool specific tweaks here, see jedis docs & src
-				// ex: testWhileIdle = true
-			}
-				port = redisUri.getPort()
-				host = redisUri.getHost()
-				timeout = Protocol.DEFAULT_TIMEOUT
-				password = redisUri.getUserInfo().split(":",2)[1]
-		}
     }
 }
 
@@ -130,3 +103,14 @@ grails.plugins.springsecurity.authority.className = 'fonantrix.authentication.Ro
 grails.plugins.springsecurity.successHandler.alwaysUseDefault = true
 
 grails.plugins.springsecurity.logout.afterLogoutUrl = '/home/index'
+
+redis {
+	poolConfig {
+		// jedis pool specific tweaks here, see jedis docs & src
+		// ex: testWhileIdle = true
+	}
+	port = 6379
+	host = "localhost"
+	timeout = 2000 //default in milliseconds
+	password = "somepassword" //defaults to no password
+}
