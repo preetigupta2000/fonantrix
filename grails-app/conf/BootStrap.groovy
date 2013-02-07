@@ -17,6 +17,10 @@ class BootStrap {
 			//Jedis jedis = new Jedis(System.getenv("REDISTOGO_URL"))
 			//Jedis jedis = new Jedis("localhost")
 		
+		System.out.println("redis port:" + grailsApplication.config.redis.port)
+		System.out.println("redis host:" + grailsApplication.config.redis.host)
+		System.out.println("redis username:" + grailsApplication.config.redis.username)
+		System.out.println("redis password:" + grailsApplication.config.redis.password)
 		
 		/*if (Environment.current == Environment.PRODUCTION) {
 			try {
