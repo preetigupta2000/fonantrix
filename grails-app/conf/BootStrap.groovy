@@ -70,7 +70,7 @@ class BootStrap {
 				allCharts.charts.each
 				{
 					def jsonSeries = it
-					loadingChartDatatoRedis(it, i)
+					//loadingChartDatatoRedis(it, i)
 					
 					//System.out.println((jedis.lrange("charts." + i + ".xAxisjson",0,-1)).toListString())
 					//System.out.println("jedis:" + (jedis.lrange("charts." + i + ".xAxisjson",0,-1)))
@@ -88,7 +88,7 @@ class BootStrap {
 					def aSeries
 					if(jsonSeries.seriess) {
 						jsonSeries.seriess.each	{
-							loadingSeriesDatatoRedis(it, i)
+							//loadingSeriesDatatoRedis(it, i)
 							redisService.withRedis { Jedis redis ->
 								aSeries = new Series(no: it.no, 
 										  type: redis.get("charts." + i + ".series" + it.no + ".type"), 
