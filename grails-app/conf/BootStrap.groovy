@@ -16,12 +16,12 @@ class BootStrap {
 		
 			//Jedis jedis = new Jedis(System.getenv("REDISTOGO_URL"))
 			//Jedis jedis = new Jedis("localhost")
-		
+		/*
 		System.out.println("redis port:" + grailsApplication.config.grails.redis.port)
 		System.out.println("redis host:" + grailsApplication.config.grails.redis.host)
 		System.out.println("redis username:" + grailsApplication.config.grails.redis.username)
 		System.out.println("redis password:" + grailsApplication.config.grails.redis.password)
-		
+		*/
 	
 			def adminRole;
 			if (!Role.count()) {
