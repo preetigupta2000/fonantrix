@@ -61,5 +61,5 @@ grails.project.dependency.resolution = {
 		runtime ":spring-security-core:1.2.7.3"
 
     }
-	grails.plugin.location.'localizations' = "localizations-1.4.4.6"
 }
+grails.plugin.location.'localizations' = "localizations-1.4.4.6"
