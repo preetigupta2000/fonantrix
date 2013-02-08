@@ -7,7 +7,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<!--  title>Fonantrix Solutions</title -->
+		<title>Fonantrix Solutions</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0;">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		
@@ -48,11 +48,11 @@
 	</head>
 	<body dir="${direction}">
 		<div id="wrapper" class="clearfix">
-			<!--  g:render template="/layout-helpers/header"/ -->
+			<g:render template="/layout-helpers/header"/>
 			
 			<g:layoutBody/>
 			
-			<!-- g:render template="/layout-helpers/footer"/-->
+			<g:render template="/layout-helpers/footer"/>
 		</div> <!-- /wrapper -->
 		<r:layoutResources />
 	</body>
