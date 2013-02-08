@@ -1,6 +1,6 @@
 package fonantrix
 
-import org.grails.plugins.localization.*
+import org.grails.plugins.localization.Localization
 import grails.converters.JSON
 import org.springframework.web.servlet.support.RequestContextUtils as RCU
 
@@ -17,7 +17,7 @@ class AdminController {
 		def id = localization.id
 		if(localization) {
 		 def oldCode = localization.code
-		 localization.text = params.value		 
+		 localization.text = params.value
 		 if(!localization.hasErrors() && localization.save()) {
 			 Localization.resetThis(oldCode)
 			 if (localization.code != oldCode) Localization.resetThis(localization.code)
