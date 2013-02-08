@@ -42,23 +42,18 @@ class ChartController {
 		//Jedis jedis = new Jedis("localhost")
 		def keys
 		redisService.withRedis { Jedis redis ->
-			keys = redis.keys("charts.*.series*.*Value");
-		}
-		
-		for (i in keys) {
-			int index
-			redisService.withRedis { Jedis redis ->
+			keys = redis.keys("charts.*.series*.*Value");	
+			for (i in keys) {
+				int index
 				index = redis.llen(i);
-			}
-			def splitKey = i.split("\\.");
-			def chartNumber = splitKey[1]
-			def seriesNo = splitKey[2].substring(6)
-
-			//loading chart based on extracted chart no
-			Chart chart = Chart.findByNumber(chartNumber)
-			//loading series of the above loaded chart
-			Series series = Series.findByChartAndNo(chart, seriesNo)
-			redisService.withRedis { Jedis redis ->
+				def splitKey = i.split("\\.");
+				def chartNumber = splitKey[1]
+				def seriesNo = splitKey[2].substring(6)
+	
+				//loading chart based on extracted chart no
+				Chart chart = Chart.findByNumber(chartNumber)
+				//loading series of the above loaded chart
+				Series series = Series.findByChartAndNo(chart, seriesNo)
 				String data
 				if (index != 1) {
 					data = redis.lindex(i, index-1) 
