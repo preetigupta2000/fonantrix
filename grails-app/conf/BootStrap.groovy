@@ -17,38 +17,12 @@ class BootStrap {
 			//Jedis jedis = new Jedis(System.getenv("REDISTOGO_URL"))
 			//Jedis jedis = new Jedis("localhost")
 		
-		System.out.println("redis port:" + grailsApplication.config.redis.port)
-		System.out.println("redis host:" + grailsApplication.config.redis.host)
-		System.out.println("redis username:" + grailsApplication.config.redis.username)
-		System.out.println("redis password:" + grailsApplication.config.redis.password)
+		System.out.println("redis port:" + grailsApplication.config.grails.redis.port)
+		System.out.println("redis host:" + grailsApplication.config.grails.redis.host)
+		System.out.println("redis username:" + grailsApplication.config.grails.redis.username)
+		System.out.println("redis password:" + grailsApplication.config.grails.redis.password)
 		
-		/*if (Environment.current == Environment.PRODUCTION) {
-			try {
-				URI redisUri = new URI(System.getenv("REDISTOGO_URL"));
-				JedisPool pool = new JedisPool(new JedisPoolConfig(),
-                redisUri.getHost(),
-                redisUri.getPort(),
-                Protocol.DEFAULT_TIMEOUT,
-                redisUri.getUserInfo().split(":",2)[1]);
-				
-				
-				System.out.println("redisUri:" + redisUri)
-				System.out.println("redisUri Host:" + redisUri.getHost())
-				System.out.println("redisUri Port:" + redisUri.getPort())
-				System.out.println("redisUri userinfo user:" + redisUri.getUserInfo().split(":",2)[0])
-				System.out.println("redisUri userinfo pass:" + redisUri.getUserInfo().split(":",2)[1])
-				
-				grailsApplication.config.redis.port = redisUri.getPort()
-				grailsApplication.config.redis.host = redisUri.getHost()
-				grailsApplication.config.redis.timeout = Protocol.DEFAULT_TIMEOUT
-				grailsApplication.config.redis.username = redisUri.getUserInfo().split(":",2)[0]
-				grailsApplication.config.redis.password = redisUri.getUserInfo().split(":",2)[1]
-				
-								
-			} catch (URISyntaxException e) {
-					   // URI couldn't be parsed.
-			}
-		}*/		
+	
 			def adminRole;
 			if (!Role.count()) {
 				adminRole = new Role(authority: 'ROLE_ADMIN').save(failOnError: true, flush: true)
