@@ -29,6 +29,12 @@ class HomeController {
 	}
 	
     def index() { 
+		if (params.launchFromMain)
+		{
+			session.setAttribute("showMainSiteButton", true)
+		} else {
+			session.setAttribute("showMainSiteButton", false)
+		}
 		render(view: "/home/index", model: [direction: directiveCalculator()])
 	}
 	

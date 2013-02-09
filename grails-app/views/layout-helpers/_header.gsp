@@ -6,6 +6,11 @@
 				Fonantrix
 			</a>			
 		</h1>
+		<g:if test="${session.showMainSiteButton}">
+			<span class="header-button">
+				<a href="http://fonantrix.com/expert-opinions.php"><button id="dynamicMode" type="submit" class="btn btn-warning btn-mini">Back to Main Site</button></a>
+			</span>
+		</g:if>
 	</div> <!-- /container -->
 </div> <!-- /header -->	
 

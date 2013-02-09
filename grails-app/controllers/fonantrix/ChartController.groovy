@@ -9,6 +9,13 @@ class ChartController {
 	def redisService
 	
     def index() {
+		if (params.launchFromMain)
+		{
+			session.setAttribute("showMainSiteButton", true)
+		} else {
+			session.setAttribute("showMainSiteButton", false)
+		}
+
 		def chartList = Chart.list()
 		def mergeData = [];
 		
@@ -35,7 +42,7 @@ class ChartController {
 		def json = new JsonBuilder(mergeData)
 		
 		//System.out.println("mergeData:" + mergeData)
-		render(view: "/chart/index",  model:[charts:json.toString()])
+		render(view: "/chart/index",  model:[charts:json.toString(),showMainSiteButton:"true"])
 	}
 	
 	def refreshData() {

@@ -6747,6 +6747,20 @@ body {
 	color: #333333; */
 
 }
+.header-button {
+  float: right;
+  margin-top: -30px;
+}
+#chartDetails p {
+  width: 75%;
+  float: left;
+}
+#chartDetails span {
+  float: left;
+  width: 200px;
+  height: 90px;
+  margin: 0 auto;
+}
 /*------------------------------------------------------------------
 
 [Responsive Stylesheet]
@@ -6768,6 +6782,10 @@ body {
   }
   h1 {
     font-size: 24px;
+  }
+  #chartDetails p {
+    width: 100%;
+    float: none;
   }
 }
 /*------------------------------------------------------------------
@@ -6865,6 +6883,10 @@ body {
   .thumbnail {
     /*display: inline-block;*/
   
+  }
+  #chartDetails p {
+    width: 100%;
+    float: none;
   }
 }
 .popover-title {

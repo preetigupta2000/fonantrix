@@ -127,6 +127,9 @@ com.fonantrix.application.site = (function() {
 		splinechart = new Highcharts.Chart({
             chart: {
 	                renderTo: contianerName,
+	                marginRight: 2,
+	                backgroundColor:'rgba(255, 255, 255, 0.1)',
+	                borderWidth: 0,
 	                type: 'spline',
 	                zoomType: 'xy',
 	                events: {
@@ -143,22 +146,37 @@ com.fonantrix.application.site = (function() {
 	                }	                
 	            },
 	            title: {
-	                text: param.title
+	                text: null,
+	                labels: {enabled:false},
+	                style: {
+	                    font: '12px "Trebuchet MS", Verdana, sans-serif'
+	                 }	                
 	            },
 	            subtitle: {
 	                text: param.subtitle
 	            },
 	            xAxis: {
 	                type: 'datetime',
-	                tickPixelInterval: 150
+	                tickPixelInterval: 100,
+	                labels: {
+	                    style: {
+	                       font: '11px Trebuchet MS, Verdana, sans-serif'
+	                    }
+	                 }	 	                
 	            },
 	            yAxis: {
+	            	lineWidth: 1,
 	                title: {
 	                    text: param.yAxistitle
 	                },
+	                labels: {
+	                    style: {
+	                       font: '11px Trebuchet MS, Verdana, sans-serif'
+	                    }
+	                 },	                
 	                plotLines: [{
 	                    value: 0,
-	                    width: 1,
+	                    width: 0.5,
 	                    color: '#808080'
 	                }]	                
 	            },
@@ -174,8 +192,11 @@ com.fonantrix.application.site = (function() {
 	            },
 	            exporting: {
 	            	enabled: false
-	            },	            
-	            series:  eval("(" + getSeriesValue(param) + ')')
+	            },           
+	            series:  eval("(" + getSeriesValue(param) + ')'),
+	            credits: {
+	                enabled: false
+	            } 	            
 	    });
 		return splinechart;
 	}

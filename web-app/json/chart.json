@@ -121,22 +121,22 @@
             "type": "spline",
         	"title": "Live random data",
         	"subtitle": "",
-        	"xAxisTitle": "Value",
+        	"xAxisTitle": "",
         	"xAxisjson": "type: 'datetime', tickPixelInterval: 150",
-        	"yAxistitle": "Value",
+        	"yAxistitle": "",
         	"plotLinescolor": "#808080",
 			"seriess": [{
 				        	"no": 1,
 				        	"type": "function",
 				        	"name": "Random data",				        	
 				        	"data": "(function() { var data = [], time = (new Date()).getTime(), i; for (i = -19; i <= 0; i++) { data.push({ x: time + i * 1000, y: Math.random()}); } return data; })()",
-				        	"additionalNodes": ""
+				        	"additionalNodes": "color: '#0066FF', marker: { enabled: false, states: { hover: { enabled: true, symbol: 'circle', radius: 5, lineWidth: 1} } }"
         				}
         	]           	
         },        
         {
             "type": "combination",
-        	"title": "Alert Summay",
+        	"title": "Alert Summary",
         	"subtitle": "Alerts Components",
         	"xAxisTitle": "Alerts",
         	"xAxisjson": "'1', '2', '3', '4', '5', '6', '7', '8', '9', '10'",

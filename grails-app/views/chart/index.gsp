@@ -11,24 +11,27 @@
 
 <body>
 	<div id="page-title">
-		<h1><a href="casestudy">Case Study</a>&nbsp; <h2>DashBoard</h2></h1>
-		<p>Following is a sample dashboard demonstrating dynamic chart and a responsive design for mobil delivery. The background (analytic) is based on cloud Redis instance and can be easily extended for any other reporting database.</p>
+		<h1><a href="casestudy"><g:message code="casestudy.site.heading" /></a>&nbsp;>&nbsp;<h2><g:message code="casestudy.chart.heading" /></h2></h1>
+		<div id="chartDetails">
+			<p><g:message code="casestudy.chart.detail" /></p>
+			<span id="container4" class="hidden-phone"></span>
+		</div>
 		<div class="btn-group-wrap">
 			<!-- a href="javascript:refreshChart();"><button type="submit" class="btn btn-warning btn-mini">Refresh Status</button></a -->
-			<a href="updatechart"><button type="submit" class="btn btn-warning btn-mini">Refresh Status</button></a>
-			<a href="javascript:enableDynamicMode();"><button id="dynamicMode" type="submit" class="btn btn-warning btn-mini">Enable Dynamic Mode</button></a>
+			<!-- a href="updatechart"><button type="submit" class="btn btn-warning btn-mini">Refresh Status</button></a -->
+			<a href="javascript:enableDynamicMode();"><button id="dynamicMode" type="submit" class="btn btn-warning btn-mini"><g:message code="casestudy.chart.button.enable" /></button></a>
 			<span class="btn-group">
-				<button class="btn btn-warning btn-mini">Skins</button>
+				<button class="btn btn-warning btn-mini"><g:message code="casestudy.chart.button.skin" /></button>
 	            <button class="btn btn-warning btn-mini dropdown-toggle" data-toggle="dropdown">
 	                <span class="caret"></span>
 	            </button>
 	            <ul class="dropdown-menu">
-		        	<li><a href="javascript:changeTheme()">Default</a></li>
-		        	<li><a href="javascript:changeTheme('grid')">Grid</a></li>
-		            <li><a href="javascript:changeTheme('skies')">Skies</a></li>
-		            <li><a href="javascript:changeTheme('gray')">Gray</a></li>
-		            <li><a href="javascript:changeTheme('blue')">Dark blue</a></li>
-		            <li><a href="javascript:changeTheme('green')">Dark green</a></li>                       
+		        	<li><a href="javascript:changeTheme()"><g:message code="casestudy.chart.button.skin.default" />t</a></li>
+		        	<li><a href="javascript:changeTheme('grid')"><g:message code="casestudy.chart.button.skin.grid" /></a></li>
+		            <li><a href="javascript:changeTheme('skies')"><g:message code="casestudy.chart.button.skin.skies" /></a></li>
+		            <li><a href="javascript:changeTheme('gray')"><g:message code="casestudy.chart.button.skin.gray" /></a></li>
+		            <li><a href="javascript:changeTheme('blue')"><g:message code="casestudy.chart.button.skin.darkblue" /></a></li>
+		            <li><a href="javascript:changeTheme('green')"><g:message code="casestudy.chart.button.skin.darkgreen" /></a></li>                       
 		        </ul>
         	</span>	
 		</div>
@@ -45,17 +48,14 @@
 				<div id="home" class="tab-pane fade in" -->
 				<div class="row">
 					<div class="grid-12">
-						<p class="alert alert-info pull-right">* Click and drag in the plot area to zoom in</p>
+						<p class="alert alert-info pull-right"><g:message code="casestudy.chart.note" /></p>
 					</div>
 				</div>
 					<div class="row">
-						<div class="grid-6">
+						<div class="grid-12">
 							<div id="container5" style="min-width: 300px; height: 250px; margin: 0 auto"></div>
 						</div>
-						<div class="grid-6">
-							<div id="container4" style="min-width: 300px; height: 250px; margin: 0 auto" data-highcharts-chart="0"></div>
-						</div>				
-					</div> <!-- /row -->
+					</div> <!-- /row -->				
 					<div class="row">
 						<div class="grid-6">
 							<div id="container0" style="min-width: 300px; height: 250px; margin: 0 auto"></div>
@@ -89,7 +89,7 @@
 		var charts = ${charts};
 		var app = com.fonantrix.application.site;
 		$(document).ready(function() {
-			app.drawChart(charts);
+			app.drawChart(charts, "gray");
 		});
 
 		function changeTheme(value) {
@@ -105,6 +105,7 @@
 				app.dynamicMode = true;
 				$("#dynamicMode").html("Disable Dynamic Mode");
 				$("#dynamicMode").css("background-color", "#da8205");
+		//alert($("#dynamicMode").css("background-color"));
 				$("#dynamicMode").css("background-image", "-moz-linear-gradient(center top , #DA8300, #DA8400)");
 			} else {
 				app.dynamicMode = false;

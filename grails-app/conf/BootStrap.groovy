@@ -5,7 +5,6 @@ import fonantrix.authentication.User
 import fonantrix.authentication.Role
 import fonantrix.authentication.UserRole
 import redis.clients.jedis.*
-import grails.util.Environment
 
 class BootStrap {
 
@@ -44,7 +43,7 @@ class BootStrap {
 				allCharts.charts.each
 				{
 					def jsonSeries = it
-					//loadingChartDatatoRedis(it, i)
+					loadingChartDatatoRedis(it, i)
 					
 					//System.out.println((jedis.lrange("charts." + i + ".xAxisjson",0,-1)).toListString())
 					//System.out.println("jedis:" + (jedis.lrange("charts." + i + ".xAxisjson",0,-1)))
@@ -55,19 +54,19 @@ class BootStrap {
 								  title: redis.get("charts." + i + ".title"), 
 								  subtitle: redis.get("charts." + i + ".subtitle"), 
 								  xAxisTitle: redis.get("charts." + i + ".xAxisTitle"), 
-								  xAxisjson: (redis.lrange("charts." + i + ".xAxisjson",0,-1).toListString()), 
+								  xAxisjson: (redis.lrange("charts." + i + ".xAxisjson",-10,10).toListString()), 
 								  yAxistitle: redis.get("charts." + i + ".yAxistitle"), 
 								  plotLinescolor:  redis.get("charts." + i + ".plotLinescolor")).save(failOnError: true)
 					}
 					def aSeries
 					if(jsonSeries.seriess) {
 						jsonSeries.seriess.each	{
-							//loadingSeriesDatatoRedis(it, i)
+							loadingSeriesDatatoRedis(it, i)
 							redisService.withRedis { Jedis redis ->
 								aSeries = new Series(no: it.no, 
 										  type: redis.get("charts." + i + ".series" + it.no + ".type"), 
 										  name: redis.get("charts." + i + ".series" + it.no + ".name"), 
-										  dataValue: redis.lrange("charts." + i + ".series" + it.no + ".dataValue",0,-1).toListString(), 
+										  dataValue: redis.lrange("charts." + i + ".series" + it.no + ".dataValue",-10,10).toListString(), 
 										  additionalNodes: redis.get("charts." + i + ".series" + it.no + ".additionalNodes"))
 							}
 							//System.out.println("name" + jedis.lrange("charts." + i + ".series" + it.no + ".dataValue",0,-1))
