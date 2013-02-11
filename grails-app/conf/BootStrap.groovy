@@ -45,18 +45,14 @@ class BootStrap {
 					def jsonSeries = it
 					loadingChartDatatoRedis(it, i)
 					
-					//System.out.println((jedis.lrange("charts." + i + ".xAxisjson",0,-1)).toListString())
-					//System.out.println("jedis:" + (jedis.lrange("charts." + i + ".xAxisjson",0,-1)))
 					def aChart
-					redisService.withRedis { Jedis redis ->
-						
-
+					redisService.withRedis { Jedis redis ->					
 						aChart  = new Chart(number: i,
 								  type: redis.get("charts." + i + ".type"), 
 								  title: redis.get("charts." + i + ".title"), 
 								  subtitle: redis.get("charts." + i + ".subtitle"), 
 								  xAxisTitle: redis.get("charts." + i + ".xAxisTitle"), 
-								  xAxisjson: (redis.lrange("charts." + i + ".xAxisjson").toListString()), 
+								  xAxisjson: redis.lrange("charts." + i + ".xAxisjson", 0, -1).toListString(), 
 								  yAxistitle: redis.get("charts." + i + ".yAxistitle"), 
 								  plotLinescolor:  redis.get("charts." + i + ".plotLinescolor")).save(failOnError: true)
 					}
