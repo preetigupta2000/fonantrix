@@ -78,10 +78,6 @@ class BootStrap {
 					i++;
 				}
 			}
-			//System.out.println(jedis.get("charts.1.type"))
-			//System.out.println(jedis.get("charts.1.plotLinescolor"))
-			//System.out.println(jedis.get("charts.1.series1"))
-			//System.out.println(jedis.lrange("charts.1.series1.dataValue",0,-1))
 	    }
     }
 	
