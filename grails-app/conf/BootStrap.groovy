@@ -49,6 +49,8 @@ class BootStrap {
 					//System.out.println("jedis:" + (jedis.lrange("charts." + i + ".xAxisjson",0,-1)))
 					def aChart
 					redisService.withRedis { Jedis redis ->
+						
+System.out.println("####" + (redis.lrange("charts." + i + ".xAxisjson",-10,10)))						
 						aChart  = new Chart(number: i,
 								  type: redis.get("charts." + i + ".type"), 
 								  title: redis.get("charts." + i + ".title"), 
