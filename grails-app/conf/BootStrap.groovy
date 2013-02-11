@@ -51,10 +51,6 @@ class BootStrap {
 					redisService.withRedis { Jedis redis ->
 						
 
-System.out.println("######" + redis.lrange("charts." + i + ".series" + it.no + ".dataValue",-10,10).toListString())						
-
-
-
 						aChart  = new Chart(number: i,
 								  type: redis.get("charts." + i + ".type"), 
 								  title: redis.get("charts." + i + ".title"), 
