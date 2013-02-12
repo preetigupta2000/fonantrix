@@ -16,7 +16,7 @@
 			<p><g:message code="casestudy.chart.detail" /></p>
 			<span id="container4" class="hidden-phone"></span>
 		</div>
-		<div class="clearfix btn-group-wrap">
+		<div class="btn-group-wrap" style="clear:both;">
 			<!-- a href="javascript:refreshChart();"><button type="submit" class="btn btn-warning btn-mini">Refresh Status</button></a -->
 			<!-- a href="updatechart"><button type="submit" class="btn btn-warning btn-mini">Refresh Status</button></a -->
 			<a href="javascript:enableDynamicMode();"><button id="dynamicMode" type="submit" class="btn btn-warning btn-mini"><g:message code="casestudy.chart.button.enable" /></button></a>
