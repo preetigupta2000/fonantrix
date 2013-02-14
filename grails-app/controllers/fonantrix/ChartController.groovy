@@ -3,10 +3,14 @@ package fonantrix
 import groovy.json.JsonBuilder
 
 import redis.clients.jedis.Jedis;
+import org.codehaus.groovy.grails.plugins.quartz.GrailsTaskClassProperty as GTCP
+import org.quartz.JobDataMap
 
 class ChartController {
 
 	def redisService
+	
+	def quartzScheduler
 	
     def index() {
 		if (params.launchFromMain)
@@ -78,28 +82,29 @@ class ChartController {
 	}
 	
 	def getDynamicData() {
+		
+		/*def runJob = {
+			//quartzScheduler.triggerJob( 'DynamicData', 'GettingData')
+			GetRandomDataJob.triggerNow();
+		}*/
+		quartzScheduler.triggerJob(GetRandomDataJob, GTCP.DEFAULT_GROUP, params ? new JobDataMap(params) : null)
+		
+System.out.println(runJob)
 		//Jedis jedis = new Jedis("localhost")
 		def key = "charts." + params.chartNo + ".series"+ params.SerieNo + ".dataValue";
-		int index
-		redisService.withRedis { Jedis redis ->
-			index = redis.llen(key);
-		}
 
+		System.out.println("params.chartNo:" + params.chartNo)
+		System.out.println("params.SerieNo:" + params.SerieNo)
 		//loading chart based on extracted chart no
 		Chart chart = Chart.findByNumber(params.chartNo)
 		//loading series of the above loaded chart
 		Series series = Series.findByChartAndNo(chart, params.SerieNo)
-		def data
+		List<String> idList
 		redisService.withRedis { Jedis redis ->
-			if (index != 1) {
-				data = redis.lindex(key, index-1)
-				data = Float.parseFloat(data) + 1
-				redis.rpush(key, data.toString())
-			}
-			List<String> idList = redis.lrange(key,0,-1)
+			idList = redis.lrange(key,0,-1)
 			series.setDataValue(idList.toListString())
 			series.save()
 		}
-		render ( data + ", " + params.SerieNo)
+		render ( idList.toListString() + ", " + params.SerieNo)
 	}
 }
