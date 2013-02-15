@@ -3,10 +3,16 @@ package fonantrix
 import groovy.json.JsonBuilder
 
 import redis.clients.jedis.Jedis;
+//import org.codehaus.groovy.grails.plugins.quartz.GrailsTaskClassProperty as GTCP
+import org.quartz.JobDataMap
+import org.quartz.JobDetail
+import org.quartz.Scheduler
+import org.quartz.JobKey
 
 class ChartController {
 
 	def redisService
+	def quartzScheduler
 	
     def index() {
 		if (params.launchFromMain)
@@ -78,28 +84,45 @@ class ChartController {
 	}
 	
 	def getDynamicData() {
+		
+		/*def runJob = {
+			//quartzScheduler.triggerJob( 'DynamicData', 'GettingData')
+			GetRandomDataJob.triggerNow();
+		}*/
+		//def job = jobManagerService.getJobs("")
+		//quartzScheduler.triggerJob(job, 'GettingData', params ? new JobDataMap(params) : null)
+		String myJobName = "DynamicData"
+		
+		Scheduler scheduler = quartzScheduler.getScheduler();
+			 
+		for (String groupName : scheduler.getJobGroupNames()) {
+			
+			for (JobKey jobKey : scheduler.getJobKeys(GroupMatcher.jobGroupEquals(groupName))) {
+			
+				String jobName = jobKey.getName();
+				String jobGroup = jobKey.getGroup();
+				
+				if ((jobName).equals(myJobName)) {
+					scheduler.triggerJob(jobeName, jobGroup);
+					System.out.println("trigger job")
+				}
+			}
+		}
 		//Jedis jedis = new Jedis("localhost")
 		def key = "charts." + params.chartNo + ".series"+ params.SerieNo + ".dataValue";
-		int index
-		redisService.withRedis { Jedis redis ->
-			index = redis.llen(key);
-		}
 
+		System.out.println("params.chartNo:" + params.chartNo)
+		System.out.println("params.SerieNo:" + params.SerieNo)
 		//loading chart based on extracted chart no
 		Chart chart = Chart.findByNumber(params.chartNo)
 		//loading series of the above loaded chart
 		Series series = Series.findByChartAndNo(chart, params.SerieNo)
-		def data
+		List<String> idList
 		redisService.withRedis { Jedis redis ->
-			if (index != 1) {
-				data = redis.lindex(key, index-1)
-				data = Float.parseFloat(data) + 1
-				redis.rpush(key, data.toString())
-			}
-			List<String> idList = redis.lrange(key,0,-1)
+			idList = redis.lrange(key,0,-1)
 			series.setDataValue(idList.toListString())
 			series.save()
 		}
-		render ( data + ", " + params.SerieNo)
+		render ( idList.toListString() + ", " + params.SerieNo)
 	}
 }

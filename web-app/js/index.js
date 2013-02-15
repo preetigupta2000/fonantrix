@@ -31,9 +31,14 @@ com.fonantrix.application.site = (function() {
 	}
 	
 	function redrawCharts () {
-		comchart.redraw();
-		barchart.redraw();
-		linechart.redraw();
+		$.ajax({
+			url: "dynamicchart?chartNo=" + comchart.options.chart.number + "&SerieNo=" + comchart.options.series[0].id
+		}).done(function(response) {
+			
+			comchart.redraw();
+			//barchart.redraw();
+			linechart.redraw();
+		});		
 	}
 	
  	function drawChart(params, theme) {
@@ -67,6 +72,7 @@ com.fonantrix.application.site = (function() {
 		  comchart = new Highcharts.Chart({
 	            chart: {
 	                renderTo: contianerName,
+	                number: param.number,
 	                animation: {
 	                    duration: 1500,
 	                    easing: 'easeInQuad'
