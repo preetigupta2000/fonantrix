@@ -64,7 +64,7 @@ class BootStrap {
 								aSeries = new Series(no: it.no, 
 										  type: redis.get("charts." + i + ".series" + it.no + ".type"), 
 										  name: redis.get("charts." + i + ".series" + it.no + ".name"), 
-										  dataValue: redis.lrange("charts." + i + ".series" + it.no + ".dataValue",-10,10).toListString(), 
+										  dataValue: redis.lrange("charts." + i + ".series" + it.no + ".dataValue",-10,-1).toListString(), 
 										  additionalNodes: redis.get("charts." + i + ".series" + it.no + ".additionalNodes"))
 							}
 							//System.out.println("name" + jedis.lrange("charts." + i + ".series" + it.no + ".dataValue",0,-1))

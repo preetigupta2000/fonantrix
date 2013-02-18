@@ -14,14 +14,13 @@ class GetRandomDataJob {
 	
     def execute(JobExecutionContext context) {
         // execute job
-//System.out.println("inside GetRandomDataJob" + context.getMergedJobDataMap())
 		def key = context.getMergedJobDataMap().get("key");
-//System.out.println("key:" + key)
 		redisService.withRedis { Jedis redis ->
 			int index = redis.llen(key);
 			if (index != 1) {
-				def data = redis.lindex(key, index-1)
-				data = Float.parseFloat(data) + random.nextInt(10)
+				def data = redis.lindex(key, index-1)	
+//System.out.println((random.nextInt(100) - 50))				
+				data = Float.parseFloat(data) + (random.nextInt(200) - 100)
 				redis.rpush(key, data.toString())
 			}
 		}

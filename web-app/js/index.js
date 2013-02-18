@@ -34,7 +34,6 @@ com.fonantrix.application.site = (function() {
 		$.ajax({
 			url: "dynamicchart?chartNo=" + comchart.options.chart.number + "&SerieNo=" + comchart.options.series[0].id
 		}).done(function(response) {
-			
 			comchart.redraw();
 			//barchart.redraw();
 			linechart.redraw();
@@ -67,6 +66,47 @@ com.fonantrix.application.site = (function() {
 		keys = keys.substring(0, keys.lastIndexOf(","));
 		settingPlotStart();
  	}
+ 	
+	function getLineData(chartNo, contianerName) {
+		if (com.fonantrix.application.site.dynamicMode) {
+		    var chart = chartArray[contianerName]
+	    	for (var i=0; i<chart.series.length; i++){
+			    var series = chart.series[i]
+	            var seriesno = series.options.id
+			    if (series.type != "pie") {
+			    console.log(series.type);
+		  		  	$.get('dynamicchart?chartNo=' + chartNo + "&SerieNo=" + seriesno, function(response) {
+		  		  		seriesno = parseInt(response.split("#")[1].trim())
+		  		  		var data = eval(response.split("#")[0])
+		  		  		series = chart.get(seriesno)
+		  		  		shift = series.data.length > 10;
+				        series.addPoint(parseInt(data[0]), true, shift);
+					    series.redraw();
+				    });
+	    		}
+	    	}
+		}
+	} 	
+	
+	function settingPlotStart() {
+		arr = keys.split(",");
+		for (var j=0; j<arr.length; j++){
+			var chart = chartArray[arr[j]];
+	    	for (var i=0; i<chart.series.length; i++){
+	    		var series = chart.series[i];
+	    		if (series.type == "line") {
+			        var data = series.data;
+			        var new_data = (function(){
+			            for(var i=0,d=[];i<8;i++)
+			                d.push(Math.random()*250|0)
+			            return d;
+			        })();
+			        series.options.pointStart = data[data.length-1].x;
+			        series.setData(new_data);
+	    		}
+	    	}
+		}
+	}
 	
 	function combinationChart(param, contianerName){
 		  comchart = new Highcharts.Chart({
@@ -76,6 +116,14 @@ com.fonantrix.application.site = (function() {
 	                animation: {
 	                    duration: 1500,
 	                    easing: 'easeInQuad'
+	                },
+	                events: {
+	                    load: function() {
+	                        // set up the updating of the chart each second
+		                        setInterval(function() {
+		                        	getLineData(param.number, contianerName);
+		                        }, 5000);
+	                    }
 	                }	                
 	            },
 	            title: {
@@ -272,24 +320,7 @@ com.fonantrix.application.site = (function() {
  	        });
  		  return barchart;
  	}
- 	
-	function getLineData(chartNo, contianerName) {
-		if (com.fonantrix.application.site.dynamicMode) {
-		    var chart = chartArray[contianerName]
-	    	for (var i=0; i<chart.series.length; i++){
-			    var series = chart.series[i]
-	            var seriesno = series.options.id
-	  		  	$.get('dynamicchart?chartNo=' + chartNo + "&SerieNo=" + seriesno, function(response) {
-	  		  		seriesno = parseInt(response.split(",")[1].trim())
-	  		  		var data = parseInt(response.split(",")[0])
-	  		  		series = chart.get(seriesno)
-			        series.addPoint(parseInt(data), true, true);
-				    series.redraw();
-			    });
-	    	}
-		}
-	}
-	
+ 		
 	function lineChart(param, contianerName) {		
         linechart = new Highcharts.Chart({
 	            chart: {
@@ -383,25 +414,6 @@ com.fonantrix.application.site = (function() {
 		return returnSeries;
 	} 
 	
-	function settingPlotStart() {
-		arr = keys.split(",");
-		for (var j=0; j<arr.length; j++){
-			var chart = chartArray[arr[j]];
-	    	for (var i=0; i<chart.series.length; i++){
-	    		var series = chart.series[i];
-	    		if (series.type == "line") {
-			        var data = series.data;
-			        var new_data = (function(){
-			            for(var i=0,d=[];i<8;i++)
-			                d.push(Math.random()*250|0)
-			            return d;
-			        })();
-			        series.options.pointStart = data[data.length-1].x;
-			        series.setData(new_data);
-	    		}
-	    	}
-		}
-	}
  	/********************************************************/
  	/*                 ONE TIME INIT FUNCTION              */
  	/********************************************************/
