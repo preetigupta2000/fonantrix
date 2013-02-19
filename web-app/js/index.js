@@ -73,17 +73,23 @@ com.fonantrix.application.site = (function() {
 	    	for (var i=0; i<chart.series.length; i++){
 			    var series = chart.series[i]
 	            var seriesno = series.options.id
-			    if (series.type != "pie") {
 			    console.log(series.type);
 		  		  	$.get('dynamicchart?chartNo=' + chartNo + "&SerieNo=" + seriesno, function(response) {
 		  		  		seriesno = parseInt(response.split("#")[1].trim())
-		  		  		var data = eval(response.split("#")[0])
+		  		  		var data
 		  		  		series = chart.get(seriesno)
-		  		  		shift = series.data.length > 10;
-				        series.addPoint(parseInt(data[0]), true, shift);
+		  		  		if (series.type == 'pie') {		  		  		
+		  		  			data = eval(response.split("#")[0])
+		  		  		} else {
+		  		  			data = eval(response.split("#")[0])
+		  		  		}		  		  		
+		  		  		if (series.type === 'pie') {		  		  		
+		  		  			series.addPoint(data[0], true, true);
+		  		  		} else {
+		  		  			series.addPoint(parseInt(data[0]), true, true);
+		  		  		}
 					    series.redraw();
 				    });
-	    		}
 	    	}
 		}
 	} 	
@@ -94,7 +100,7 @@ com.fonantrix.application.site = (function() {
 			var chart = chartArray[arr[j]];
 	    	for (var i=0; i<chart.series.length; i++){
 	    		var series = chart.series[i];
-	    		if (series.type == "line") {
+	    		//if (series.type == "line") {
 			        var data = series.data;
 			        var new_data = (function(){
 			            for(var i=0,d=[];i<8;i++)
@@ -103,7 +109,7 @@ com.fonantrix.application.site = (function() {
 			        })();
 			        series.options.pointStart = data[data.length-1].x;
 			        series.setData(new_data);
-	    		}
+	    		//}
 	    	}
 		}
 	}
@@ -113,10 +119,6 @@ com.fonantrix.application.site = (function() {
 	            chart: {
 	                renderTo: contianerName,
 	                number: param.number,
-	                animation: {
-	                    duration: 1500,
-	                    easing: 'easeInQuad'
-	                },
 	                events: {
 	                    load: function() {
 	                        // set up the updating of the chart each second
@@ -133,7 +135,6 @@ com.fonantrix.application.site = (function() {
 	                categories: eval("(" + param.xAxisjson + ')')
 	            },
 	            yAxis: {
-	                min: 0,
 	                title: {
 	                    text: param.yAxistitle
 	                }
@@ -352,7 +353,6 @@ com.fonantrix.application.site = (function() {
 
 	            },
 	            yAxis: {
-	            	min: 0,
 	                labels: {
 	                    formatter: function() {
 	                        return this.value;
