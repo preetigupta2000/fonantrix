@@ -351,8 +351,7 @@ com.fonantrix.application.site = (function() {
 	            xAxis: {
 	                //categories: eval("(" + param.xAxisjson + ')')
 	            	type: 'datetime',
-	            	tickPixelInterval: 120
-
+	            	tickPixelInterval: 120	
 	            },
 	            yAxis: {
 	                labels: {

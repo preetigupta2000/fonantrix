@@ -17,10 +17,11 @@ class GetRandomDataJob {
 		def key = context.getMergedJobDataMap().get("key");
 		redisService.withRedis { Jedis redis ->
 			int index = redis.llen(key);
+//System.out.println("index:" + index)			
 			if (index != 1) {
 				def data = redis.lindex(key, index-1)	
 //System.out.println(data)				
-				data = Float.parseFloat(data) + (random.nextInt(200) - 50)
+				data = Float.parseFloat(data) + (random.nextInt(50) - 25)
 				redis.rpush(key, data.toString())
 			}
 		}

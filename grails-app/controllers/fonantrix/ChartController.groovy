@@ -115,10 +115,10 @@ class ChartController {
 		List<String> idList
 		List<String> lastElement
 		redisService.withRedis { Jedis redis ->
-			idList = redis.lrange(key,0,-1)
+			idList = redis.lrange(key,0,10)
 			series.setDataValue(idList.toListString())
 			series.save()
-			lastElement = redis.lrange(key,-1,-1)
+			lastElement = redis.lrange(key,0,0)
 		}
 //System.out.println(lastElement.toListString())		
 		//render ( lastElement.toListString() + "#" + params.serieNo + )
