@@ -19,8 +19,8 @@ class GetRandomDataJob {
 			int index = redis.llen(key);
 			if (index != 1) {
 				def data = redis.lindex(key, index-1)	
-//System.out.println((random.nextInt(100) - 50))				
-				data = Float.parseFloat(data) + (random.nextInt(200) - 100)
+//System.out.println(data)				
+				data = Float.parseFloat(data) + (random.nextInt(200) - 50)
 				redis.rpush(key, data.toString())
 			}
 		}

@@ -1,6 +1,7 @@
 package fonantrix
 
 import groovy.json.JsonBuilder
+import grails.converters.JSON
 
 import org.codehaus.groovy.grails.web.context.ServletContextHolder
 import org.codehaus.groovy.grails.web.servlet.GrailsApplicationAttributes
@@ -94,7 +95,7 @@ class ChartController {
 		
 		Scheduler scheduler = ctx.getBean("quartzScheduler")
 			
-		def key = "charts." + params.chartNo + ".series"+ params.SerieNo + ".dataValue";
+		def key = "charts." + params.chartNo + ".series"+ params.serieNo + ".dataValue";
 
 		for (String groupName : scheduler.getJobGroupNames()) {
 			for (JobKey jobKey : scheduler.getJobKeys(GroupMatcher.jobGroupEquals(groupName))) {
@@ -110,7 +111,7 @@ class ChartController {
 		//loading chart based on extracted chart no
 		Chart chart = Chart.findByNumber(params.chartNo)
 		//loading series of the above loaded chart
-		Series series = Series.findByChartAndNo(chart, params.SerieNo)
+		Series series = Series.findByChartAndNo(chart, params.serieNo)
 		List<String> idList
 		List<String> lastElement
 		redisService.withRedis { Jedis redis ->
@@ -120,6 +121,7 @@ class ChartController {
 			lastElement = redis.lrange(key,-1,-1)
 		}
 //System.out.println(lastElement.toListString())		
-		render ( lastElement.toListString() + "# " + params.SerieNo)
+		//render ( lastElement.toListString() + "#" + params.serieNo + )
+		render ([points:lastElement.toListString(),serieNo:params.serieNo,contianerId:params.contianerId] as JSON)
 	}
 }
