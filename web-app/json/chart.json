@@ -160,7 +160,7 @@
 				        	"no": 3,
 				        	"type": "pie",
 				        	"name": "Total consumption",				        	
-				        	"data": "{ name: 'Alert', y: 13, color: '#4572A7'}, {name: 'Rank', y: 23, color: '#AA4643'}, {name: 'Intervene', y: 19, color: '#89A54E'},{name: 'Time to Close', y: 12, color: '#80699B'}",
+				        	"data": "{ name: 'Alert', y: 13}, {name: 'Rank', y: 23}, {name: 'Intervene', y: 19},{name: 'Time to Close', y: 12}",
 				        	"additionalNodes": "showInLegend:false, center: [25, 25], size: 40, showInLegend: false, dataLabels: {enabled: false}"
         				},
 						{
