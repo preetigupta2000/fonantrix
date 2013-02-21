@@ -104,7 +104,7 @@ class ChartController {
 				String jobGroup = jobKey.getGroup();
 				
 				if ((jobName).equals(myJobName)) {
-					scheduler.triggerJob(jobKey, new JobDataMap(["key":key]));
+					scheduler.triggerJob(jobKey, new JobDataMap(["key":key,"type": params.serieType]));
 				}
 			}
 		}

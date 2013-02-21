@@ -74,7 +74,7 @@ com.fonantrix.application.site = (function() {
 			    var series = chart.series[i]
 	            var seriesno = series.options.id
 			    //console.log(series.type + " No:" + seriesno + " chartno" + chart.options.chart.number);
-		  		  	$.get('dynamicchart?chartNo=' + chartNo + "&serieNo=" + seriesno + "&contianerId=" + contianerName, function(response) {
+		  		  	$.get('dynamicchart?chartNo=' + chartNo + "&serieNo=" + seriesno + "&contianerId=" + contianerName + "&serieType=" + series.type, function(response) {
 		  		  		seriesno = parseInt(response.serieNo)
 		  		  		chart = chartArray[response.contianerId]
 		  		  		var data
