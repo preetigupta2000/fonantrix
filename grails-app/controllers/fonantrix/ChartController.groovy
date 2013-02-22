@@ -118,9 +118,10 @@ class ChartController {
 			idList = redis.lrange(key,0,10)
 			series.setDataValue(idList.toListString())
 			series.save()
-			lastElement = redis.lrange(key,0,0)
+			int index = redis.llen(key);
+			lastElement = redis.lrange(key,index-1,-1)
 		}
-//System.out.println(lastElement.toListString())		
+//System.out.println("last:" + lastElement.toListString())		
 		//render ( lastElement.toListString() + "#" + params.serieNo + )
 		render ([points:lastElement.toListString(),serieNo:params.serieNo,contianerId:params.contianerId] as JSON)
 	}

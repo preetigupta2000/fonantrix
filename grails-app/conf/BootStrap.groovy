@@ -98,6 +98,7 @@ class BootStrap {
 	
 	def loadingSeriesDatatoRedis(it, i){
 		// adding series data to redis
+		def dataArray
 		redisService.withRedis { Jedis redis ->
 			redis.set("charts." + i + ".series" + it.no + ".type", it.type)
 			redis.set("charts." + i + ".series" + it.no + ".name", it.name)
@@ -106,11 +107,14 @@ class BootStrap {
 				if (it.type.equals("pie") || it.type.equals("function")) {
 					//System.out.println("data: " + it.data);
 					//System.out.println("charts." + i + ".series"+ it.no + ".dataValue")
-					redis.rpush("charts." + i + ".series"+ it.no + ".dataValue", it.data)
-				} else {
-					def dataArray = it.data.split(",")
+					dataArray = it.data.split("~")
 					for( element in dataArray){
-						redis.rpush("charts." + + i + ".series"+ it.no + ".dataValue", element.trim())
+						redis.rpush("charts." + i + ".series"+ it.no + ".dataValue", element.trim())
+					}
+				} else {
+					dataArray = it.data.split(",")
+					for( element in dataArray){
+						redis.rpush("charts." + i + ".series"+ it.no + ".dataValue", element.trim())
 					}
 				}
 			}

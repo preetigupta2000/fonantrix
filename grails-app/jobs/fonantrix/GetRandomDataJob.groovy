@@ -21,19 +21,16 @@ class GetRandomDataJob {
 //System.out.println("type:" + type)			
 //System.out.println("index:" + index)
 			if (index > 0) {
-				def data = redis.lindex(key, index -1)
+				def data = redis.lindex(key, random.nextInt(4))
 				if (type == "pie") {
-					System.out.println("data:" + data)
-					def arr = data.split(",")
-					def lastElement = arr[random.nextInt(4)]
-					println lastElement
-					data = data + "," + lastElement
-					println data
+					def lastElement = data
+					data = lastElement
+					//println data
 					//redis.lset(key, index, data)
 				} else {
 					data = Float.parseFloat(data) + (random.nextInt(50) - 25)
-					redis.rpush(key, data.toString())
 				}
+				redis.rpush(key, data.toString())
 			}
 				
 		}

@@ -160,7 +160,7 @@
 				        	"no": 3,
 				        	"type": "pie",
 				        	"name": "Total consumption",				        	
-				        	"data": "{ name: 'Alert', y: 13}, {name: 'Rank', y: 23}, {name: 'Intervene', y: 19},{name: 'Time to Close', y: 12}",
+				        	"data": "{ name: 'Alert', y: 13}~{name: 'Rank', y: 23}~{name: 'Intervene', y: 19}~{name: 'Time to Close', y: 12}",
 				        	"additionalNodes": "showInLegend:false, center: [25, 25], size: 40, showInLegend: false, dataLabels: {enabled: false}"
         				},
 						{
