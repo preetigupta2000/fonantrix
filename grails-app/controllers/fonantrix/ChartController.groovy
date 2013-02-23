@@ -88,6 +88,31 @@ class ChartController {
 		redirect(controller: "chart", action: "index")
 	}
 	
+	def zoomChart() {
+		Chart chart = Chart.findByNumber(params.chartNo)
+		def data = [
+			number : chart.number,
+			type : chart.type,
+			title : chart.title,
+			subtitle : chart.subtitle,
+			xAxisTitle : chart.xAxisTitle,
+			xAxisjson : chart.xAxisjson,
+			xAxisjson : chart.xAxisjson,
+			yAxistitle : chart.yAxistitle,
+			plotLinescolor : chart.plotLinescolor,
+			series : chart.seriess.collect {[
+				no: it.no,
+				type: it.type,
+				name: it.name,
+				data: it.dataValue,
+				additionalNodes : it.additionalNodes]
+			}
+		]
+		
+		def json = new JsonBuilder(data)
+		render ([chart:json] as JSON)
+	}
+	
 	def getDynamicData() {
 		String myJobName = "fonantrix.GetRandomDataJob"
 		

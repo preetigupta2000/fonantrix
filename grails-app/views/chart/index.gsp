@@ -5,7 +5,7 @@
 	<style type="text/css">
 		.btn-group { display: -moz-inline-box;}
 		#page-title { padding-bottom: 10px; margin-bottom: 1.5em;}
-		.row { margin-bottom: 10px; }
+		.row { margin-bottom: 10px; }	
 	</style>
   </head>
 
@@ -53,7 +53,7 @@
 				</div>
 					<div class="row">
 						<div class="grid-12">
-							<div id="container5" style="min-width: 300px; height: 250px; margin: 0 auto"></div>
+							<div id="container5" style="min-width: 300px; height: 250px; margin: 0 auto;"></div>
 						</div>
 					</div> <!-- /row -->				
 					<div class="row">
@@ -73,6 +73,12 @@
 						</div>								
 					</div> <!-- /row -->
 				<!--  /div-->
+				
+				<!-- this is the placeholder for the modal box -->
+				<div id="modal-zoomChart" class="modal hide">
+					<!-- content will go here -->
+					<div id="containerZoom5" style="min-width: 500px; height: 550px; margin: 0 auto"></div>
+				</div>				
 				
 				<!-- div id="grid" class="tab-pane fade in">
 					<img src="${resource(dir: 'images', file: 'commingsoon.jpg')}" alt="Coming Soon" />
@@ -114,6 +120,18 @@
 				$("#dynamicMode").css("background-image", "-moz-linear-gradient(center top , #FBB450, #F89406)");
 			}
 		}
+
+		jQuery( function($) { 			
+			// when the modal show event fires, load the url that was copied to the data-href attribute
+			$('#modal-zoomChart').bind('show', function() {
+				$.ajax({
+					url: "zoomChart?chartNo=" + comchart.options.chart.number
+				}).done(function(response) {
+					app.zoomChart("container5", "containerZoom5");
+				});						
+			});
+		});
+	
 	</script>	
   </body>
 </html>
