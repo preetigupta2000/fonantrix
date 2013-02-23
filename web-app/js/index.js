@@ -40,6 +40,15 @@ com.fonantrix.application.site = (function() {
 		});		
 	}
 	
+	function zoomChart (contianerName , newContianerName) {
+		var chart = chartArray[contianerName]
+		$.ajax({
+			url: "zoomChart?chartNo=" + chart.options.chart.number
+		}).done(function(response) {
+			combinationChart(response.chart.content, newContianerName, false)
+		});		
+	}
+	
  	function drawChart(params, theme) {
  				
 		// Apply the theme
@@ -58,7 +67,7 @@ com.fonantrix.application.site = (function() {
 			} else if (params[i].type === "spline") {
 				returnChartName = splineChart(params[i], contianerName)				
 			} else if (params[i].type === "combination") {
-				returnChartName = combinationChart(params[i], contianerName)
+				returnChartName = combinationChart(params[i], contianerName, true)
 			}
 			chartArray[contianerName] = returnChartName;
 			keys += contianerName + ","
@@ -116,7 +125,7 @@ com.fonantrix.application.site = (function() {
 		}
 	}
 	
-	function combinationChart(param, contianerName){
+	function combinationChart(param, contianerName, showButtons){
 		  comchart = new Highcharts.Chart({
 	            chart: {
 	                renderTo: contianerName,
@@ -170,7 +179,36 @@ com.fonantrix.application.site = (function() {
 	            series: eval("(" + getSeriesValue(param) + ')'),
 	            credits: {
 	                enabled: false
-	            } 	            
+	            },
+	            exporting: {
+	                buttons: {
+	                    ZoomBtn: {
+	                    	symbol: 'url(images/zoom.gif)',
+	                    	 _id: 'Zoom',
+	                        _titleKey: 'Zoom',
+	                        x: -60,
+	                        symbolFill: '#B5C9DF',
+	                        hoverSymbolFill: '#779ABF',
+	                        onclick: function () {
+	                            $('#modal-zoomChart').modal({show: true , backdrop : true , keyboard: true}).css({
+		                               'width': function () { 
+		                                   return ($(document).width() * .9) + 'px';  
+		                               },
+		                               'margin-left': function () { 
+		                                   return -($(this).width() / 2); 
+		                               }
+		                        });
+	                        },
+	            			enabled: showButtons
+	                    },
+	                    exportButton: {
+	                        enabled: showButtons
+	                    },
+	                    printButton: {
+	                        enabled: showButtons
+	                    }
+	                }
+	            }	            
 	        });
 		  return comchart;
 	}
@@ -324,7 +362,7 @@ com.fonantrix.application.site = (function() {
  		  return barchart;
  	}
  		
-	function lineChart(param, contianerName) {		
+	function lineChart(param, contianerName, showButtons) {		
         linechart = new Highcharts.Chart({
 	            chart: {
 	                renderTo: contianerName,
@@ -384,7 +422,7 @@ com.fonantrix.application.site = (function() {
 	            series: eval("(" + getSeriesValue(param) + ")"),
 	            credits: {
 	                enabled: false
-	            }
+	            }            
 	    });
         return linechart;
 	}
@@ -471,6 +509,7 @@ com.fonantrix.application.site = (function() {
  		"changeTheme":updateTheme,
  		"redrawChart":redrawCharts,
  		"dynamicMode":dynamicMode,
+ 		"zoomChart":zoomChart,
  		"settingPlotStart":settingPlotStart
  	}
  

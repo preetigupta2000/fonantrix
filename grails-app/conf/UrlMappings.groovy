@@ -9,6 +9,7 @@ class UrlMappings {
 		"/chart"(controller:"chart")
 		"/updatechart"(controller:"chart", action:"refreshData")
 		"/dynamicchart"(controller:"chart", action:"getDynamicData")
+		"/zoomChart"(controller:"chart", action:"zoomChart")
 		
 		"/"(controller:"home")
 		"/home"(controller:"home")
