@@ -1,19 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,800);
-
 @import '../bootstrap-editable.css';
-
 @import '../pages/homepage.css';
-
 @import '../pages/about.css';
-
 @import '../pages/services.css';
-
 @import '../pages/contact.css';
-
 @import '../pages/casestudy.css';
-
 @import '../components/plans.css';
-
 @import '../../js/plugins/faq/faq.css';
 /*!
  * Bootstrap v2.0.4

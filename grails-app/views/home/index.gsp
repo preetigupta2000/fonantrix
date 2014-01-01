@@ -69,7 +69,7 @@
 					</div> <!-- /item -->
 					
 					<div class="item">
-						<img src="${resource(dir: 'images/masthead', file: 'masthead-3.jpg')}" alt="" />
+						<img src="${resource(dir: 'images/masthead', file: 'masthead-5.jpg')}" alt="" />
 				
 						<div class="masthead-details">
 							
